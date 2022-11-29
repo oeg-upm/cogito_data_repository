@@ -1,0 +1,52 @@
+{
+    "id": "079637bb-87d5-4fef-9704-d556364d90ba",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "description": "Project test designed as BA",
+    "properties": {
+        "platform:hasValueInGraph": {
+            "forms": [
+                {
+                    "href": "http://data.cogito.iot.linkeddata.es/resources/Project_079637bb-87d5-4fef-9704-d556364d90ba",
+                    "type": "text/turtle"
+                }
+            ]
+        },
+        "platform:hasIRI": {
+            "forms": [
+                {
+                    "href": "https://data.cogito.iot.linkeddata.es/resources/project/079637bb-87d5-4fef-9704-d556364d90ba",
+                    "type": "text/turtle"
+                }
+            ]
+        },
+        "platform:hasKnowledgeGraph": {
+            "forms": [
+                {
+                    "href": "https://data.cogito.iot.linkeddata.es/resources/079637bb-87d5-4fef-9704-d556364d90ba",
+                    "type": "text/turtle"
+                }
+            ]
+        }
+    },
+    "title": "Project BA",
+    "type": "https://cogito.iot.linkeddata.es/def/facility#Project",
+    "registration": {
+        "created": "2022-11-29T18:43:53.404Z",
+        "modified": "2022-11-29T18:43:53.462Z"
+    },
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "facility": "https://cogito.iot.linkeddata.es/def/facility#",
+            "platform": "https://cogito.iot.linkeddata.es/def/platform#"
+        },
+        "https://w3c.github.io/wot-discovery/context/discovery-context.jsonld"
+    ],
+    "security": [
+        "nosec_sc"
+    ]
+}

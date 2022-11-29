@@ -11,15 +11,19 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix s4city: <https://saref.etsi.org/saref4city#> .
 @prefix saref: <https://saref.etsi.org/core#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix point: <http://data.cogito.iot.linkeddata.es/resources/point/> .
+@prefix tag_group: <http://data.cogito.iot.linkeddata.es/resources/tag_group/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
 
-data:Project_2b547f71-6e1c-4048-a61c-eb59c7e79976
+project:079637bb-87d5-4fef-9704-d556364d90ba
     a facility:Project ;
-    facility:hasProjectId '2b547f71-6e1c-4048-a61c-eb59c7e79976'^^<http://www.w3.org/2001/XMLSchema#string> .
+    facility:hasProjectId '079637bb-87d5-4fef-9704-d556364d90ba'^^<http://www.w3.org/2001/XMLSchema#string> .
 
-data:TagGroup_9d8b5d6e-691a-482a-ab8e-85a7e094dab0
+tag_group:9d8b5d6e-691a-482a-ab8e-85a7e094dab0
     a resource:TrackingTagGroup ;
     a resource:EquipmentTagGroup ;
     a resource:ResourceType ;
     resource:name 'Workers'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:resourceTypeId '8'^^<http://www.w3.org/2001/XMLSchema#string> ;
-    resource:belongsToProject data:Project_2b547f71-6e1c-4048-a61c-eb59c7e79976 .
+    resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
