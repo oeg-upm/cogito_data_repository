@@ -1,0 +1,68 @@
+{
+    "id": "3349c4e2427a43ef7dc79ab79b1a67dd6f50615b396364566da836a0a70e033b",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "description": "IoT Tag Groups file associated to project 079637bb-87d5-4fef-9704-d556364d90ba",
+    "links": [
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/079637bb-87d5-4fef-9704-d556364d90ba",
+            "rel": "platform:relatedTD",
+            "type": "application/td+json"
+        }
+    ],
+    "properties": {
+        "platform:relatedToProject": {
+            "forms": [
+                {
+                    "href": "http://data.cogito.iot.linkeddata.es/resources/Project_079637bb-87d5-4fef-9704-d556364d90ba",
+                    "type": "text/turtle"
+                }
+            ]
+        },
+        "platform:hasKnowledgeGraph": {
+            "forms": [
+                {
+                    "href": "https://data.cogito.iot.linkeddata.es/resources/079637bb-87d5-4fef-9704-d556364d90ba/3349c4e2427a43ef7dc79ab79b1a67dd6f50615b396364566da836a0a70e033b",
+                    "type": "text/turtle"
+                }
+            ]
+        },
+        "platform:relatedToProject_GoodPractice": {
+            "forms": [
+                {
+                    "href": "https://data.cogito.iot.linkeddata.es/resources/project/079637bb-87d5-4fef-9704-d556364d90ba",
+                    "type": "text/turtle"
+                }
+            ]
+        },
+        "platform:hasFile": {
+            "forms": [
+                {
+                    "href": "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/iot/files/taggroups.json",
+                    "type": "iot_tag_groups"
+                }
+            ]
+        }
+    },
+    "title": "IoT Tag Groups File",
+    "type": "qual:InformationResource",
+    "registration": {
+        "created": "2022-11-29T18:52:18.4Z",
+        "modified": "2022-11-29T18:52:18.4Z"
+    },
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "process": "https://cogito.iot.linkeddata.es/def/process#",
+            "qual": "https://cogito.iot.linkeddata.es/quality#",
+            "platform": "https://cogito.iot.linkeddata.es/def/platform#"
+        },
+        "https://w3c.github.io/wot-discovery/context/discovery-context.jsonld"
+    ],
+    "security": [
+        "nosec_sc"
+    ]
+}

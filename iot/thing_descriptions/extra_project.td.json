@@ -1,0 +1,24 @@
+{
+    "links": [
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/44bb0866d3bf2c81f19c81b7e120cde47e4bd5ff8eb4836b1ef5837a324b09f2",
+            "rel": "platform:hasIoTProjectFile",
+            "type": "application/td+json"
+        },
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/3349c4e2427a43ef7dc79ab79b1a67dd6f50615b396364566da836a0a70e033b",
+            "rel": "platform:hasIoTTagGroupsFile",
+            "type": "application/td+json"
+        },
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/a2f617456d1c0697dd88db41abebcfb1de2890c1967425a225f2de0c43ee89c5",
+            "rel": "platform:hasIoTTrackedZonesFile",
+            "type": "application/td+json"
+        },
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/62897fb8a03c00f7689a37016c5d351f393e37efbabe95d42c873b91e1d08e43",
+            "rel": "platform:hasIoTWorkOrderFile",
+            "type": "application/td+json"
+        }
+    ]
+}
