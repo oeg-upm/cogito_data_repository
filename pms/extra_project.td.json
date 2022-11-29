@@ -1,0 +1,9 @@
+{
+    "links": [
+        {
+            "href": "https://data.cogito.iot.linkeddata.es/tdd/api/things/dab8fc2cd989f7aad11af91c9db5add1ebde97371807fce0b983862e63692186",
+            "rel": "platform:hasIoTProjectFile",
+            "type": "application/td+json"
+        }
+    ]
+}
