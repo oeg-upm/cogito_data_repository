@@ -1,0 +1,54 @@
+{
+    "project_id": "079637bb-87d5-4fef-9704-d556364d90ba",
+    "process_id": "FE090C7C-7AEC-42FE-9452-AD0AA8643D28",
+    "tasks": {
+        "56": {
+            "name": "Round foundations",
+            "start_time": "2010-06-07T08:00:00",
+            "end_time": "2010-06-11T17:00:00",
+            "parent_task": "",
+            "sub_task_list": [],
+            "previous_task_list": "7",
+            "resource_list": [{
+              "resource_id": "4",
+              "quantity_needed": 1
+            }, {
+              "resource_id": "8",
+              "quantity_needed": 1
+            }],
+            "zone": "22O7WvOu1F3RpVxpkqDC6M"
+        },
+        "72": {
+            "name": "Steel",
+            "start_time": "2014-06-10 08:00",
+            "end_time": "2014-06-10 17:00",
+            "parent_task": "",
+            "sub_task_list": [],
+            "previous_task_list": "56",
+            "resource_list": [{
+              "resource_id": "8",
+              "quantity_needed": 1
+            }],
+            "zone": "22O7WvOu1F3RpVxpkqDC6M"
+        },
+        "118": {
+            "name": "Concrete Roof",
+            "start_time": "2015-06-10 08:00",
+            "end_time": "2021-06-10 17:00",
+            "parent_task": "",
+            "sub_task_list": [],
+            "previous_task_list": "76",
+            "resource_list": [{
+              "resource_id": "1",
+              "quantity_needed": 1
+            }, {
+              "resource_id": "2",
+              "quantity_needed": 1
+            }, {
+              "resource_id": "8",
+              "quantity_needed": 2
+            }],
+            "zone": "22O7WvOu1F3RpVxpkqDC6M"
+        }
+    }
+}
