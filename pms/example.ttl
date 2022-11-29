@@ -1,0 +1,94 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix data: <http://data.cogito.iot.linkeddata.es/resources/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a facility:Project ;
+    facility:isRelatedToProcess data:FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
+    facility:projectID "079637bb-87d5-4fef-9704-d556364d90ba"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+        task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_56
+        a process:Task ;
+        facility:isRelatedToProject project:079637bb-87d5-4fef-9704-d556364d90ba ;
+        process:taskId '56' ;
+        process:hasName 'Round foundations'^^<http://www.w3.org/2001/XMLSchema#string> ;
+        process:plannedStartDate '2010-06-07T08:00:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        process:plannedEndDate '2010-06-11T17:00:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+               process:hasResourceTypeRequirement res_type_req:Excavator .
+
+            res_type_req:Excavator 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 1 ;
+                process:relatesToResourceType res_type:Excavator .
+
+            res_type:Excavator
+                a resource:ResourceType.
+               process:hasResourceTypeRequirement res_type_req:Worker .
+
+            res_type_req:Worker 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 1 ;
+                process:relatesToResourceType res_type:Worker .
+
+            res_type:Worker
+                a resource:ResourceType.
+        task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_72
+        a process:Task ;
+        facility:isRelatedToProject project:079637bb-87d5-4fef-9704-d556364d90ba ;
+        process:taskId '72' ;
+        process:hasName 'Steel'^^<http://www.w3.org/2001/XMLSchema#string> ;
+        process:plannedStartDate '2014-06-10 08:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        process:plannedEndDate '2014-06-10 17:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+               process:hasResourceTypeRequirement res_type_req:Worker .
+
+            res_type_req:Worker 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 1 ;
+                process:relatesToResourceType res_type:Worker .
+
+            res_type:Worker
+                a resource:ResourceType.
+        task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_118
+        a process:Task ;
+        facility:isRelatedToProject project:079637bb-87d5-4fef-9704-d556364d90ba ;
+        process:taskId '118' ;
+        process:hasName 'Concrete Roof'^^<http://www.w3.org/2001/XMLSchema#string> ;
+        process:plannedStartDate '2015-06-10 08:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+        process:plannedEndDate '2021-06-10 17:00'^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+               process:hasResourceTypeRequirement res_type_req:Truck_mounted_concrete_boom_pump .
+
+            res_type_req:Truck_mounted_concrete_boom_pump 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 1 ;
+                process:relatesToResourceType res_type:Truck_mounted_concrete_boom_pump .
+
+            res_type:Truck_mounted_concrete_boom_pump
+                a resource:ResourceType.
+               process:hasResourceTypeRequirement res_type_req:Concrete_mixer_truck .
+
+            res_type_req:Concrete_mixer_truck 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 1 ;
+                process:relatesToResourceType res_type:Concrete_mixer_truck .
+
+            res_type:Concrete_mixer_truck
+                a resource:ResourceType.
+               process:hasResourceTypeRequirement res_type_req:Worker .
+
+            res_type_req:Worker 
+                a process:ResourceTypeRequirement ;
+                process:quantityNeeded 2 ;
+                process:relatesToResourceType res_type:Worker .
+
+            res_type:Worker
+                a resource:ResourceType.
