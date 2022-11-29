@@ -15,11 +15,13 @@
           "resource_list":[
              {
                 "resource_id":"4",
-                "quantity_needed":1
+                "quantity_needed":1,
+                "name":"Excavator"
              },
              {
                 "resource_id":"8",
-                "quantity_needed":1
+                "quantity_needed":1,
+                "name":"Worker"
              }
           ],
           "zone":"22O7WvOu1F3RpVxpkqDC6M"
@@ -37,7 +39,8 @@
           "resource_list":[
              {
                 "resource_id":"8",
-                "quantity_needed":1
+                "quantity_needed":1,
+                "name":"Worker"
              }
           ],
           "zone":"22O7WvOu1F3RpVxpkqDC6M"
@@ -55,15 +58,18 @@
           "resource_list":[
              {
                 "resource_id":"1",
-                "quantity_needed":1
+                "quantity_needed":1,
+                "name":"Truck_mounted_concrete_boom_pump"
              },
              {
                 "resource_id":"2",
-                "quantity_needed":1
+                "quantity_needed":1,
+                "name":"Concrete_mixer_truck"
              },
              {
                 "resource_id":"8",
-                "quantity_needed":2
+                "quantity_needed":2,
+                "name":"Worker"
              }
           ],
           "zone":"22O7WvOu1F3RpVxpkqDC6M"
