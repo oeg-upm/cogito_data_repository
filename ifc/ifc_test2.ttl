@@ -5259,3 +5259,5 @@ element:159530  a           beo:Slab , bot:Element ;
         props:hasArea            "1.44"^^xsd:double ;
         props:hasCompressedGuid  "01U2Ox69TF78CjGAzXHAIv" ;
         props:hasVolume          "1.728"^^xsd:double .
+
+https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/ifc_test2.ttl
