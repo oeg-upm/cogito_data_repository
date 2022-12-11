@@ -1,0 +1,331 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+
+shape:Project
+    a               sh:NodeShape ;
+    rdfs:label      "Project" ;
+    sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+    sh:name         "Project" ;
+	sh:nodeKind     sh:IRI ;
+    sh:property     shape:isRelatedToProcess, shape:identifier, shape:title ;
+    sh:stem         project: ;
+	sh:targetClass  facility:Project .
+
+shape:Process
+	a               sh:NodeShape ;
+	rdfs:label      "As-planned Original Process" ;
+    sh:description  "An initial planned process" ;
+    sh:name         "As-planned Original Process" ;
+	sh:nodeKind     sh:IRI ;
+	sh:property     shape:identifier, shape:title, shape:hasTask, shape:hasWorkOrder, shape:involvesResourceType ;
+    sh:stem        process_data: ;
+	sh:targetClass  process:Process .
+
+shape:Task
+	a               sh:NodeShape ;
+	rdfs:label      "Task" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Task" ;
+	sh:nodeKind     sh:IRI ;
+	sh:property     shape:identifier, shape:title, shape:hasAssignedResource, shape:hasResourceTypeRequirement, shape:plannedStartDate, shape:plannedEndDate ;
+    sh:stem         task: ;
+	sh:targetClass  process:Task .
+
+shape:TrackingTag
+    a               sh:NodeShape ;
+    rdfs:label      "Tracking Tag" ;
+    sh:description  "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location" ;
+    sh:name         "Tracking Tag" ;
+	sh:nodeKind     sh:IRI ;
+    sh:stem         tracking_tag: ;
+	sh:targetClass  iot:TrackingTag .
+
+shape:Resource
+    a               sh:NodeShape ;
+    rdfs:label      "Resource" ;
+    sh:description  "A source of supply, support, or aid, especially one that can be readily drawn upon when needed" ;
+    sh:name         "Resource" ;
+	sh:nodeKind     sh:IRI ;
+	sh:property     shape:hasTrackingTag, shape:belongsToType, shape:identifier, shape:email ;
+    sh:stem         resource_data: ;
+	sh:targetClass  resource:Resource .
+
+shape:WorkOrder
+    a               sh:NodeShape ;
+    rdfs:label      "Work Order" ;
+    sh:description  "A command or instruction authorizing specific work, repairs, etc., to be done" ;
+    sh:name         "Work Order" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:identifier, shape:hasMainProvider, shape:belongsToProcess, shape:hasComponentTask ;
+    sh:stem         work_order: ;
+    sh:targetClass  process:WorkOrder .
+
+shape:Element
+    a               sh:NodeShape ;
+    rdfs:label      "Element" ;
+    sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+    sh:name         "Element" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:isControlledByTask, shape:hasImage, shape:identifier, shape:title ;
+    sh:stem         element: ;
+    sh:targetClass  facility:Element .
+
+shape:ResourceTypeRequirement
+    a               sh:NodeShape ;
+    rdfs:label      "Resource Type Requirement" ;
+    sh:description  "An entity that includes the requitrments that a task has pertaining a resource type" ;
+    sh:name         "Resource Type Requirement" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:quantityNeeded, shape:relatesToResourceType ;
+    sh:stem         res_type_req: ;
+    sh:targetClass  process:ResourceTypeRequirement .
+
+shape:ResourceType
+    a               sh:NodeShape ;
+    rdfs:label      "Resource Type" ;
+    sh:description  "The kind of resources assigned to a process:Task or involved in a process:Process" ;
+    sh:name         "Resource Type" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasResourceTypeRequirement, shape:identifier, shape:title, shape:costPerHour, shape:maxUnit ;
+    sh:stem         res_type: ;
+    sh:targetClass  resource:ResourceType .
+
+shape:identifier
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "identifier" ;
+    sh:name           "identifier" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path           dcterms:identifier .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path           dcterms:title .
+
+shape:isRelatedToProcess
+    a               sh:PropertyShape ;
+    rdfs:label      "is related to process" ;
+    sh:class        process:Process ;
+    sh:description  "A property that relates an entity (especially a facility:Project) to its processes" ;
+    sh:name         "is related to process" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         process_data: ;
+    sh:path         process:isRelatedToProcess .
+
+shape:hasTask
+    a               sh:PropertyShape ;
+    rdfs:label      "has task" ;
+    sh:class        process:Task ;
+    sh:description  "A property that relates an entity (especially a process:Process) to the tasks it involves" ;
+    sh:name         "has task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         task: ;
+    sh:path         process:hasTask .
+
+shape:hasWorkOrder
+    a               sh:PropertyShape ;
+    rdfs:label      "has work order" ;
+    sh:class        process:WorkOrder ;
+    sh:description  "A property that relates an entity (especially a process:Process) to the work orders it contains" ;
+    sh:name         "has work order" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         work_order: ;
+    sh:path         process:hasWorkOrder .
+
+shape:hasAssignedResource
+    a               sh:PropertyShape ;
+    rdfs:label      "has assigned resource" ;
+    sh:class        resource:Resource ;
+    sh:description  "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+    sh:name         "has assigned resource" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         resource_data: ;
+    sh:path         resource:hasAssignedResource .
+
+shape:hasResourceTypeRequirement
+    a               sh:PropertyShape ;
+    rdfs:label      "has resource type requirement" ;
+    sh:class        process:ResourceTypeRequirement ;
+    sh:description  "A property that relates an entity (especially a process:Task) to its requirements of resource types:" ;
+    sh:name         "has resource type requirement" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         res_type_req: ;
+    sh:path         process:hasResourceTypeRequirement .
+
+shape:hasTrackingTag
+    a               sh:PropertyShape ;
+    rdfs:label      "has tracking tag" ;
+    sh:class        iot:TrackingTag ;
+    sh:description  "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" ;
+    sh:name         "has tracking tag" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         tracking_tag: ;
+    sh:path         process:hasTrackingTag .
+
+shape:belongsToType
+    a               sh:PropertyShape ;
+    rdfs:label      "belongs to resource type" ;
+    sh:class        resource:ResourceType ;
+    sh:description  "A property that relates a resource:Resource to its type" ;
+    sh:name         "belongs to resource type" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         res_type: ;
+    sh:path         resource:belongsToResourceType .
+
+shape:hasMainProvider
+    a               sh:PropertyShape ;
+    rdfs:label      "has main provider" ;
+    sh:class        resource:Worker ;
+    sh:description  "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+    sh:name         "has main provider" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         resource_data: ;
+    sh:path         process:hasMainProvider .
+
+shape:belongsToProcess
+    a               sh:PropertyShape ;
+    rdfs:label      "belongs to process" ;
+    sh:class        process:Process ;
+    sh:description  "A property that relates an entity (especially a process:Task) to the process:Process it belongs to" ;
+    sh:name         "belongs to process" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         process_data: ;
+    sh:path         process:belongsToProcess .
+
+shape:hasComponentTask
+    a               sh:PropertyShape ;
+    rdfs:label      "has component task" ;
+    sh:class        process:Task ;
+    sh:description  "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+    sh:name         "has component task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         task: ;
+    sh:minCount     1 ;
+    sh:path         process:hasComponentTask .
+
+shape:isControlledByTask
+    a               sh:PropertyShape ;
+    rdfs:label      "is controlled by task" ;
+    sh:class        process:Task ;
+    sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
+    sh:name         "is controlled by task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         task: ;
+    sh:path         process:isControlledByTask .
+
+shape:hasImage
+    a               sh:PropertyShape ;
+    rdfs:label      "has image" ;
+    sh:description  "A property that relates an entity (especially a facility:Element) to the iot:Image it has" ;
+    sh:name         "has image" ;
+    sh:minCount     1 ;
+    sh:nodeKind     sh:IRI ;
+    sh:path         facility:hasImage .
+
+shape:relatesToResourceType
+    a               sh:PropertyShape ;
+    rdfs:label      "relates to resource type" ;
+    sh:description  "A property that relates an entity (especially a process:ResourceTypeRequirement) to the resource type it refers to" ;
+    sh:name         "relates to resource type" ;
+    sh:nodeKind     sh:IRI ;
+    sh:stem         res_type: ;
+    sh:path         process:relatesToResourceType .
+
+shape:plannedStartDate
+    a               sh:PropertyShape ;
+    rdfs:label      "planned start date"  ;
+    sh:datatype     xsd:dateTime ;
+    sh:description  "A property indicating the planned start date of an entity" ;
+    sh:name         "planned start date" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         process:plannedStartDate ;
+    sh:lessThan     process:plannedEndDate ;
+    sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+shape:plannedEndDate
+    a               sh:PropertyShape ;
+    rdfs:label      "planned end date" ;
+    sh:datatype     xsd:dateTime ;
+    sh:description  "A property indicating the planned end date of an entity" ;
+    sh:name         "planned end date" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         process:plannedEndDate ;
+    sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+shape:email
+    a               sh:PropertyShape ;
+    rdfs:label      "email" ;
+    sh:description  "Property indicating the email of an entity (especially a resource:Worker)" ;
+    sh:name         "email" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         resource:email .
+
+shape:quantityNeeded
+    a               sh:PropertyShape ;
+    rdfs:label      "quantity needed" ;
+    sh:description  "A property indicating the needed quantity of an entity" ;
+    sh:name         "quantity needed" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:lessThanOrEquals  resource:maxUnit ;
+    sh:path         process:quantityNeeded .
+
+shape:costPerHour
+    a               sh:PropertyShape ;
+    rdfs:label      "cost per hour" ;
+    sh:description  "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" ;
+    sh:name         "cost per hour" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         resource:costPerHour .
+
+shape:maxUnit
+    a               sh:PropertyShape ;
+    rdfs:label      "maximum number of units" ;
+    sh:description  "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;
+    sh:name         "maximum number of units" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         resource:maxUnit .

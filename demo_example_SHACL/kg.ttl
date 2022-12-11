@@ -4,47 +4,87 @@
 @prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
 @prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
 @prefix process2: <http://data.cogito.iot.linkeddata.es/resources/process/> .
 @prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
 @prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
 @prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
 
 project:079637bb-87d5-4fef-9704-d556364d90ba
-    a facility:Project ;
-    process:isRelatedToProcess process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
-    dcterms:identifier '079637bb-87d5-4fef-9704-d556364d90ba'^^<http://www.w3.org/2001/XMLSchema#string> ;
-    dcterms:title "Project test 1" .
+    a   facility:Project ;
+    process:isRelatedToProcess  process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
+    dcterms:identifier          "079637bb-87d5-4fef-9704-d556364d90ba"^^xsd:string ;
+    dcterms:title               "Project test 1"^^xsd:string .
 
 process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28
-    a process:Process ;
-    dcterms:identifier 'FE090C7C-7AEC-42FE-9452-AD0AA8643D28'^^<http://www.w3.org/2001/XMLSchema#string> ;
-    process:hasWorkOrder work_order:2985732-49853425-38954, work_order:2985732-49853425-34095 .
+    a   process:Process ;
+    dcterms:identifier      "FE090C7C-7AEC-42FE-9452-AD0AA8643D28"^^xsd:string ;
+    dcterms:title           "rst_advanced_sample_project_MSP2010.xml"^^xsd:string;
+    process:hasTask         task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8 ;
+    process:involvesResourceType res_type:Excavator, res_type:Worker ;
+    process:hasWorkOrder    work_order:2985732-49853425-38954 .
 
 tracking_tag:e9b870d9-5058-4d4a-802b-3457279524e0
-    a iot:TrackingTag;
-    resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
+    a   iot:TrackingTag, iot:HumanTag ;
+    resource:belongsToProject   project:079637bb-87d5-4fef-9704-d556364d90ba .
 
 resource_data:e9b870d9-5058-4d4a-802b-3457279524e0
-    a resource:Worker ;
+    a   resource:Worker ;
     resource:hasTrackingTag tracking_tag:e9b870d9-5058-4d4a-802b-3457279524e0;
-    dcterms:identifier 'e9b870d9-5058-4d4a-802b-3457279524e0'^^<http://www.w3.org/2001/XMLSchema#string>;
-    resource:email 'worker_e9b870d9-5058-4d4a-802b-3457279524e0@example.com'^^<http://www.w3.org/2001/XMLSchema#string>;
-    resource:belongsToType resource_type:Worker .
+    dcterms:identifier      "e9b870d9-5058-4d4a-802b-3457279524e0"^^xsd:string;
+    resource:email          <worker_e9b870d9-5058-4d4a-802b-3457279524e0@example.com> ;
+    resource:belongsToType  res_type:Worker .
 
 work_order:2985732-49853425-38954
-    a process:WorkOrder ;
-    dcterms:identifier '2985732-49853425-38954'^^<http://www.w3.org/2001/XMLSchema#string> ;
-    process:belongsToProcess process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
-    process:hasMainProvider resource_data:e9b870d9-5058-4d4a-802b-3457279524e0 ;
-    process:hasComponentTask task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8 .
+    a   process:WorkOrder ;
+    dcterms:identifier          "2985732-49853425-38954"^^xsd:string ;
+    process:belongsToProcess    process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
+    process:hasMainProvider     resource_data:e9b870d9-5058-4d4a-802b-3457279524e0 ;
+    process:hasComponentTask    task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8 .
 
 element:3954 
-        a   beo:Column , bot:Element, facility:Element ;
-        facility:hasImage   ''^^<http://www.w3.org/2001/XMLSchema#string> ;
-        rdfs:label  "M_Concrete-Round-Column:450mm:122512" ;
-        const:involvesTask  task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8 ;
-        props:hasCompressedGuid "18YHwga450Mw4Fy6M5t_8h" ;
-        props:hasVolume "0.556638970864849"^^xsd:double .
+    a   beo:Column , bot:Element, facility:Element ;
+    facility:hasImage   <https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/images/image_test.jpg> ;
+    dcterms:title          "M_Concrete-Round-Column:450mm:122512" ;
+    process:isControlledByTask task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8 ;
+    dcterms:identifier "18YHwga450Mw4Fy6M5t_8h"^^xsd:string ;
+    props:hasVolume     "0.556638970864849"^^xsd:double .
+
+task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8
+    a   process:Task ;
+    dcterms:identifier  "8"^^xsd:string ;
+    dcterms:title       "Beams and Floor Slab (Floor 1)"^^xsd:string ;
+    process:plannedStartDate    "2010-06-07T08:00:00"^^xsd:dateTime ;
+    process:plannedEndDate      "2010-06-11T17:00:00"^^xsd:dateTime ;
+    process:hasAssignedResource resource_data:e9b870d9-5058-4d4a-802b-3457279524e0 ;
+    process:hasResourceTypeRequirement  res_type_req:Excavator .
+
+res_type_req:Excavator
+    a   process:ResourceTypeRequirement ;
+    process:quantityNeeded  1 ;
+    process:relatesToResourceType   res_type:Excavator .
+
+res_type:Excavator
+    a   resource:ResourceType, resource:EquipmentType ;
+    dcterms:identifier      "4"^^xsd:string ;
+    dcterms:title           "Excavator"^^xsd:string ;
+    resource:costPerHour    1500 ;
+    resource:maxUnit        2 .
+
+res_type:Worker
+    a   resource:ResourceType, resource:WorkerRole ;
+    dcterms:identifier      "8"^^xsd:string ;
+    dcterms:title           "Worker"^^xsd:string ;
+    resource:costPerHour    200 ;
+    resource:maxUnit        10 .
