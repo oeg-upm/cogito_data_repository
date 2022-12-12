@@ -307,8 +307,34 @@ shape:quantityNeeded
     sh:nodeKind     sh:Literal ;
     sh:minCount     1 ;
     sh:maxCount     1 ;
-    sh:path         ( resource:ResourceType resource:maxUnit ) ;
-    sh:lessThanOrEquals resource:maxUnit .
+    sh:sparql [
+		a sh:SPARQLConstraint ;
+        sh:message "Max Unit must be greater than or equal to Quantity Needed";
+        sh:prefixes [
+            sh:declare [
+            sh:prefix "rdf" ;
+            sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            ],[
+            sh:prefix "rdfs" ;
+            sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            ],[
+            sh:prefix "process" ;
+            sh:namespace "https://cogito.iot.linkeddata.es/def/process#"^^xsd:anyURI ;
+            ],[
+            sh:prefix "resource" ;
+            sh:namespace "https://cogito.iot.linkeddata.es/def/resource#"^^xsd:anyURI ;
+            ]
+        ] ;
+        sh:select
+        """SELECT $this ?quantityNeeded ?maxUnit WHERE {
+                $this a process:ResourceTypeRequirement .
+                $this process:quantityNeeded ?quantityNeeded .
+                $this process:relatesToResourceType ?res_type .
+                ?res_type resource:maxUnit ?maxUnit .
+                FILTER  ( ! (?maxUnit >= ?quantityNeeded ))
+            }""" ;
+        ] ;
+    sh:path         process:quantityNeeded .
     
 
 shape:costPerHour
