@@ -307,8 +307,9 @@ shape:quantityNeeded
     sh:nodeKind     sh:Literal ;
     sh:minCount     1 ;
     sh:maxCount     1 ;
-    sh:lessThanOrEquals  resource:maxUnit ;
-    sh:path         process:quantityNeeded .
+    sh:path         ( resource:ResourceType resource:maxUnit ) ;
+    sh:lessThanOrEquals resource:maxUnit .
+    
 
 shape:costPerHour
     a               sh:PropertyShape ;

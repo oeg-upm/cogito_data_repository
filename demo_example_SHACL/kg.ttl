@@ -68,12 +68,17 @@ task:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28_8
     process:plannedStartDate    "2010-06-07T08:00:00"^^xsd:dateTime ;
     process:plannedEndDate      "2010-06-11T17:00:00"^^xsd:dateTime ;
     process:hasAssignedResource resource_data:e9b870d9-5058-4d4a-802b-3457279524e0 ;
-    process:hasResourceTypeRequirement  res_type_req:Excavator .
+    process:hasResourceTypeRequirement  res_type_req:Excavator, res_type_req:Worker .
 
 res_type_req:Excavator
     a   process:ResourceTypeRequirement ;
     process:quantityNeeded  1 ;
     process:relatesToResourceType   res_type:Excavator .
+
+res_type_req:Worker
+    a   process:ResourceTypeRequirement ;
+    process:quantityNeeded  2 ;
+    process:relatesToResourceType   res_type:Worker .
 
 res_type:Excavator
     a   resource:ResourceType, resource:EquipmentType ;
