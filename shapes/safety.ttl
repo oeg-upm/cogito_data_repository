@@ -1,0 +1,80 @@
+@prefix :      <https://cogito.iot.linkeddata.es/safety#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#7e0af21cc33b361ff89bb7f4dbd441a2> , <https://astrea.linkeddata.es/shapes#9b5dea0c5a91b5b19247fe63fded4b90> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> , <https://astrea.linkeddata.es/shapes#168358958b05e5a5c28047737ce0e3fa> , <https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1> , <https://astrea.linkeddata.es/shapes#4bc459c037de0d8e89f34918f2e3616d> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/01350035052> .
+
+<https://astrea.linkeddata.es/shapes#9b5dea0c5a91b5b19247fe63fded4b90>
+        a               sh:PropertyShape ;
+        rdfs:label      "mitigation" , "Property indicating a mitigation (for a risk)" ;
+        sh:description  "Property indicating a mitigation (for a risk)" ;
+        sh:name         "mitigation" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :mitigation .
+
+<https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Zone" ;
+        sh:description  "An entity used to represent zones used by the Health and Safety module" ;
+        sh:name         "Construction Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#ConstructionZone> .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/report/01350035052>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/safety/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms> ;
+        rdfs:label        "identifier" ;
+        sh:name           "identifier" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#168358958b05e5a5c28047737ce0e3fa>
+        a               sh:PropertyShape ;
+        rdfs:label      "severity" , "Property indicating de severity of a safety hazard" ;
+        sh:description  "Property indicating de severity of a safety hazard" ;
+        sh:name         "severity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :severity .
+
+<https://astrea.linkeddata.es/shapes#4bc459c037de0d8e89f34918f2e3616d>
+        a               sh:NodeShape ;
+        rdfs:label      "Safety Information" ;
+        sh:description  "Data regarding the safety" ;
+        sh:name         "Safety Information" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :SafetyInformation .
+
+<https://astrea.linkeddata.es/shapes#7e0af21cc33b361ff89bb7f4dbd441a2>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to zone" , "Property that relates an entity (especially a safety:SafetyInformation) to a facility:ConstructionZone" ;
+        sh:description  "Property that relates an entity (especially a safety:SafetyInformation) to a facility:ConstructionZone" ;
+        sh:name         "refers to zone" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :refersToZone .

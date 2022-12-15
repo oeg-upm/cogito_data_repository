@@ -1,0 +1,614 @@
+@prefix :      <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#ed5729495b0f8778780de4f79e464539>
+        a               sh:PropertyShape ;
+        rdfs:label      "involves resource type" , "A property that relates an entity (especially a process:Process) to the resource types it includes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#ResourceType> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the resource types it includes" ;
+        sh:name         "involves resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :involvesResourceType .
+
+<https://astrea.linkeddata.es/shapes#c8e8609e189c63bdd456a111d854855e>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned early start date" , "A property indicating the earliest  date an entity can start" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the earliest  date an entity can start" ;
+        sh:name         "planned early start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedEarlyStartDate .
+
+<https://astrea.linkeddata.es/report/0409674493>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/process/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#1914cc5553d33255b5fe7f9c6734a355>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to project" , "A property that relates an entity (especially a process:Process) to its facility:Project" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Project> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to its facility:Project" ;
+        sh:name         "is related to project" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRelatedToProject .
+
+<https://astrea.linkeddata.es/shapes#37e704097f0f7b140d6f732956826be8>
+        a               sh:PropertyShape ;
+        rdfs:label      "repairs element" , "A property that relates a process:Task to the facility:Element it repairs" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates a process:Task to the facility:Element it repairs" ;
+        sh:name         "repairs element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :repairsElelment .
+
+<https://astrea.linkeddata.es/shapes#1e4b015c13d74edd082668e96a799cb3>
+        a               sh:NodeShape ;
+        rdfs:label      "As-planned Original Process" ;
+        sh:description  "An initial planned process" ;
+        sh:name         "As-planned Original Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :AsPlannedOriginalProcess .
+
+<https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187>
+        a               sh:NodeShape ;
+        rdfs:label      "Project" ;
+        sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+        sh:name         "Project" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Project> .
+
+<https://astrea.linkeddata.es/shapes#5373496c4f0968c7c4a1e1ee67317771>
+        a               sh:PropertyShape ;
+        rdfs:label      "has assigned resource" , "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#Resource> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+        sh:name         "has assigned resource" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource> .
+
+<https://astrea.linkeddata.es/shapes#087b9f263a6f690ac596f7600489829e>
+        a               sh:NodeShape ;
+        rdfs:label      "Work Order" ;
+        sh:description  "A command or instruction authorizing specific work, repairs, etc., to be done" ;
+        sh:name         "Work Order" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :WorkOrder .
+
+<https://astrea.linkeddata.es/shapes#139e4e244b43fa819f20f28632cfd6fa>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "A property indicating the status of an entity (especially a process:WorkOrder)" ;
+        sh:description  "A property indicating the status of an entity (especially a process:WorkOrder)" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :status .
+
+<https://astrea.linkeddata.es/shapes#bab1a10ce983f31b5947e4974380cc44>
+        a               sh:PropertyShape ;
+        rdfs:label      "progress" , "A property indicating the progress of an entity (especially a process:Task)" ;
+        sh:datatype     xsd:float ;
+        sh:description  "A property indicating the progress of an entity (especially a process:Task)" ;
+        sh:name         "progress" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :progress ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#0221f2d012ca60ff6dd4002f9393bb0c>
+        a               sh:NodeShape ;
+        rdfs:label      "As-is Process" ;
+        sh:description  "A process in its current condition" ;
+        sh:name         "As-is Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :AsIsProcess .
+
+<https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource Type" ;
+        sh:description  "The kind of resources assigned to a process:Task or involved in a process:Process" ;
+        sh:name         "Resource Type" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
+
+<https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource" ;
+        sh:description  "A source of supply, support, or aid, especially one that can be readily drawn upon when needed" ;
+        sh:name         "Resource" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Resource> .
+
+<https://astrea.linkeddata.es/shapes#bc1d65c9335ee61c26e6ba87318c6468>
+        a               sh:PropertyShape ;
+        rdfs:label      "has cost" , "A property that relates an entity (especially a process:Task or a process:Process) to its cost" ;
+        sh:class        :Cost ;
+        sh:description  "A property that relates an entity (especially a process:Task or a process:Process) to its cost" ;
+        sh:name         "has cost" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasCost .
+
+<https://astrea.linkeddata.es/shapes#eace9e05165dd048bd5d220effd61c53>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to resource type" , "A property that relates a resource:Resource to its type" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#ResourceType> ;
+        sh:description  "A property that relates a resource:Resource to its type" ;
+        sh:name         "belongs to resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#belongsToResourceType> .
+
+<https://astrea.linkeddata.es/shapes#3502f1ff9843ffa5ae37c038eb6b7d8d>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned early end date" , "A property indicating the earliest  date an entity can end" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the earliest  date an entity can end" ;
+        sh:name         "planned early end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedEarlyEndDate .
+
+<https://astrea.linkeddata.es/shapes#01109b8cf1846598baf66150280355e0>
+        a               sh:NodeShape ;
+        rdfs:label      "As-planned Enriched Process" ;
+        sh:description  "A planned process after being enriched" ;
+        sh:name         "As-planned Enriched Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :AsPlannedEnrichedProcess .
+
+<https://astrea.linkeddata.es/shapes#368f8b165056794dc86f4b3c92e65801>
+        a               sh:NodeShape ;
+        rdfs:label      "Task" ;
+        sh:description  "A piece of work, which is performed in a process:Process" ;
+        sh:name         "Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91> ;
+        sh:targetClass  :Task .
+
+<https://astrea.linkeddata.es/shapes#abcbc6c65cb325168fe715e373960e7c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "creator" ;
+        sh:name           "creator" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/creator> .
+
+<https://astrea.linkeddata.es/shapes#8433f3bd707b13982d67d48077c56c93>
+        a               sh:PropertyShape ;
+        rdfs:label      "actual start date" , "A property indicating the actual start date of an entity" ;
+        sh:description  "A property indicating the actual start date of an entity" ;
+        sh:name         "actual start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :actualStartDate .
+
+<https://astrea.linkeddata.es/shapes#5de58b9e4cdad68371da5bd5ebff2906>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource Type Requirement" ;
+        sh:description  "An entity that includes the requitrments that a task has pertaining a resource type" ;
+        sh:name         "Resource Type Requirement" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :ResourceTypeRequirement .
+
+<https://astrea.linkeddata.es/shapes#7990c32d7287019c22f2b80cd6372da4>
+        a               sh:NodeShape ;
+        rdfs:label      "Geometric Quality Task" ;
+        sh:description  "A task related to the geometric quaity domain" ;
+        sh:name         "Geometric Quality Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :GeometricQualityTask .
+
+<https://astrea.linkeddata.es/shapes#d7e41a30c21ecec35d84add6350ffc47>
+        a               sh:PropertyShape ;
+        rdfs:label      "quantity needed" , "A property indicating the needed quantity of an entity" ;
+        sh:description  "A property indicating the needed quantity of an entity" ;
+        sh:name         "quantity needed" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :quantityNeeded .
+
+<https://astrea.linkeddata.es/shapes#6c6eb8d8a82af4ea6f752e1e5e5eb4ae>
+        a               sh:PropertyShape ;
+        rdfs:label      "removes element" , "A property that relates a process:Task to the facility:Element it removes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates a process:Task to the facility:Element it removes" ;
+        sh:name         "removes element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :removesElement .
+
+<https://astrea.linkeddata.es/shapes#b46053099880c65381d4c5a1f62e4931>
+        a               sh:NodeShape ;
+        rdfs:label      "Process" ;
+        sh:description  "A series of actions aimed at accomplishing some result (in this case, related to a facility:Project)" ;
+        sh:name         "Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Process .
+
+<https://astrea.linkeddata.es/shapes#ce4e9584ec3d179c50d601ea8db4c59b>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned start date" , "A property indicating the planned start date of an entity" ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "A property indicating the planned start date of an entity" ;
+        sh:name         "planned start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedStartDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#5fa67d9ef0f48e74dc88194a79e20f26>
+        a               sh:NodeShape ;
+        rdfs:label      "Safety Task" ;
+        sh:description  "A task related to the safety domain" ;
+        sh:name         "Safety Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :SatetyTask .
+
+<https://astrea.linkeddata.es/shapes#9f7a28bb9c5d06a88580e98661040c77>
+        a               sh:PropertyShape ;
+        rdfs:label      "controls element" , "A property that relates an entity (especially a process:Task) to the facility:Element it controls" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it controls" ;
+        sh:name         "controls element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :controlsElement .
+
+<https://astrea.linkeddata.es/shapes#d4610d417a6ce29cd41a960551db9ef5>
+        a               sh:PropertyShape ;
+        rdfs:label      "priority" , "A property indicating the priority of an entity" ;
+        sh:datatype     xsd:integer ;
+        sh:description  "A property indicating the priority of an entity" ;
+        sh:name         "priority" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :priority ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#fb5edd3b022882e7eb6a0ede4e2a909e>
+        a               sh:PropertyShape ;
+        rdfs:label      "has component task" , "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+        sh:name         "has component task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasComponentTask .
+
+<https://astrea.linkeddata.es/shapes#06cd35a991a1d383c67b3934f9fb142d>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to process" , "A property that relates an entity (especially a process:Task) to the process:Process it belongs to" ;
+        sh:class        :Process ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the process:Process it belongs to" ;
+        sh:name         "belongs to process" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :belongsToProcess .
+
+<https://astrea.linkeddata.es/shapes#3619dcd1ba77e1bef244c4abbef59e7f>
+        a               sh:PropertyShape ;
+        rdfs:label      "amount" , "A property indicating the amount of an entity" ;
+        sh:datatype     xsd:float ;
+        sh:description  "A property indicating the amount of an entity" ;
+        sh:name         "amount" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :amount ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#d98b840e777a6cfb282ed4fd76abe6f4>
+        a               sh:PropertyShape ;
+        rdfs:label      "has resource type requirement" , "Aproperty that relates an entity (especially a process:Task) to its requirements of resource types:" ;
+        sh:class        :ResourceTypeRequirement ;
+        sh:description  "Aproperty that relates an entity (especially a process:Task) to its requirements of resource types:" ;
+        sh:name         "has resource type requirement" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasResourceTypeRequirement .
+
+<https://astrea.linkeddata.es/shapes#e7bfad223a5d170819fc688b4db36f99>
+        a               sh:PropertyShape ;
+        rdfs:label      "adds element" , "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
+        sh:name         "adds element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :addsElement .
+
+<https://astrea.linkeddata.es/shapes#9134b5fc4567260bbf012e7d1c614d67>
+        a               sh:PropertyShape ;
+        rdfs:label      "currency symbol" , "A property indicating the currency symbol of an entity (especially a process:UnitOfCurrency)" ;
+        sh:description  "A property indicating the currency symbol of an entity (especially a process:UnitOfCurrency)" ;
+        sh:name         "currency symbol" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :currencySymbol .
+
+<https://astrea.linkeddata.es/shapes#bf96a28cf3a5fad8989b32f39f22f522>
+        a               sh:PropertyShape ;
+        rdfs:label      "is removed by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that removes it" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that removes it" ;
+        sh:name         "is removed by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRemovedByTask .
+
+<https://astrea.linkeddata.es/shapes#64ea1f13f6b8f9e615b74504d8440d94>
+        a               sh:PropertyShape ;
+        rdfs:label      "is added by task" , "A property that relates an entity (especially a  facility:Element) to the process:Task  that creates it" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a  facility:Element) to the process:Task  that creates it" ;
+        sh:name         "is added by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isAddedByTask .
+
+<https://astrea.linkeddata.es/shapes#967f987e15e3bd62af601655742833a8>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Task" ;
+        sh:description  "A task related to a construction domain" ;
+        sh:name         "Construction Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :ConstructionTask .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "identifier" ;
+        sh:name           "identifier" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#e668f6b32baad9b7482380056b25512d>
+        a               sh:NodeShape ;
+        rdfs:label      "Unit of Currency" ;
+        sh:description  "The currency used to measure a process:Cost" ;
+        sh:name         "Unit of Currency" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :UnitOfCurrency .
+
+<https://astrea.linkeddata.es/shapes#76b55914acb958282e74ca727fa1bd13>
+        a               sh:PropertyShape ;
+        rdfs:label      "time step" , "A property indicating the time step of an entity (especially a process:Process)" ;
+        sh:description  "A property indicating the time step of an entity (especially a process:Process)" ;
+        sh:name         "time step" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :timeStep .
+
+<https://astrea.linkeddata.es/shapes#d4708507e57027690edfd75e5f9c62c9>
+        a               sh:PropertyShape ;
+        rdfs:label      "is repaired by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that repairs it" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that repairs it" ;
+        sh:name         "is repaired by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRepairedByTask .
+
+<https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510>
+        a               sh:NodeShape ;
+        rdfs:label      "Worker" ;
+        sh:description  "A human resource that works in a project (especially performing a process:Task)" ;
+        sh:name         "Worker" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Worker> .
+
+<https://astrea.linkeddata.es/shapes#ddcabce9d7ae5a7e1056590219d9b439>
+        a               sh:PropertyShape ;
+        rdfs:label      "has task" , "A property that relates an entity (especially a process:Process) to the tasks it involves" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the tasks it involves" ;
+        sh:name         "has task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasTask .
+
+<https://astrea.linkeddata.es/shapes#8cf57837086fb4dd966113542ef9b330>
+        a               sh:PropertyShape ;
+        rdfs:label      "relates to resource type" , "A property that relates an entity (especially a process:ResourceTypeRequirement) to the resource type it refers to" ;
+        sh:description  "A property that relates an entity (especially a process:ResourceTypeRequirement) to the resource type it refers to" ;
+        sh:name         "relates to resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :relatesToResourceType .
+
+<https://astrea.linkeddata.es/shapes#c1a0fd5ca62b0a71c8b40a0364cdde4e>
+        a                sh:PropertyShape ;
+        rdfs:label       "total float" , "A property indicating the number of days an entity (especially a task) can be delayed" ;
+        sh:datatype      xsd:nonNegativeInteger ;
+        sh:description   "A property indicating the number of days an entity (especially a task) can be delayed" ;
+        sh:minInclusive  0 ;
+        sh:name          "total float" ;
+        sh:nodeKind      sh:Literal ;
+        sh:path          :totalFloat ;
+        sh:pattern       "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#60bf39714069accef3e81542ed6f5176>
+        a               sh:PropertyShape ;
+        rdfs:label      "is critical" , "A property indicating if an entity (especially a task) is critical" ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "A property indicating if an entity (especially a task) is critical" ;
+        sh:name         "is critical" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :isCritical ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#af2e63ddbbfc6f76bb498ee0bd798104>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned end date" , "A property indicating the planned end date of an entity" ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "A property indicating the planned end date of an entity" ;
+        sh:name         "planned end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedEndDate ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#2ad57886640d5195c5d4362d81d9cfcb>
+        a               sh:PropertyShape ;
+        rdfs:label      "is measured in" , "A property that relates an entity (especially a process:Cost) to the currency it is measured in" ;
+        sh:class        :UnitOfCurrency ;
+        sh:description  "A property that relates an entity (especially a process:Cost) to the currency it is measured in" ;
+        sh:name         "is measured in" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isMeasuredIn .
+
+<https://astrea.linkeddata.es/shapes#8a477cd76f4a28afbe02c6416fb48923>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sub-task" , "A property that relates an entity (especially a process:Task) to the tasks it includes" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the tasks it includes" ;
+        sh:name         "has sub-task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasSubTask .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#8433f3bd707b13982d67d48077c56c93> , <https://astrea.linkeddata.es/shapes#65dcbbbe8f92a8a723fa11c8ca4dc886> , <https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91> , <https://astrea.linkeddata.es/shapes#eace9e05165dd048bd5d220effd61c53> , <https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41> , <https://astrea.linkeddata.es/shapes#abcbc6c65cb325168fe715e373960e7c> , <https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187> , <https://astrea.linkeddata.es/shapes#bab1a10ce983f31b5947e4974380cc44> , <https://astrea.linkeddata.es/shapes#d98b840e777a6cfb282ed4fd76abe6f4> , <https://astrea.linkeddata.es/shapes#b46053099880c65381d4c5a1f62e4931> , <https://astrea.linkeddata.es/shapes#5744ae30a8a77fbac6b57d5ea027f772> , <https://astrea.linkeddata.es/shapes#0221f2d012ca60ff6dd4002f9393bb0c> , <https://astrea.linkeddata.es/shapes#bc1d65c9335ee61c26e6ba87318c6468> , <https://astrea.linkeddata.es/shapes#9f7a28bb9c5d06a88580e98661040c77> , <https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510> , <https://astrea.linkeddata.es/shapes#925e42c32e80d1fb57d19c374cd0864d> , <https://astrea.linkeddata.es/shapes#76b55914acb958282e74ca727fa1bd13> , <https://astrea.linkeddata.es/shapes#d4708507e57027690edfd75e5f9c62c9> , <https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883> , <https://astrea.linkeddata.es/shapes#64ea1f13f6b8f9e615b74504d8440d94> , <https://astrea.linkeddata.es/shapes#c1a0fd5ca62b0a71c8b40a0364cdde4e> , <https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362> , <https://astrea.linkeddata.es/shapes#368f8b165056794dc86f4b3c92e65801> , <https://astrea.linkeddata.es/shapes#5cfe2a7b1f6d00d6c381234cd59b3592> , <https://astrea.linkeddata.es/shapes#ff44aea2ac8000b51a8243cd2ecfe636> , <https://astrea.linkeddata.es/shapes#ce4e9584ec3d179c50d601ea8db4c59b> , <https://astrea.linkeddata.es/shapes#7990c32d7287019c22f2b80cd6372da4> , <https://astrea.linkeddata.es/shapes#048232ce891a949415f166d3e36aa426> , <https://astrea.linkeddata.es/shapes#8ddb01fe19e5849467c63b01acb43f4c> , <https://astrea.linkeddata.es/shapes#8a477cd76f4a28afbe02c6416fb48923> , <https://astrea.linkeddata.es/shapes#5fa67d9ef0f48e74dc88194a79e20f26> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> , <https://astrea.linkeddata.es/shapes#9134b5fc4567260bbf012e7d1c614d67> , <https://astrea.linkeddata.es/shapes#5373496c4f0968c7c4a1e1ee67317771> , <https://astrea.linkeddata.es/shapes#d4610d417a6ce29cd41a960551db9ef5> , <https://astrea.linkeddata.es/shapes#20a763b12226f595ed355e194823a9d7> , <https://astrea.linkeddata.es/shapes#06cd35a991a1d383c67b3934f9fb142d> , <https://astrea.linkeddata.es/shapes#5de58b9e4cdad68371da5bd5ebff2906> , <https://astrea.linkeddata.es/shapes#37e704097f0f7b140d6f732956826be8> , <https://astrea.linkeddata.es/shapes#2ad57886640d5195c5d4362d81d9cfcb> , <https://astrea.linkeddata.es/shapes#b6101ff1bda65c2ac403d08af9453515> , <https://astrea.linkeddata.es/shapes#6c6eb8d8a82af4ea6f752e1e5e5eb4ae> , <https://astrea.linkeddata.es/shapes#0b47ca783b387c8553e9a3d6b94e304c> , <https://astrea.linkeddata.es/shapes#e668f6b32baad9b7482380056b25512d> , <https://astrea.linkeddata.es/shapes#3619dcd1ba77e1bef244c4abbef59e7f> , <https://astrea.linkeddata.es/shapes#60bf39714069accef3e81542ed6f5176> , <https://astrea.linkeddata.es/shapes#139e4e244b43fa819f20f28632cfd6fa> , <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#e7bfad223a5d170819fc688b4db36f99> , <https://astrea.linkeddata.es/shapes#8cf57837086fb4dd966113542ef9b330> , <https://astrea.linkeddata.es/shapes#1914cc5553d33255b5fe7f9c6734a355> , <https://astrea.linkeddata.es/shapes#138ba88c1b524d03a6a7e4760e8e8083> , <https://astrea.linkeddata.es/shapes#ddcabce9d7ae5a7e1056590219d9b439> , <https://astrea.linkeddata.es/shapes#c8e8609e189c63bdd456a111d854855e> , <https://astrea.linkeddata.es/shapes#50dc3a9469d59d68d43e5fe360019298> , <https://astrea.linkeddata.es/shapes#01109b8cf1846598baf66150280355e0> , <https://astrea.linkeddata.es/shapes#af2e63ddbbfc6f76bb498ee0bd798104> , <https://astrea.linkeddata.es/shapes#967f987e15e3bd62af601655742833a8> , <https://astrea.linkeddata.es/shapes#f31288f45557f654fc2db4a369bebfa7> , <https://astrea.linkeddata.es/shapes#d7e41a30c21ecec35d84add6350ffc47> , <https://astrea.linkeddata.es/shapes#bf96a28cf3a5fad8989b32f39f22f522> , <https://astrea.linkeddata.es/shapes#e851ef8f3e3e05588c932534d25c093a> , <https://astrea.linkeddata.es/shapes#fb5edd3b022882e7eb6a0ede4e2a909e> , <https://astrea.linkeddata.es/shapes#3502f1ff9843ffa5ae37c038eb6b7d8d> , <https://astrea.linkeddata.es/shapes#087b9f263a6f690ac596f7600489829e> , <https://astrea.linkeddata.es/shapes#1e4b015c13d74edd082668e96a799cb3> , <https://astrea.linkeddata.es/shapes#ed5729495b0f8778780de4f79e464539> , <https://astrea.linkeddata.es/shapes#e3ef37989500f0e1d3a941dba1f5d09d> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0409674493> .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/shapes#8ddb01fe19e5849467c63b01acb43f4c>
+        a               sh:NodeShape ;
+        rdfs:label      "Cost" ;
+        sh:description  "An entity representing the cost of another entity" ;
+        sh:name         "Cost" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Cost .
+
+<https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91>
+        a               sh:PropertyShape ;
+        rdfs:label      "is executed after" , "A property that relates an entity (especially a process:Task) to the task that have to be executed before it" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the task that have to be executed before it" ;
+        sh:name         "is executed after" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isExecutedAfter .
+
+<https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362>
+        a               sh:NodeShape ;
+        rdfs:label      "Element" ;
+        sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+        sh:name         "Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Element> .
+
+<https://astrea.linkeddata.es/shapes#5744ae30a8a77fbac6b57d5ea027f772>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to process" , "A property that relates an entity (especially a facility:Project) to its processes" ;
+        sh:class        :Process ;
+        sh:description  "A property that relates an entity (especially a facility:Project) to its processes" ;
+        sh:name         "is related to process" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRelatedToProcess .
+
+<https://astrea.linkeddata.es/shapes#50dc3a9469d59d68d43e5fe360019298>
+        a               sh:PropertyShape ;
+        rdfs:label      "is controlled by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
+        sh:name         "is controlled by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isControlledByTask .
+
+<https://astrea.linkeddata.es/shapes#048232ce891a949415f166d3e36aa426>
+        a               sh:PropertyShape ;
+        rdfs:label      "has main provider" , "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#Worker> ;
+        sh:description  "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+        sh:name         "has main provider" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasMainProvider .
+
+<https://astrea.linkeddata.es/shapes#ff44aea2ac8000b51a8243cd2ecfe636>
+        a               sh:PropertyShape ;
+        rdfs:label      "currency code" , "A property indicating the currency code of an entity (especially a process:UnitOfCurrency)" ;
+        sh:description  "A property indicating the currency code of an entity (especially a process:UnitOfCurrency)" ;
+        sh:name         "currency code" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :currencyCode .
+
+<https://astrea.linkeddata.es/shapes#5cfe2a7b1f6d00d6c381234cd59b3592>
+        a               sh:PropertyShape ;
+        rdfs:label      "has work order" , "A property that relates an entity (especially a process:Process) to the work orders it contains" ;
+        sh:class        :WorkOrder ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the work orders it contains" ;
+        sh:name         "has work order" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasWorkOrder .
+
+<https://astrea.linkeddata.es/shapes#f31288f45557f654fc2db4a369bebfa7>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        <https://cogito.iot.linkeddata.es/def/created> ;
+        sh:name           <https://cogito.iot.linkeddata.es/def/created> ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/created> .
+
+<https://astrea.linkeddata.es/shapes#925e42c32e80d1fb57d19c374cd0864d>
+        a                sh:PropertyShape ;
+        rdfs:label       "A property indicating the minimal number of days doing a task takes" , "duration" ;
+        sh:datatype      xsd:nonNegativeInteger ;
+        sh:description   "A property indicating the minimal number of days doing a task takes" ;
+        sh:minInclusive  0 ;
+        sh:name          "duration" ;
+        sh:nodeKind      sh:Literal ;
+        sh:path          :duration ;
+        sh:pattern       "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#0b47ca783b387c8553e9a3d6b94e304c>
+        a               sh:PropertyShape ;
+        rdfs:label      "time window" , "A property indicating the time window of an entity (especially a process:Process)" ;
+        sh:description  "A property indicating the time window of an entity (especially a process:Process)" ;
+        sh:name         "time window" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :timeWindow .
+
+<https://astrea.linkeddata.es/shapes#e3ef37989500f0e1d3a941dba1f5d09d>
+        a               sh:PropertyShape ;
+        rdfs:label      "actual end date" , "A property indicating the actual end date of an entity" ;
+        sh:description  "A property indicating the actual end date of an entity" ;
+        sh:name         "actual end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :actualEndDate .
+
+<https://astrea.linkeddata.es/shapes#e851ef8f3e3e05588c932534d25c093a>
+        a               sh:PropertyShape ;
+        rdfs:label      "result" , "A property indicating the result of an entity (especially a process:Task)" ;
+        sh:description  "A property indicating the result of an entity (especially a process:Task)" ;
+        sh:name         "result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :result .
+
+<https://astrea.linkeddata.es/shapes#65dcbbbe8f92a8a723fa11c8ca4dc886>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned late start date" , "A property indicating the latest  date an entity can start" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the latest  date an entity can start" ;
+        sh:name         "planned late start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedLateStartDate .
+
+<https://astrea.linkeddata.es/shapes#138ba88c1b524d03a6a7e4760e8e8083>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned late end date" , "A property indicating the latest  date an entity can end" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the latest  date an entity can end" ;
+        sh:name         "planned late end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :plannedLateEndDate .
+
+<https://astrea.linkeddata.es/shapes#b6101ff1bda65c2ac403d08af9453515>
+        a               sh:PropertyShape ;
+        rdfs:label      "is sub-task of" , "A property that relates an entity (especially a process:Task) to the task it belongs to" ;
+        sh:class        :Task ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the task it belongs to" ;
+        sh:name         "is sub-task of" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isSubTaskOf .
+
+<https://astrea.linkeddata.es/shapes#20a763b12226f595ed355e194823a9d7>
+        a               sh:NodeShape ;
+        rdfs:label      "Visual Quality Task" ;
+        sh:description  "A task related to the visual quality domain" ;
+        sh:name         "Visual Quality Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :VisualQualityTask .

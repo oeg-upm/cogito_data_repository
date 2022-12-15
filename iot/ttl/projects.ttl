@@ -15,6 +15,7 @@
 @prefix point: <http://data.cogito.iot.linkeddata.es/resources/point/> .
 @prefix tag_group: <http://data.cogito.iot.linkeddata.es/resources/tag_group/> .
 @prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
 
 project:079637bb-87d5-4fef-9704-d556364d90ba
     a facility:Project ;
@@ -28,38 +29,36 @@ point:079637bb-87d5-4fef-9704-d556364d90ba
     geo:lon 23.796327919846476 .
 
 tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b2
-    a resource:TrackingTagGroup ;
-    a resource:EquipmentTagGroup ;
-    a resource:ResourceType ;
+    a iot:EquipmentTagGroup ;
     resource:name 'Workers'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:resourceTypeId '7ec6bf7e-14bd-42a4-8cad-9d5d60e789b2'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
 
+tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b3
+    a iot:EquipmentTagGroup ;
+    resource:name 'Equipments'^^<http://www.w3.org/2001/XMLSchema#string> ;
+    resource:resourceTypeId '7ec6bf7e-14bd-42a4-8cad-9d5d60e789b3'^^<http://www.w3.org/2001/XMLSchema#string> ;
+    resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
+
 tracking_tag:e9b870d9-5058-4d4a-802b-3457279524e0
-    a resource:Resource ;
-    a resource:TrackingTag ;
-    a resource:EquipmentTag ;
+    a iot:HumanTag ;
     resource:resourceId 'e9b870d9-5058-4d4a-802b-3457279524e0'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:status "Active"^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:belongsToGroup tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b2 ;
     resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
 
 tracking_tag:0176711d-00a6-5dab-be9c-a807e6dace25
-    a resource:Resource ;
-    a resource:TrackingTag ;
-    a resource:EquipmentTag ;
+    a iot:HumanTag ;
     resource:resourceId '0176711d-00a6-5dab-be9c-a807e6dace25'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:status "Active"^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:belongsToGroup tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b2 ;
     resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
 
 tracking_tag:0176711d-00a6-5dab-be9c-a807e6dace27
-    a resource:Resource ;
-    a resource:TrackingTag ;
-    a resource:EquipmentTag ;
+    a iot:EquipmentTag ;
     resource:resourceId '0176711d-00a6-5dab-be9c-a807e6dace27'^^<http://www.w3.org/2001/XMLSchema#string> ;
-    resource:status "Inactive"^^<http://www.w3.org/2001/XMLSchema#string> ;
-    resource:belongsToGroup tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b2 ;
+    resource:status "Active"^^<http://www.w3.org/2001/XMLSchema#string> ;
+    resource:belongsToGroup tag_group:7ec6bf7e-14bd-42a4-8cad-9d5d60e789b3 ;
     resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
 
  

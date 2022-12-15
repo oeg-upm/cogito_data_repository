@@ -61,9 +61,20 @@ resource_data:0176711d-00a6-5dab-be9c-a807e6dace25
     resource:email 'worker_0176711d-00a6-5dab-be9c-a807e6dace25@example.com'^^<http://www.w3.org/2001/XMLSchema#string> ;
     resource:belongsToType resource_type:Worker .
 
+tracking_tag:0176711d-00a6-5dab-be9c-a807e6dace27
+    a iot:TrackingTag ;
+    resource:belongsToProject project:079637bb-87d5-4fef-9704-d556364d90ba .
+
+resource_data:0176711d-00a6-5dab-be9c-a807e6dace27
+    a resource:Equipment ;
+    resource:hasTrackingTag tracking_tag:0176711d-00a6-5dab-be9c-a807e6dace27 ;
+    dcterms:identifier '0176711d-00a6-5dab-be9c-a807e6dace27'^^<http://www.w3.org/2001/XMLSchema#string> ;
+    dcterms:title 'Excavator'^^<http://www.w3.org/2001/XMLSchema#string> ;
+    resource:belongsToType resource_type:Worker .
+
 work_order:2985732-49853425-34095
     a process:WorkOrder ;
     process:workOrderId '2985732-49853425-34095'^^<http://www.w3.org/2001/XMLSchema#string> ;
     process:belongsToProcess process2:079637bb-87d5-4fef-9704-d556364d90ba_FE090C7C-7AEC-42FE-9452-AD0AA8643D28 ;
-    resource:hasAssignedResource tracking_tag:0176711d-00a6-5dab-be9c-a807e6dace25 .
+    resource:hasAssignedResource resource_data:0176711d-00a6-5dab-be9c-a807e6dace25, resource_data:0176711d-00a6-5dab-be9c-a807e6dace27 .
 

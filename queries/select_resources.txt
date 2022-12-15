@@ -1,0 +1,27 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>PREFIX facility: <https://cogito.iot.linkeddata.es/def/facility#>
+PREFIX process: <https://cogito.iot.linkeddata.es/def/process#>
+PREFIX resource: <https://cogito.iot.linkeddata.es/def/resource#>
+SELECT ?element WHERE {
+	?project a facility:Project .
+	?project facility:isRelatedToProcess ?process .
+	?process process:hasWorkOrder ?work_order .
+	?work_order process:hasMainProvider ?worker .
+	?worker resource:email "worker_e9b870d9-5058-4d4a-802b-3457279524e0@example.com" .
+	?worker resource:hasTrackingTag ?tracking_tag .
+	?worker resource:belongsToType ?res_type .
+	?res_type_req process:relatesToResourceType ?res_type .
+	?task process:hasResourceTypeRequirement ?res_type_req .
+	?task facility:isRelatedTo ?element .
+} LIMIT 100
+
+
+-------------------------------------------------------------------------
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX resource: <https://cogito.iot.linkeddata.es/def/resource#>
+SELECT ?resource ?type WHERE {
+	?resource a resource:Resource .
+  	?resource a ?type .
+} LIMIT 100

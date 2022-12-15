@@ -1,0 +1,194 @@
+@prefix :      <https://cogito.iot.linkeddata.es/platform#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Point Cloud" ;
+        sh:description  "A point cloud representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Point Cloud" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#AsBuiltPointCloud> .
+
+<https://astrea.linkeddata.es/shapes#393c5ba189a699fce169de01fede636e>
+        a               sh:PropertyShape ;
+        rdfs:label      "has schedule" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its schedule file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its schedule file" ;
+        sh:name         "has schedule" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasSchedule .
+
+<https://astrea.linkeddata.es/report/1350613779>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/platform/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#b9cf2ed65730c93ef82461f8cac97d6c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "forms" ;
+        sh:class          <https://www.w3.org/2019/wot/td#Form> ;
+        sh:name           "forms" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://www.w3.org/2019/wot/td#forms> .
+
+<https://astrea.linkeddata.es/shapes#1a21dc375b61f75b72cb2bf3de802a15>
+        a               sh:PropertyShape ;
+        rdfs:label      "has file" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its file" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its file" ;
+        sh:name         "has file" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasFile .
+
+<https://astrea.linkeddata.es/shapes#d28da74eab801fe7db570afed2a8f062>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "Form" ;
+        sh:name           "Form" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://www.w3.org/2019/wot/td#Form> .
+
+<https://astrea.linkeddata.es/shapes#6b9796aff8201fd6a21b0e6b91708120>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "Thing" ;
+        sh:name           "Thing" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://www.w3.org/2019/wot/td#Thing> .
+
+<https://astrea.linkeddata.es/shapes#45d2625f13dba3319778e2fc53e9cf94>
+        a               sh:PropertyShape ;
+        rdfs:label      "has IRI" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its IRI" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its IRI" ;
+        sh:name         "has IRI" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasIRI .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f> , <https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4> , <https://astrea.linkeddata.es/shapes#45ed579f7f6323455350d5815fe90866> , <https://astrea.linkeddata.es/shapes#45d2625f13dba3319778e2fc53e9cf94> , <https://astrea.linkeddata.es/shapes#c41337bdf42ba81679d8b6be5c90d080> , <https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187> , <https://astrea.linkeddata.es/shapes#b9cf2ed65730c93ef82461f8cac97d6c> , <https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0> , <https://astrea.linkeddata.es/shapes#ec07380e7c33044eb496926062cfe711> , <https://astrea.linkeddata.es/shapes#df5e9feeedf06a9110a1aa7557e70000> , <https://astrea.linkeddata.es/shapes#8bba623ad6050e461f2e3f0e0063f0d0> , <https://astrea.linkeddata.es/shapes#a3c67c015054f440136576215452ed7c> , <https://astrea.linkeddata.es/shapes#1a21dc375b61f75b72cb2bf3de802a15> , <https://astrea.linkeddata.es/shapes#6b9796aff8201fd6a21b0e6b91708120> , <https://astrea.linkeddata.es/shapes#298804f5948e0c382f1f0aa7650fe8ea> , <https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08> , <https://astrea.linkeddata.es/shapes#52d880b6219491eaedc377478b45cb1e> , <https://astrea.linkeddata.es/shapes#393c5ba189a699fce169de01fede636e> , <https://astrea.linkeddata.es/shapes#2eace57834fb38dfd5ba5977fb45bca2> , <https://astrea.linkeddata.es/shapes#d28da74eab801fe7db570afed2a8f062> , <https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/1350613779> .
+
+<https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187>
+        a               sh:NodeShape ;
+        rdfs:label      "Project" ;
+        sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+        sh:name         "Project" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Project> .
+
+<https://astrea.linkeddata.es/shapes#2eace57834fb38dfd5ba5977fb45bca2>
+        a               sh:PropertyShape ;
+        rdfs:label      "has Ifc" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its IFC file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its IFC file" ;
+        sh:name         "has Ifc" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasIfc .
+
+<https://astrea.linkeddata.es/shapes#52d880b6219491eaedc377478b45cb1e>
+        a               sh:NodeShape ;
+        rdfs:label      "Digital Twin" ;
+        sh:description  "Entity that is a digital twin in the platform" ;
+        sh:name         "Digital Twin" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :DigitalTwin .
+
+<https://astrea.linkeddata.es/shapes#a3c67c015054f440136576215452ed7c>
+        a               sh:PropertyShape ;
+        rdfs:label      "related thing description" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating a related thing description" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating a related thing description" ;
+        sh:name         "related thing description" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :relatedTD .
+
+<https://astrea.linkeddata.es/shapes#45ed579f7f6323455350d5815fe90866>
+        a               sh:PropertyShape ;
+        rdfs:label      "has mesh" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its mesh file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its mesh file" ;
+        sh:name         "has mesh" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasMesh .
+
+<https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Mesh" ;
+        sh:description  "A mesh representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Mesh" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#AsBuiltMesh> .
+
+<https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4>
+        a               sh:NodeShape ;
+        rdfs:label      "Information Resource" ;
+        sh:description  "Data regarding  the quality of an entity (especially a facility:Project or facility:Element) and that may have associated files in the platform" ;
+        sh:name         "Information Resource" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#InformationResource> .
+
+<https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362>
+        a               sh:NodeShape ;
+        rdfs:label      "Element" ;
+        sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+        sh:name         "Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Element> .
+
+<https://astrea.linkeddata.es/shapes#8bba623ad6050e461f2e3f0e0063f0d0>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Twin Thing" ;
+        sh:description  "A subclass of a td:Thing and, as such, an abstraction of a physical or a virtual entity whose metadata and interfaces are described by a WoT Thing Description. In this case, an entity of a construction twin, namely, a facility:Project, a facility:Element, a qual:Image. a qual:PointCloud and a qual:Mesh." ;
+        sh:name         "Construction Twin Thing" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :PlatformThing .
+
+<https://astrea.linkeddata.es/shapes#df5e9feeedf06a9110a1aa7557e70000>
+        a               sh:PropertyShape ;
+        rdfs:label      "has knowledge graph" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its knowledge graph" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its knowledge graph" ;
+        sh:name         "has knowledge graph" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasKnowledgeGraph .
+
+<https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08>
+        a               sh:NodeShape ;
+        rdfs:label      "Raw Image" ;
+        sh:description  "An image that has not been processed" ;
+        sh:name         "Raw Image" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#RawImage> .
+
+<https://astrea.linkeddata.es/shapes#298804f5948e0c382f1f0aa7650fe8ea>
+        a               sh:PropertyShape ;
+        rdfs:label      "has point cloud" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its point cloud file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its point cloud file" ;
+        sh:name         "has point cloud" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasPointCloud .
+
+<https://astrea.linkeddata.es/shapes#c41337bdf42ba81679d8b6be5c90d080>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "links" ;
+        sh:class          <https://www.w3.org/2019/wot/td#Link> ;
+        sh:name           "links" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://www.w3.org/2019/wot/td#links> .
+
+<https://astrea.linkeddata.es/shapes#ec07380e7c33044eb496926062cfe711>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "Link" ;
+        sh:name           "Link" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://www.w3.org/2019/wot/td#Link> .

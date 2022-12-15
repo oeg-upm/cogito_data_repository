@@ -1,0 +1,347 @@
+@prefix :      <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#a5fe018408970344b0bb4c16f7958395>
+        a               sh:NodeShape ;
+        rdfs:label      "Bridge" ;
+        sh:description  "A structure spanning and providing passage over a river, chasm, road, or the like" ;
+        sh:name         "Bridge" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Bridge .
+
+<https://astrea.linkeddata.es/shapes#e72b1e77872e1ba2f4892b62f485450d>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "has space" ;
+        sh:class          <https://saref.etsi.org/saref4bldg#SpaceBuilding> ;
+        sh:name           "has space" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/saref4bldg#hasSpace> .
+
+<https://astrea.linkeddata.es/shapes#e824bc3a07d17f8c2fe3656cc611c684>
+        a               sh:PropertyShape ;
+        rdfs:label      "has facility" , "A property relating a facility:Zone (especially a facility:Site) to a facility:Facility" ;
+        sh:description  "A property relating a facility:Zone (especially a facility:Site) to a facility:Facility" ;
+        sh:name         "has facility" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasFacility .
+
+<https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187>
+        a               sh:NodeShape ;
+        rdfs:label      "Project" ;
+        sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment." ;
+        sh:name         "Project" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Project .
+
+<https://astrea.linkeddata.es/shapes#363fbf7f179e9833abb312a158f8d3c3>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Site" ;
+        sh:name           "Site" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Site> .
+
+<https://astrea.linkeddata.es/shapes#964e79e6853232c2ef8e4f4ead800eb1>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "Space Building" ;
+        sh:name           "Space Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/saref4bldg#SpaceBuilding> .
+
+<https://astrea.linkeddata.es/shapes#7c66eacd3eb9460118422509387c4af8>
+        a               sh:NodeShape ;
+        rdfs:label      "Zone" ;
+        sh:name         "Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca> , <https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8> , <https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b> , <https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c> , <https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717> ;
+        sh:targetClass  <https://w3id.org/bot#Zone> .
+
+<https://astrea.linkeddata.es/shapes#4164c607e6556e30a6bbd15fe711d8a2>
+        a               sh:PropertyShape ;
+        rdfs:label      "material" , "Property that refers to the outside material of an entity (especially a facility:Element) and is taken into account when processing visual quality" ;
+        sh:description  "Property that refers to the outside material of an entity (especially a facility:Element) and is taken into account when processing visual quality" ;
+        sh:name         "material" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :material .
+
+<https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has element" ;
+        sh:class          :Element ;
+        sh:name           "has element" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasElement> .
+
+<https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has storey" ;
+        sh:class          :Storey ;
+        sh:name           "has storey" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasStorey> .
+
+<https://astrea.linkeddata.es/shapes#2555e2c5dd5daf03da7556c160443a79>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to site" , "A property that relates an entity (especially, a facility:Project) to a facility:Site" ;
+        sh:class        :Site ;
+        sh:description  "A property that relates an entity (especially, a facility:Project) to a facility:Site" ;
+        sh:name         "is related to site" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRelatedToSite .
+
+<https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql#> ;
+        rdfs:label        "Spatial Object" ;
+        sh:name           "Spatial Object" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+<https://astrea.linkeddata.es/shapes#70dea406ce156986ffcd950471ed0080>
+        a               sh:NodeShape ;
+        rdfs:label      "Site" ;
+        sh:description  "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent" ;
+        sh:name         "Site" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Site .
+
+<https://astrea.linkeddata.es/shapes#d264831fd3f3c03fdc2454d1f4c4abc3>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Building" ;
+        sh:name           "Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Building> .
+
+<https://astrea.linkeddata.es/shapes#e1c4e4b9ce9ad056f28f1f256f066384>
+        a               sh:NodeShape ;
+        rdfs:label      "Storey" ;
+        sh:description  "A subclass of bot:Storey and, as such, is contained (bot:hasStorey) in one facility:Building, and is intended to contain (bot:hasSpace) one or more facility:Space that are horizontally connected." ;
+        sh:name         "Storey" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Storey .
+
+<https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has building" ;
+        sh:class          :Building ;
+        sh:name           "has building" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasBuilding> .
+
+<https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591>
+        a               sh:PropertyShape ;
+        rdfs:label      "has facility part" , "A property relating a facility:Zone (especially a facility:Facility or a facility:FacilityPart) to a facility:FacilityPart" ;
+        sh:class        :FacilityPart ;
+        sh:description  "A property relating a facility:Zone (especially a facility:Facility or a facility:FacilityPart) to a facility:FacilityPart" ;
+        sh:name         "has facility part" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasFacilityPart .
+
+<https://astrea.linkeddata.es/shapes#28a5e8832b998735500d8b000050cfed>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Element" ;
+        sh:name           "Element" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Element> .
+
+<https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has space" ;
+        sh:class          :Space ;
+        sh:name           "has space" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasSpace> .
+
+<https://astrea.linkeddata.es/shapes#062d55373c45af0fb1ce8e045ec3cab9>
+        a               sh:NodeShape ;
+        rdfs:label      "Railway" ;
+        sh:description  "A permanent track composed of a line of parallel metal rails fixed to sleepers, for transport of passengers and goods in trains" ;
+        sh:name         "Railway" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Railway .
+
+<https://astrea.linkeddata.es/shapes#a24b8cffdea9c608509b0d54b2cc2cbf>
+        a               sh:NodeShape ;
+        rdfs:label      "Building" ;
+        sh:description  "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006]" ;
+        sh:name         "Building" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Building .
+
+<https://astrea.linkeddata.es/shapes#d3a0ad1c0d6fab3dfd3aa0abedde86a6>
+        a               sh:NodeShape ;
+        rdfs:label      "Spatial Zone" ;
+        sh:description  "A subclass of bot:Zone and, as such, a part of the physical or a virtual world that is inherently both located in this world and has a 3D spatial extent." ;
+        sh:name         "Spatial Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591> ;
+        sh:targetClass  :SpatialZone .
+
+<https://astrea.linkeddata.es/shapes#d3b5ba212bebe17ef65785140e79dc3a>
+        a               sh:NodeShape ;
+        rdfs:label      "Space" ;
+        sh:description  "A subclass of bot:Space and, as such, a part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically and provides for certain functions within the zone it is contained in." ;
+        sh:name         "Space" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Space .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "identifier" ;
+        sh:name           "identifier" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#9c3f722f3c27e264b70635a16b390297>
+        a               sh:NodeShape ;
+        rdfs:label      "Walkable Zone" ;
+        sh:description  "A zone where somebody or something can walk along" ;
+        sh:name         "Walkable Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :WalkableZone .
+
+<https://astrea.linkeddata.es/shapes#a92a7f566d1704b71734f2d734e84546>
+        a               sh:NodeShape ;
+        rdfs:label      "Facility" ;
+        sh:description  "Something designed and built to serve a specific function providing a convenience or a service." ;
+        sh:name         "Facility" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Facility .
+
+<https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "contains zone" ;
+        sh:class          <https://w3id.org/bot#Zone> ;
+        sh:name           "contains zone" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#containsZone> .
+
+<https://astrea.linkeddata.es/shapes#b1b6b268ab5d0cf0d149bb43735ddc2d>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "Building" ;
+        sh:name           "Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/saref4bldg#Building> .
+
+<https://astrea.linkeddata.es/shapes#5a37a577b5fee2092c3dc5851a518b15>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Storey" ;
+        sh:name           "Storey" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Storey> .
+
+<https://astrea.linkeddata.es/shapes#fd9eb5a4b0a2ac348d9a2c9725522d10>
+        a               sh:NodeShape ;
+        rdfs:label      "Facility Part" ;
+        sh:description  "Something that is contained n a facility:Zone (especially a facility:Facility) and can contain more facility parts" ;
+        sh:name         "Facility Part" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :FacilityPart .
+
+<https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "description" ;
+        sh:name           "description" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/description> .
+
+<https://astrea.linkeddata.es/shapes#7767d82a9e8e617edb9ae3e8c1302360>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Space" ;
+        sh:name           "Space" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Space> .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1> , <https://astrea.linkeddata.es/shapes#2555e2c5dd5daf03da7556c160443a79> , <https://astrea.linkeddata.es/shapes#a5fe018408970344b0bb4c16f7958395> , <https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187> , <https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717> , <https://astrea.linkeddata.es/shapes#70dea406ce156986ffcd950471ed0080> , <https://astrea.linkeddata.es/shapes#28a5e8832b998735500d8b000050cfed> , <https://astrea.linkeddata.es/shapes#d6f29b3593a614106a573f5ca46d66d1> , <https://astrea.linkeddata.es/shapes#a24b8cffdea9c608509b0d54b2cc2cbf> , <https://astrea.linkeddata.es/shapes#b1b6b268ab5d0cf0d149bb43735ddc2d> , <https://astrea.linkeddata.es/shapes#e1c4e4b9ce9ad056f28f1f256f066384> , <https://astrea.linkeddata.es/shapes#964e79e6853232c2ef8e4f4ead800eb1> , <https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362> , <https://astrea.linkeddata.es/shapes#363fbf7f179e9833abb312a158f8d3c3> , <https://astrea.linkeddata.es/shapes#fd9eb5a4b0a2ac348d9a2c9725522d10> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> , <https://astrea.linkeddata.es/shapes#0cadecc7f4ec0cfdccc75f9341bbfb5a> , <https://astrea.linkeddata.es/shapes#5a37a577b5fee2092c3dc5851a518b15> , <https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591> , <https://astrea.linkeddata.es/shapes#d3a0ad1c0d6fab3dfd3aa0abedde86a6> , <https://astrea.linkeddata.es/shapes#7767d82a9e8e617edb9ae3e8c1302360> , <https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b> , <https://astrea.linkeddata.es/shapes#e72b1e77872e1ba2f4892b62f485450d> , <https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f> , <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#a92a7f566d1704b71734f2d734e84546> , <https://astrea.linkeddata.es/shapes#9c3f722f3c27e264b70635a16b390297> , <https://astrea.linkeddata.es/shapes#d3b5ba212bebe17ef65785140e79dc3a> , <https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8> , <https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca> , <https://astrea.linkeddata.es/shapes#d264831fd3f3c03fdc2454d1f4c4abc3> , <https://astrea.linkeddata.es/shapes#96ea172addc7eb5a2a49f01b8583ad5c> , <https://astrea.linkeddata.es/shapes#e824bc3a07d17f8c2fe3656cc611c684> , <https://astrea.linkeddata.es/shapes#062d55373c45af0fb1ce8e045ec3cab9> , <https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c> , <https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0> , <https://astrea.linkeddata.es/shapes#4164c607e6556e30a6bbd15fe711d8a2> , <https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da> , <https://astrea.linkeddata.es/shapes#7c66eacd3eb9460118422509387c4af8> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0330349853> .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Zone" ;
+        sh:description  "An entity used to represent zones used by the Health and Safety module" ;
+        sh:name         "Construction Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :ConstructionZone .
+
+<https://astrea.linkeddata.es/report/0330349853>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/facility/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362>
+        a               sh:NodeShape ;
+        rdfs:label      "Element" ;
+        sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position." ;
+        sh:name         "Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f> ;
+        sh:targetClass  :Element .
+
+<https://astrea.linkeddata.es/shapes#d6f29b3593a614106a573f5ca46d66d1>
+        a               sh:NodeShape ;
+        rdfs:label      "Road" ;
+        sh:description  "A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points;\nstreet or highway" ;
+        sh:name         "Road" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Road .
+
+<https://astrea.linkeddata.es/shapes#0cadecc7f4ec0cfdccc75f9341bbfb5a>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracked Zone" ;
+        sh:description  "Something used to represent zones used by the IoT preprocessing module" ;
+        sh:name         "Tracked Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :TrackedZone .
+
+<https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sub-element" , "A property that relates a facility:Element to another facility:Element it contains" ;
+        sh:class        :Element ;
+        sh:description  "A property that relates a facility:Element to another facility:Element it contains" ;
+        sh:name         "has sub-element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasSubElement .
+
+<https://astrea.linkeddata.es/shapes#96ea172addc7eb5a2a49f01b8583ad5c>
+        a               sh:NodeShape ;
+        rdfs:label      "Fall Zone" ;
+        sh:description  "A zone where somebody or something can fall through" ;
+        sh:name         "Fall Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :FallZone .

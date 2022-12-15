@@ -1,0 +1,162 @@
+@prefix :      <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510>
+        a               sh:NodeShape ;
+        rdfs:label      "Worker" ;
+        sh:description  "A human resource that works in a project (especially performing a process:Task)" ;
+        sh:name         "Worker" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Worker .
+
+<https://astrea.linkeddata.es/shapes#aaf9d54eda525c18e705e43a164a2334>
+        a               sh:PropertyShape ;
+        rdfs:label      "cost per hour" , "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" ;
+        sh:description  "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" ;
+        sh:name         "cost per hour" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :costPerHour .
+
+<https://astrea.linkeddata.es/shapes#f0799d69fff9f86419a5b5361fb45e42>
+        a               sh:PropertyShape ;
+        rdfs:label      "maximum number of units" , "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;
+        sh:description  "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;
+        sh:name         "maximum number of units" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :maxUnit .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#f0799d69fff9f86419a5b5361fb45e42> , <https://astrea.linkeddata.es/shapes#aaf9d54eda525c18e705e43a164a2334> , <https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883> , <https://astrea.linkeddata.es/shapes#898c69f95b04d3caafe9b5a3b908b7b2> , <https://astrea.linkeddata.es/shapes#79c6432ede8c2818efc44605505f8a92> , <https://astrea.linkeddata.es/shapes#a8b72f7c26d9c03291c0e3bcb3e3a560> , <https://astrea.linkeddata.es/shapes#3f18e793b39c90743a2c6e008a045f12> , <https://astrea.linkeddata.es/shapes#81b7f5eaf286a56aa540e9bb8cf5cba5> , <https://astrea.linkeddata.es/shapes#5b1a044c425cadfa59d16cdccfe82542> , <https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41> , <https://astrea.linkeddata.es/shapes#911e74eaa5485bb9e3f249a59cc91d56> , <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794> , <https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a> , <https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510> , <https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0382392435> .
+
+<https://astrea.linkeddata.es/report/0382392435>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/resources/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#81b7f5eaf286a56aa540e9bb8cf5cba5>
+        a               sh:NodeShape ;
+        rdfs:label      "Worker Role" ;
+        sh:description  "The different kinds of roles a human worker can play in a (construction) project" ;
+        sh:name         "Worker Role" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :WorkerRole .
+
+<https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Feature of Interest" ;
+        sh:name           "Feature of Interest" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core#FeatureOfInterest> .
+
+<https://astrea.linkeddata.es/shapes#911e74eaa5485bb9e3f249a59cc91d56>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "Property indicating the status of an entity (especially a resource:Resource)" ;
+        sh:description  "Property indicating the status of an entity (especially a resource:Resource)" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :status .
+
+<https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource" ;
+        sh:description  "A source of supply, support, or aid, especially one that can be readily drawn upon when needed; and from which a property is measured" ;
+        sh:name         "Resource" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Resource .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/shapes#898c69f95b04d3caafe9b5a3b908b7b2>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment" ;
+        sh:description  "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)" ;
+        sh:name         "Equipment" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Equipment .
+
+<https://astrea.linkeddata.es/shapes#a8b72f7c26d9c03291c0e3bcb3e3a560>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to type" , "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType" ;
+        sh:class        :ResourceType ;
+        sh:description  "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType" ;
+        sh:name         "belongs to type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :belongsToType .
+
+<https://astrea.linkeddata.es/shapes#79c6432ede8c2818efc44605505f8a92>
+        a               sh:PropertyShape ;
+        rdfs:label      "has tracking tag" , "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/iot#TrackingTag> ;
+        sh:description  "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" ;
+        sh:name         "has tracking tag" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasTackingTag .
+
+<https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql#> ;
+        rdfs:label        "Spatial Object" ;
+        sh:name           "Spatial Object" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+<https://astrea.linkeddata.es/shapes#3f18e793b39c90743a2c6e008a045f12>
+        a               sh:PropertyShape ;
+        rdfs:label      "email" , "Property indicating the email of an entity (especially a resource:Worker)" ;
+        sh:description  "Property indicating the email of an entity (especially a resource:Worker)" ;
+        sh:name         "email" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :email .
+
+<https://astrea.linkeddata.es/shapes#5b1a044c425cadfa59d16cdccfe82542>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment Type" ;
+        sh:description  "The different kinds of (construction) equipment" ;
+        sh:name         "Equipment Type" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :EquipmentType .
+
+<https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracking Tag" ;
+        sh:description  "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location" ;
+        sh:name         "Tracking Tag" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#TrackingTag> .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "identifier" ;
+        sh:name           "identifier" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource Type" ;
+        sh:description  "The kind of resources assigned to a process:Task or involved in a process:Process" ;
+        sh:name         "Resource Type" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :ResourceType .

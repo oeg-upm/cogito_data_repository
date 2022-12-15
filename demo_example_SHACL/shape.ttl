@@ -42,7 +42,7 @@ shape:Process
     sh:description  "An initial planned process" ;
     sh:name         "As-planned Original Process" ;
 	sh:nodeKind     sh:IRI ;
-	sh:property     shape:identifier, shape:title, shape:hasTask, shape:hasWorkOrder, shape:involvesResourceType ;
+	sh:property     shape:identifier, shape:title, shape:hasTask, shape:hasWorkOrder ;
     sh:stem        process_data: ;
 	sh:targetClass  process:Process .
 

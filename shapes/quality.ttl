@@ -1,0 +1,415 @@
+@prefix :      <https://cogito.iot.linkeddata.es/quality#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#050145a791bd80a620883c69432971a1>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to element" , "Property that relates an entity (especially qual:QualityResult) to a facility:Element" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "Property that relates an entity (especially qual:QualityResult) to a facility:Element" ;
+        sh:name         "refers to element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :refersToElement .
+
+<https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187>
+        a               sh:NodeShape ;
+        rdfs:label      "Project" ;
+        sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+        sh:name         "Project" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Project> .
+
+<https://astrea.linkeddata.es/shapes#bcbba4a996a2380291cd84d31b874a61>
+        a               sh:PropertyShape ;
+        rdfs:label      "device position" , "Property indication the position of a device" ;
+        sh:description  "Property indication the position of a device" ;
+        sh:name         "device position" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :devicePosition .
+
+<https://astrea.linkeddata.es/shapes#fdc15ade43fc71215a0eff8dfc90bd6e>
+        a               sh:PropertyShape ;
+        rdfs:label      "element type keywords" , "List of keywords related to the element type" ;
+        sh:description  "List of keywords related to the element type" ;
+        sh:name         "element type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :elementTypeKeyword .
+
+<https://astrea.linkeddata.es/shapes#b3b504a4193632f9ee4b04cde2d138d1>
+        a               sh:PropertyShape ;
+        rdfs:label      "result" , "Property indicating the result of an entity (especially a qual:GeometricQualityInformation" ;
+        sh:description  "Property indicating the result of an entity (especially a qual:GeometricQualityInformation" ;
+        sh:name         "result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :result .
+
+<https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08>
+        a               sh:NodeShape ;
+        rdfs:label      "Raw Image" ;
+        sh:description  "An image that has not been processed" ;
+        sh:name         "Raw Image" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :RawImage .
+
+<https://astrea.linkeddata.es/shapes#5d5893cb33739e1909b4efec8832151e>
+        a               sh:PropertyShape ;
+        rdfs:label      "origin document" , "Property indicating the origin document of an entity (especially a qual:GeometricQualityInformation)" ;
+        sh:description  "Property indicating the origin document of an entity (especially a qual:GeometricQualityInformation)" ;
+        sh:name         "origin document" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :originDocument .
+
+<https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Point Cloud" ;
+        sh:description  "A point cloud representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Point Cloud" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :AsBuiltPointCloud .
+
+<https://astrea.linkeddata.es/shapes#df3534c1d3d32b7b48eebd659b465ddf>
+        a               sh:PropertyShape ;
+        rdfs:label      "confidence level" , "Property indicating the level of confidence of a result (especially a qual:Defect)" ;
+        sh:description  "Property indicating the level of confidence of a result (especially a qual:Defect)" ;
+        sh:name         "confidence level" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :confidenceLevel .
+
+<https://astrea.linkeddata.es/shapes#073d85431f8d68a75a8d73057dabf570>
+        a               sh:PropertyShape ;
+        rdfs:label      "predicted label" , "Property indicating the origin document of an entity (especially a qual:Defect)" ;
+        sh:description  "Property indicating the origin document of an entity (especially a qual:Defect)" ;
+        sh:name         "predicted label" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :predictedLabel .
+
+<https://astrea.linkeddata.es/shapes#f73162148d76c37ee55306b23f1bc6d3>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects quality result" , "Property that relates an entity (especially qual:QuqlityInformation to a qual:QualityResult" ;
+        sh:description  "Property that relates an entity (especially qual:QuqlityInformation to a qual:QualityResult" ;
+        sh:name         "reflects quality result" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :refelctsQualityResult .
+
+<https://astrea.linkeddata.es/shapes#2347789a0a227ab598ec5ded8703f745>
+        a               sh:NodeShape ;
+        rdfs:label      "Geometric Quality Information" ;
+        sh:description  "Data informing a particular problem regarding a particular qual:Rule on a facility:Element" ;
+        sh:name         "Geometric Quality Information" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :GeometricQualityInformation .
+
+<https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4>
+        a               sh:NodeShape ;
+        rdfs:label      "Quality Information" ;
+        sh:description  "Data regarding  the quality of an entity (especially a facility:Project or facility:Element) and that may have associated files in the platform" ;
+        sh:name         "Quality Information" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :InformationResource .
+
+<https://astrea.linkeddata.es/shapes#c2b3cdd8022858071e845a64219f6e27>
+        a               sh:NodeShape ;
+        rdfs:label      "Image Job" ;
+        sh:description  "Data regarding an image and the results of processing it" ;
+        sh:name         "Image Job" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :ImageJob .
+
+<https://astrea.linkeddata.es/shapes#8f4a68b2e16be86eb1f66df8d43b0a21>
+        a               sh:PropertyShape ;
+        rdfs:label      "has processed image" , "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
+        sh:class        :Image ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
+        sh:name         "has processed image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasProcessedImage .
+
+<https://astrea.linkeddata.es/shapes#d2a3874972735954683a0650493a3eef>
+        a               sh:PropertyShape ;
+        rdfs:label      "relationship type keywords" , "List of keywords related to the relationship type" ;
+        sh:description  "List of keywords related to the relationship type" ;
+        sh:name         "relationship type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :relationshipTypeKeyword .
+
+<https://astrea.linkeddata.es/shapes#0c88f701f1940d718cca7c32c3d1f46c>
+        a               sh:PropertyShape ;
+        rdfs:label      "performed timestamp" , "Property indicating the actual time" ;
+        sh:description  "Property indicating the actual time" ;
+        sh:name         "performed timestamp" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :performedTimestamp .
+
+<https://astrea.linkeddata.es/shapes#735fdc5938cfefa151a3a9e88f95f019>
+        a               sh:NodeShape ;
+        rdfs:label      "Mesh" ;
+        sh:description  "A collection of vertices, edges and faces that defines the shape of an object (especially a facility:Element)" ;
+        sh:name         "Mesh" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Mesh .
+
+<https://astrea.linkeddata.es/shapes#d0c4ced02cf8a24e05a30a3bfc0468d2>
+        a               sh:PropertyShape ;
+        rdfs:label      "severity" , "A property indicating the severity of an entity (especially a qual:Defect)" ;
+        sh:description  "A property indicating the severity of an entity (especially a qual:Defect)" ;
+        sh:name         "severity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :severity .
+
+<https://astrea.linkeddata.es/shapes#837710a57279984962100ecb5678deb5>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to task" , "Property that relates an entity (especially qual:QuqlityInformation) to a process:Task" ;
+        sh:class        <https://cogito.iot.linkeddata.es/process#Task> ;
+        sh:description  "Property that relates an entity (especially qual:QuqlityInformation) to a process:Task" ;
+        sh:name         "is related to task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRelatedToTask .
+
+<https://astrea.linkeddata.es/shapes#41593b5c39b411f02637833e1cefd1f1>
+        a               sh:NodeShape ;
+        rdfs:label      "Quality Result" ;
+        sh:description  "The result of the analysis of  information (especially qual:QuantityInformation)" ;
+        sh:name         "Quality Result" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :QualityResult .
+
+<https://astrea.linkeddata.es/shapes#219f305d448cac604a8de1a1320b784f>
+        a               sh:PropertyShape ;
+        rdfs:label      "scheduled timestamp" , "Property indicating the scheduled time" ;
+        sh:description  "Property indicating the scheduled time" ;
+        sh:name         "scheduled timestamp" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :scheduledTimestamp .
+
+<https://astrea.linkeddata.es/shapes#b503396766d2be0e02842b69d29ade20>
+        a               sh:PropertyShape ;
+        rdfs:label      "has result image" , "Property that relates an entity (especially qual:ImageJob to a resulting qual:Image" ;
+        sh:class        :Image ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to a resulting qual:Image" ;
+        sh:name         "has result image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasResultImage .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a            sh:PropertyShape ;
+        rdfs:label   "identifier" ;
+        sh:name      "identifier" ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#c5a4ce5bcf93757808f380b1d6ad4277>
+        a               sh:NodeShape ;
+        rdfs:label      "Rule" ;
+        sh:description  "Information regarding what an entity (especially a faciity:Element) must fulfil" ;
+        sh:name         "Rule" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Rule .
+
+<https://astrea.linkeddata.es/shapes#0c7bfdb8c0070c333818670b1161f465>
+        a               sh:PropertyShape ;
+        rdfs:label      "has raw image" , "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
+        sh:class        :RawImage ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
+        sh:name         "has raw image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasRawImage .
+
+<https://astrea.linkeddata.es/shapes#ad2d8ff1dc125d8583211a03b9948dd4>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to element" , "Property that relates an entity (especially qual:QualityInformation) to a facility:Element" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "Property that relates an entity (especially qual:QualityInformation) to a facility:Element" ;
+        sh:name         "is related to element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :isRelatedToElement .
+
+<https://astrea.linkeddata.es/shapes#2ee51acc231849e6a11051b71bbbad04>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to project" , "Property that relates an entity (especially qual:QualityInformation and quel:Rule) to a facility:Project" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Project> ;
+        sh:description  "Property that relates an entity (especially qual:QualityInformation and quel:Rule) to a facility:Project" ;
+        sh:name         "is related to project" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/quality#isRelatedToProject> .
+
+<https://astrea.linkeddata.es/shapes#e025b64b334d79a8f29d9f427e18f2a0>
+        a               sh:PropertyShape ;
+        rdfs:label      "taken at time" , "Property indicating the time a data has been taken" ;
+        sh:description  "Property indicating the time a data has been taken" ;
+        sh:name         "taken at time" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :takenAtTime .
+
+<https://astrea.linkeddata.es/shapes#5dbf9b77bfd2190038c5625aaaacf47c>
+        a               sh:PropertyShape ;
+        rdfs:label      "device orientation" , "Property indicating the orientation of a device" ;
+        sh:description  "Property indicating the orientation of a device" ;
+        sh:name         "device orientation" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :deviceOrientation .
+
+<https://astrea.linkeddata.es/shapes#99446dbcfcb5704d0eed9976ab1f0bd7>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects defect" , "Property that relates an entity (especially qual:ImageJob) to a qual:Defect" ;
+        sh:class        :Defect ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob) to a qual:Defect" ;
+        sh:name         "reflects defect" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :reflectsDefect .
+
+<https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da>
+        a            sh:PropertyShape ;
+        rdfs:label   "description" ;
+        sh:name      "description" ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://purl.org/dc/terms/description> .
+
+<https://astrea.linkeddata.es/shapes#ab495ba755a75f9bd64ee2fb7b230bf4>
+        a               sh:NodeShape ;
+        rdfs:label      "Image" ;
+        sh:description  "A picture of an entity" ;
+        sh:name         "Image" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Image .
+
+<https://astrea.linkeddata.es/shapes#c32ca14d3e344cde76ae464713549b66>
+        a               sh:NodeShape ;
+        rdfs:label      "Defect" ;
+        sh:description  "A shortcoming, fault, or imperfection regarding a particular facility:Element." ;
+        sh:name         "Defect" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Defect .
+
+<https://astrea.linkeddata.es/shapes#4e41dc115f85be072b16536ddd4beb17>
+        a               sh:PropertyShape ;
+        rdfs:label      "capture device" , "Property identifying  the device that has captured an entity (especially a qual:Image)" ;
+        sh:description  "Property identifying  the device that has captured an entity (especially a qual:Image)" ;
+        sh:name         "capture device" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :captureDevice .
+
+<https://astrea.linkeddata.es/shapes#af4e534bc3b5b6e4a4016771a7068965>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to rule" , "Property that relates an entity (especially qual:Defect) to a qual:Rule" ;
+        sh:class        :Rule ;
+        sh:description  "Property that relates an entity (especially qual:Defect) to a qual:Rule" ;
+        sh:name         "refers to rule" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :refersToRule .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#073d85431f8d68a75a8d73057dabf570> , <https://astrea.linkeddata.es/shapes#1275031e9a6a6b90566a116870107d96> , <https://astrea.linkeddata.es/shapes#ab495ba755a75f9bd64ee2fb7b230bf4> , <https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187> , <https://astrea.linkeddata.es/shapes#5d5893cb33739e1909b4efec8832151e> , <https://astrea.linkeddata.es/shapes#f73162148d76c37ee55306b23f1bc6d3> , <https://astrea.linkeddata.es/shapes#837710a57279984962100ecb5678deb5> , <https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4> , <https://astrea.linkeddata.es/shapes#0c7bfdb8c0070c333818670b1161f465> , <https://astrea.linkeddata.es/shapes#9a72b5c24c5a11e561181c50371437ff> , <https://astrea.linkeddata.es/shapes#df3534c1d3d32b7b48eebd659b465ddf> , <https://astrea.linkeddata.es/shapes#6e64945ca900acb9db18fa42c053915f> , <https://astrea.linkeddata.es/shapes#b3b504a4193632f9ee4b04cde2d138d1> , <https://astrea.linkeddata.es/shapes#0c88f701f1940d718cca7c32c3d1f46c> , <https://astrea.linkeddata.es/shapes#c2b3cdd8022858071e845a64219f6e27> , <https://astrea.linkeddata.es/shapes#c5a4ce5bcf93757808f380b1d6ad4277> , <https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> , <https://astrea.linkeddata.es/shapes#7ff4c494e51f962b62eeec1d74c1b3b2> , <https://astrea.linkeddata.es/shapes#5dbf9b77bfd2190038c5625aaaacf47c> , <https://astrea.linkeddata.es/shapes#8f4a68b2e16be86eb1f66df8d43b0a21> , <https://astrea.linkeddata.es/shapes#c97c0acee00786a5055b4fd9c4a636e4> , <https://astrea.linkeddata.es/shapes#bcbba4a996a2380291cd84d31b874a61> , <https://astrea.linkeddata.es/shapes#3ae7810b96d1343071618de4dcb32a69> , <https://astrea.linkeddata.es/shapes#d2a3874972735954683a0650493a3eef> , <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#219f305d448cac604a8de1a1320b784f> , <https://astrea.linkeddata.es/shapes#a64c42050c69176d7ff1b2b28ffb2957> , <https://astrea.linkeddata.es/shapes#1556f970052fd7921f8ac68df1b6c93f> , <https://astrea.linkeddata.es/shapes#fdc15ade43fc71215a0eff8dfc90bd6e> , <https://astrea.linkeddata.es/shapes#050145a791bd80a620883c69432971a1> , <https://astrea.linkeddata.es/shapes#99446dbcfcb5704d0eed9976ab1f0bd7> , <https://astrea.linkeddata.es/shapes#210d452cf7e541ba7bc4396a7425b1b2> , <https://astrea.linkeddata.es/shapes#4e41dc115f85be072b16536ddd4beb17> , <https://astrea.linkeddata.es/shapes#41593b5c39b411f02637833e1cefd1f1> , <https://astrea.linkeddata.es/shapes#e025b64b334d79a8f29d9f427e18f2a0> , <https://astrea.linkeddata.es/shapes#735fdc5938cfefa151a3a9e88f95f019> , <https://astrea.linkeddata.es/shapes#d0c4ced02cf8a24e05a30a3bfc0468d2> , <https://astrea.linkeddata.es/shapes#c32ca14d3e344cde76ae464713549b66> , <https://astrea.linkeddata.es/shapes#b503396766d2be0e02842b69d29ade20> , <https://astrea.linkeddata.es/shapes#2347789a0a227ab598ec5ded8703f745> , <https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08> , <https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0> , <https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f> , <https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da> , <https://astrea.linkeddata.es/shapes#ad2d8ff1dc125d8583211a03b9948dd4> , <https://astrea.linkeddata.es/shapes#2ee51acc231849e6a11051b71bbbad04> , <https://astrea.linkeddata.es/shapes#af4e534bc3b5b6e4a4016771a7068965> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/2039080051> .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a            sh:PropertyShape ;
+        rdfs:label   "title" ;
+        sh:name      "title" ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/shapes#9a72b5c24c5a11e561181c50371437ff>
+        a               sh:PropertyShape ;
+        rdfs:label      "outcome" , "Property indicating if a result has been accepted or rejected" ;
+        sh:description  "Property indicating if a result has been accepted or rejected" ;
+        sh:name         "outcome" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :outcome .
+
+<https://astrea.linkeddata.es/shapes#7ff4c494e51f962b62eeec1d74c1b3b2>
+        a               sh:NodeShape ;
+        rdfs:label      "Point Cloud" ;
+        sh:description  "A set of data points in space" ;
+        sh:name         "Point Cloud" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :PointCoud .
+
+<https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362>
+        a               sh:NodeShape ;
+        rdfs:label      "Element" ;
+        sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+        sh:name         "Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Element> .
+
+<https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Mesh" ;
+        sh:description  "A mesh representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Mesh" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :AsBuiltMesh .
+
+<https://astrea.linkeddata.es/shapes#1556f970052fd7921f8ac68df1b6c93f>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects geometric quality" , "Property that relates an entity (especially qual:PointCloud) to a qual:GeometricQualityInformation" ;
+        sh:class        :GeometricQualityInformation ;
+        sh:description  "Property that relates an entity (especially qual:PointCloud) to a qual:GeometricQualityInformation" ;
+        sh:name         "reflects geometric quality" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :reflectsGeometricQuality .
+
+<https://astrea.linkeddata.es/report/2039080051>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/quality/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#1275031e9a6a6b90566a116870107d96>
+        a               sh:PropertyShape ;
+        rdfs:label      "scalar result" , "Property indicating the scalar result" ;
+        sh:description  "Property indicating the scalar result" ;
+        sh:name         "scalar result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :scalarResult .
+
+<https://astrea.linkeddata.es/shapes#210d452cf7e541ba7bc4396a7425b1b2>
+        a               sh:PropertyShape ;
+        rdfs:label      "material type keywords" , "List of keywords related to the material type" ;
+        sh:description  "List of keywords related to the material type" ;
+        sh:name         "material type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :materialTypeKeyword .
+
+<https://astrea.linkeddata.es/shapes#3ae7810b96d1343071618de4dcb32a69>
+        a               sh:PropertyShape ;
+        rdfs:label      "tolerance reference" , "property indicating the tolerance reference" ;
+        sh:description  "property indicating the tolerance reference" ;
+        sh:name         "tolerance reference" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :toleranceReference .
+
+<https://astrea.linkeddata.es/shapes#c97c0acee00786a5055b4fd9c4a636e4>
+        a               sh:NodeShape ;
+        rdfs:label      "Task" ;
+        sh:description  "A piece of work, which is performed in a process:Process" ;
+        sh:name         "Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/process#Task> .
+
+<https://astrea.linkeddata.es/shapes#a64c42050c69176d7ff1b2b28ffb2957>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "Property indicating if a result has been checked" ;
+        sh:description  "Property indicating if a result has been checked" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :status .
+
+<https://astrea.linkeddata.es/shapes#6e64945ca900acb9db18fa42c053915f>
+        a               sh:PropertyShape ;
+        rdfs:label      "unit" , "Property indicating the unit of an entity" ;
+        sh:description  "Property indicating the unit of an entity" ;
+        sh:name         "unit" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         :unit .

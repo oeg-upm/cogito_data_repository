@@ -1,0 +1,158 @@
+@prefix :      <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#4f102e9cc4310d750da29cc6b18dc001>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "has timestamp" ;
+        sh:description    "has timestamp" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <https://saref.etsi.org/core#hasTimestamp> .
+
+<https://astrea.linkeddata.es/shapes#eee84842ba6396ae47e7b2d0bf3e8c8d>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location KF" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a KF transformation" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a KF transformation" ;
+        sh:name         "has location KF" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasLocationKF .
+
+<https://astrea.linkeddata.es/shapes#25ec003602564842d39f501bdffe113d>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at" ;
+        sh:name         "has location" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasLocation .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#15529732aa4688139897c5d12604a607> , <https://astrea.linkeddata.es/shapes#eee84842ba6396ae47e7b2d0bf3e8c8d> , <https://astrea.linkeddata.es/shapes#005c11d466d10c8c19c0afa143d5a64c> , <https://astrea.linkeddata.es/shapes#90287d82d4a468b15a57bfdd614bc6da> , <https://astrea.linkeddata.es/shapes#4f102e9cc4310d750da29cc6b18dc001> , <https://astrea.linkeddata.es/shapes#1df80e441119944c743ed23e101e6066> , <https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883> , <https://astrea.linkeddata.es/shapes#45521f3d539040600a0579cf64e05ca5> , <https://astrea.linkeddata.es/shapes#1e2197548b1ffbff5ee8879bea0f06db> , <https://astrea.linkeddata.es/shapes#80098e102999b383203c2b7ee67e9118> , <https://astrea.linkeddata.es/shapes#25ec003602564842d39f501bdffe113d> , <https://astrea.linkeddata.es/shapes#767c9e3e28f6819c678fd3930fbff540> , <https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794> , <https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a> , <https://astrea.linkeddata.es/shapes#0dc15d417cc75f81972c2f5ddfaf9e69> , <https://astrea.linkeddata.es/shapes#49b5a0bf781ac644bf1ae11022104b1c> , <https://astrea.linkeddata.es/shapes#5edb76fff9fb0810b5bc6de2acc59091> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/048957244> .
+
+<https://astrea.linkeddata.es/shapes#49b5a0bf781ac644bf1ae11022104b1c>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Measurement" ;
+        sh:name           "Measurement" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core#Measurement> .
+
+<https://astrea.linkeddata.es/shapes#767c9e3e28f6819c678fd3930fbff540>
+        a               sh:NodeShape ;
+        rdfs:label      "Location Measurement" ;
+        sh:description  "The location measured by an entity (especially an iot:TrackingTag)" ;
+        sh:name         "Location Measurement" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :LocationMeasurement .
+
+<https://astrea.linkeddata.es/report/048957244>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://cogito.iot.linkeddata.es/def/iot/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Feature of Interest" ;
+        sh:name           "Feature of Interest" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core#FeatureOfInterest> .
+
+<https://astrea.linkeddata.es/shapes#0dc15d417cc75f81972c2f5ddfaf9e69>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "makes measurement" ;
+        sh:name           "makes measurement" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core#makesMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#5edb76fff9fb0810b5bc6de2acc59091>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "is measurement of" ;
+        sh:name           "is measurement of" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core#isMeasurementOf> .
+
+<https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883>
+        a               sh:NodeShape ;
+        sh:description  "A source of supply, support, or aid, especially one that can be readily drawn upon when needed; and from which a property is measured" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Resource> .
+
+<https://astrea.linkeddata.es/shapes#1e2197548b1ffbff5ee8879bea0f06db>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparq#> ;
+        rdfs:label        "Point" ;
+        sh:name           "Point" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#Point> .
+
+<https://astrea.linkeddata.es/shapes#005c11d466d10c8c19c0afa143d5a64c>
+        a               sh:PropertyShape ;
+        rdfs:label      "has result" , "Property that relates an entity (especially a saref:MEasurement) to its result" ;
+        sh:description  "Property that relates an entity (especially a saref:MEasurement) to its result" ;
+        sh:name         "has result" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasResult .
+
+<https://astrea.linkeddata.es/shapes#45521f3d539040600a0579cf64e05ca5>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment Tag" ;
+        sh:description  "A tracking tag assigned to a piece of equipment" ;
+        sh:name         "Equipment Tag" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :EquipmentTag .
+
+<https://astrea.linkeddata.es/shapes#15529732aa4688139897c5d12604a607>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location MA" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a MA transformation" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a MA transformation" ;
+        sh:name         "has location MA" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasLocationMA .
+
+<https://astrea.linkeddata.es/shapes#90287d82d4a468b15a57bfdd614bc6da>
+        a               sh:NodeShape ;
+        rdfs:label      "Human Tag" ;
+        sh:description  "A tracking tag assigned to a human" ;
+        sh:name         "Human Tag" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :HumanTag .
+
+<https://astrea.linkeddata.es/shapes#1df80e441119944c743ed23e101e6066>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Device" ;
+        sh:name           "Device" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core#Device> .
+
+<https://astrea.linkeddata.es/shapes#80098e102999b383203c2b7ee67e9118>
+        a               sh:NodeShape ;
+        rdfs:label      "Result" ;
+        sh:description  "An entity representing the result of a saref:Measurement" ;
+        sh:name         "Result" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :Result .
+
+<https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracking Tag" ;
+        sh:description  "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location" ;
+        sh:name         "Tracking Tag" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :TrackingTag .
