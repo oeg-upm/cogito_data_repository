@@ -1,0 +1,1867 @@
+@prefix :      <https://cogito.iot.linkeddata.es/platform#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#5a37a577b5fee2092c3dc5851a518b15>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Storey" ;
+        sh:name           "Storey" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Storey> .
+
+<https://astrea.linkeddata.es/shapes#898c69f95b04d3caafe9b5a3b908b7b2>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment" ;
+        sh:description  "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)" ;
+        sh:name         "Equipment" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Equipment> .
+
+<https://astrea.linkeddata.es/shapes#8a477cd76f4a28afbe02c6416fb48923>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sub-task" , "A property that relates an entity (especially a process:Task) to the tasks it includes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the tasks it includes" ;
+        sh:name         "has sub-task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasSubTask> .
+
+<https://astrea.linkeddata.es/report/0503228594>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-safety-ontology/main/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#d2839b49f3065bc840b0fa730262b897>
+        a               sh:PropertyShape ;
+        rdfs:label      "work quantity" , "Property  indicating  the amount of work. Work quantity is typically measured as: m, m2, m3, units, depending on the type of activity. So, we could have a mixture of productivity metrics, m/time, m2/time, m3/time, depending on the type of activity." ;
+        sh:description  "Property  indicating  the amount of work. Work quantity is typically measured as: m, m2, m3, units, depending on the type of activity. So, we could have a mixture of productivity metrics, m/time, m2/time, m3/time, depending on the type of activity." ;
+        sh:name         "work quantity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#workQuantity> .
+
+<https://astrea.linkeddata.es/shapes#a64c42050c69176d7ff1b2b28ffb2957>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "Property indicating if a result has been checked" ;
+        sh:description  "Property indicating if a result has been checked" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#status> .
+
+<https://astrea.linkeddata.es/shapes#e3ef37989500f0e1d3a941dba1f5d09d>
+        a               sh:PropertyShape ;
+        rdfs:label      "actual end date" , "A property indicating the actual end date of an entity" ;
+        sh:description  "A property indicating the actual end date of an entity" ;
+        sh:name         "actual end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#actualEndDate> .
+
+<https://astrea.linkeddata.es/shapes#d4fcbf3b6b6e53b5e5e731acb01a8ece>
+        a               sh:PropertyShape ;
+        rdfs:label      "work quantity unit" , "Property indicating the unit used to measure wok quantity. Work quantity is typically measured as: m, m2, m3, units, depending on the type of activity." ;
+        sh:description  "Property indicating the unit used to measure wok quantity. Work quantity is typically measured as: m, m2, m3, units, depending on the type of activity." ;
+        sh:name         "work quantity unit" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#workQuantityUnit> .
+
+<https://astrea.linkeddata.es/shapes#65dcbbbe8f92a8a723fa11c8ca4dc886>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned late start date" , "A property indicating the latest  date an entity can start" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the latest  date an entity can start" ;
+        sh:name         "planned late start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedLateStartDate> .
+
+<https://astrea.linkeddata.es/shapes#d3a0ad1c0d6fab3dfd3aa0abedde86a6>
+        a               sh:NodeShape ;
+        rdfs:label      "Spatial Zone" ;
+        sh:description  "A subclass of bot:Zone and, as such, a part of the physical or a virtual world that is inherently both located in this world and has a 3D spatial extent." ;
+        sh:name         "Spatial Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591> ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#SpatialZone> .
+
+<https://astrea.linkeddata.es/shapes#21e884c326728fcc86de5712bd90baec>
+        a               sh:NodeShape ;
+        rdfs:label      "Mitigation Element" ;
+        sh:description  "An element used to mitigate a safety hazard" ;
+        sh:name         "Mitigation Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#MitigationElement> .
+
+<https://astrea.linkeddata.es/shapes#104899729cad4644ce3aac869d87255f>
+        a               sh:NodeShape ;
+        rdfs:label      "Hole Zone" ;
+        sh:description  "An analysis zone defining a hole" ;
+        sh:name         "Hole Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#HoleZone> .
+
+<https://astrea.linkeddata.es/shapes#c97c0acee00786a5055b4fd9c4a636e4>
+        a               sh:NodeShape ;
+        rdfs:label      "Task" ;
+        sh:description  "A piece of work, which is performed in a process:Process" ;
+        sh:name         "Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/process#Task> .
+
+<https://astrea.linkeddata.es/shapes#735fdc5938cfefa151a3a9e88f95f019>
+        a               sh:NodeShape ;
+        rdfs:label      "Mesh" ;
+        sh:description  "A collection of vertices, edges and faces that defines the shape of an object (especially a facility:Element)" ;
+        sh:name         "Mesh" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#Mesh> .
+
+<https://astrea.linkeddata.es/shapes#2754736927cccdc145874dcfd21c1d2c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/titile> .
+
+<https://astrea.linkeddata.es/shapes#4164c607e6556e30a6bbd15fe711d8a2>
+        a               sh:PropertyShape ;
+        rdfs:label      "material" , "Property that refers to the outside material of an entity (especially a facility:Element) and is taken into account when processing visual quality" ;
+        sh:description  "Property that refers to the outside material of an entity (especially a facility:Element) and is taken into account when processing visual quality" ;
+        sh:name         "material" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#material> .
+
+<https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource" ;
+        sh:description  "A source of supply, support, or aid, especially one that can be readily drawn upon when needed; and from which a property is measured" , "A source of supply, support, or aid, especially one that can be readily drawn upon when needed" ;
+        sh:name         "Resource" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Resource> .
+
+<https://astrea.linkeddata.es/shapes#0686da40e51fd01790daa7ef55a9ab03>
+        a               sh:NodeShape ;
+        rdfs:label      "Human Tag Group" ;
+        sh:description  "A tracking tag group belonging to a human" ;
+        sh:name         "Human Tag Group" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#HumanTagGroup> .
+
+<https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql#> ;
+        rdfs:label        "Spatial Object" ;
+        sh:name           "Spatial Object" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#SpatialObject> .
+
+<https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Point Cloud" ;
+        sh:description  "A point cloud representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Point Cloud" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#AsBuiltPointCloud> .
+
+<https://astrea.linkeddata.es/shapes#01109b8cf1846598baf66150280355e0>
+        a               sh:NodeShape ;
+        rdfs:label      "As-planned Enriched Process" ;
+        sh:description  "A planned process after being enriched" ;
+        sh:name         "As-planned Enriched Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#AsPlannedEnrichedProcess> .
+
+<https://astrea.linkeddata.es/shapes#25ec003602564842d39f501bdffe113d>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at" ;
+        sh:name         "has location" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/iot#hasLocation> .
+
+<https://astrea.linkeddata.es/shapes#7c66eacd3eb9460118422509387c4af8>
+        a               sh:NodeShape ;
+        rdfs:label      "Zone" ;
+        sh:name         "Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca> , <https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8> , <https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b> , <https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c> , <https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717> ;
+        sh:targetClass  <https://w3id.org/bot#Zone> .
+
+<https://astrea.linkeddata.es/shapes#ed5729495b0f8778780de4f79e464539>
+        a               sh:PropertyShape ;
+        rdfs:label      "involves resource type" , "A property that relates an entity (especially a process:Process) to the resource types it includes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#ResourceType> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the resource types it includes" ;
+        sh:name         "involves resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#involvesResourceType> .
+
+<https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms> , <http://purl.org/dc/terms/> ;
+        rdfs:label        "title" ;
+        sh:name           "title" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/title> .
+
+<https://astrea.linkeddata.es/shapes#d392605f2e9561b9b7d587fedf11eaad>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "has link" ;
+        sh:class          <https://www.w3.org/2019/wot/hypermedia#Link> ;
+        sh:name           "has link" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://www.w3.org/2019/wot/td#hasLink> .
+
+<https://astrea.linkeddata.es/shapes#b3b504a4193632f9ee4b04cde2d138d1>
+        a               sh:PropertyShape ;
+        rdfs:label      "result" , "Property indicating the result of an entity (especially a qual:GeometricQualityInformation" ;
+        sh:description  "Property indicating the result of an entity (especially a qual:GeometricQualityInformation" ;
+        sh:name         "result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#result> .
+
+<https://astrea.linkeddata.es/shapes#1e4b015c13d74edd082668e96a799cb3>
+        a               sh:NodeShape ;
+        rdfs:label      "As-planned Original Process" ;
+        sh:description  "An initial planned process" ;
+        sh:name         "As-planned Original Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#AsPlannedOriginalProcess> .
+
+<https://astrea.linkeddata.es/shapes#d2a3874972735954683a0650493a3eef>
+        a               sh:PropertyShape ;
+        rdfs:label      "relationship type keywords" , "List of keywords related to the relationship type" ;
+        sh:description  "List of keywords related to the relationship type" ;
+        sh:name         "relationship type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#relationshipTypeKeyword> .
+
+<https://astrea.linkeddata.es/shapes#d0c4ced02cf8a24e05a30a3bfc0468d2>
+        a               sh:PropertyShape ;
+        rdfs:label      "severity" , "A property indicating the severity of an entity (especially a qual:Defect)" ;
+        sh:description  "A property indicating the severity of an entity (especially a qual:Defect)" ;
+        sh:name         "severity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#severity> .
+
+<https://astrea.linkeddata.es/shapes#88d3f022bbe5ad4138183c6dd3f64ebf>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Device" ;
+        sh:name           "Device" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core/Device> .
+
+<https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms> , <http://purl.org/dc/terms/> ;
+        rdfs:label        "identifier" ;
+        sh:name           "identifier" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/identifier> .
+
+<https://astrea.linkeddata.es/shapes#3f18e793b39c90743a2c6e008a045f12>
+        a               sh:PropertyShape ;
+        rdfs:label      "email" , "Property indicating the email of an entity (especially a resource:Worker)" ;
+        sh:description  "Property indicating the email of an entity (especially a resource:Worker)" ;
+        sh:name         "email" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#email> .
+
+<https://astrea.linkeddata.es/shapes#5de58b9e4cdad68371da5bd5ebff2906>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource Type Requirement" ;
+        sh:description  "An entity that includes the requitrments that a task has pertaining a resource type" ;
+        sh:name         "Resource Type Requirement" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#ResourceTypeRequirement> .
+
+<https://astrea.linkeddata.es/shapes#6633f6f9a681a2c4c8f51d232cf4501f>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "has form" ;
+        sh:class          <https://www.w3.org/2019/wot/hypermedia#Form> ;
+        sh:name           "has form" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://www.w3.org/2019/wot/td#hasForm> .
+
+<https://astrea.linkeddata.es/shapes#6c8d5c38ed3ebddea66c581717b5b481>
+        a               sh:NodeShape ;
+        rdfs:label      "Normal Element" ;
+        sh:description  "An element not used for safety during the construction process" ;
+        sh:name         "Normal Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#NormalElement> .
+
+<https://astrea.linkeddata.es/shapes#2555e2c5dd5daf03da7556c160443a79>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to site" , "A property that relates an entity (especially, a facility:Project) to a facility:Site" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Site> ;
+        sh:description  "A property that relates an entity (especially, a facility:Project) to a facility:Site" ;
+        sh:name         "is related to site" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#isRelatedToSite> .
+
+<https://astrea.linkeddata.es/shapes#28a5e8832b998735500d8b000050cfed>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Element" ;
+        sh:name           "Element" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Element> .
+
+<https://astrea.linkeddata.es/shapes#0dc15d417cc75f81972c2f5ddfaf9e69>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "makes measurement" ;
+        sh:name           "makes measurement" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core#makesMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#64ea1f13f6b8f9e615b74504d8440d94>
+        a               sh:PropertyShape ;
+        rdfs:label      "is added by task" , "A property that relates an entity (especially a  facility:Element) to the process:Task  that creates it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a  facility:Element) to the process:Task  that creates it" ;
+        sh:name         "is added by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isAddedByTask> .
+
+<https://astrea.linkeddata.es/shapes#fdc15ade43fc71215a0eff8dfc90bd6e>
+        a               sh:PropertyShape ;
+        rdfs:label      "element type keywords" , "List of keywords related to the element type" ;
+        sh:description  "List of keywords related to the element type" ;
+        sh:name         "element type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#elementTypeKeyword> .
+
+<https://astrea.linkeddata.es/shapes#8433f3bd707b13982d67d48077c56c93>
+        a               sh:PropertyShape ;
+        rdfs:label      "actual start date" , "A property indicating the actual start date of an entity" ;
+        sh:description  "A property indicating the actual start date of an entity" ;
+        sh:name         "actual start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#actualStartDate> .
+
+<https://astrea.linkeddata.es/shapes#073d85431f8d68a75a8d73057dabf570>
+        a               sh:PropertyShape ;
+        rdfs:label      "predicted label" , "Property indicating the origin document of an entity (especially a qual:Defect)" ;
+        sh:description  "Property indicating the origin document of an entity (especially a qual:Defect)" ;
+        sh:name         "predicted label" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#predictedLabel> .
+
+<https://astrea.linkeddata.es/shapes#1d770b664c7e99e8cda00fbb97d9ee64>
+        a               sh:PropertyShape ;
+        rdfs:label      "implied by hole" , "A safety:impliedByZone sub-property whose range is a safety:HoleZone" ;
+        sh:class        <https://cogito.iot.linkeddata.es/safety#HoleZone> ;
+        sh:description  "A safety:impliedByZone sub-property whose range is a safety:HoleZone" ;
+        sh:name         "implied by hole" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#impliedByHole> .
+
+<https://astrea.linkeddata.es/shapes#e824bc3a07d17f8c2fe3656cc611c684>
+        a               sh:PropertyShape ;
+        rdfs:label      "has facility" , "A property relating a facility:Zone (especially a facility:Site) to a facility:Facility" ;
+        sh:description  "A property relating a facility:Zone (especially a facility:Site) to a facility:Facility" ;
+        sh:name         "has facility" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#hasFacility> .
+
+<https://astrea.linkeddata.es/shapes#f73162148d76c37ee55306b23f1bc6d3>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects quality result" , "Property that relates an entity (especially qual:QuqlityInformation to a qual:QualityResult" ;
+        sh:description  "Property that relates an entity (especially qual:QuqlityInformation to a qual:QualityResult" ;
+        sh:name         "reflects quality result" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#refelctsQualityResult> .
+
+<https://astrea.linkeddata.es/shapes#0c7bfdb8c0070c333818670b1161f465>
+        a               sh:PropertyShape ;
+        rdfs:label      "has raw image" , "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#RawImage> ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
+        sh:name         "has raw image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#hasRawImage> .
+
+<https://astrea.linkeddata.es/shapes#c1a0fd5ca62b0a71c8b40a0364cdde4e>
+        a                sh:PropertyShape ;
+        rdfs:label       "total float" , "A property indicating the number of days an entity (especially a task) can be delayed" ;
+        sh:datatype      xsd:nonNegativeInteger ;
+        sh:description   "A property indicating the number of days an entity (especially a task) can be delayed" ;
+        sh:minInclusive  0 ;
+        sh:name          "total float" ;
+        sh:nodeKind      sh:Literal ;
+        sh:path          <https://cogito.iot.linkeddata.es/def/process#totalFloat> ;
+        sh:pattern       "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#363fbf7f179e9833abb312a158f8d3c3>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Site" ;
+        sh:name           "Site" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Site> .
+
+<https://astrea.linkeddata.es/shapes#5dbf9b77bfd2190038c5625aaaacf47c>
+        a               sh:PropertyShape ;
+        rdfs:label      "device orientation" , "Property indicating the orientation of a device" ;
+        sh:description  "Property indicating the orientation of a device" ;
+        sh:name         "device orientation" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#deviceOrientation> .
+
+<https://astrea.linkeddata.es/shapes#ab495ba755a75f9bd64ee2fb7b230bf4>
+        a               sh:NodeShape ;
+        rdfs:label      "Image" ;
+        sh:description  "A picture of an entity" ;
+        sh:name         "Image" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#Image> .
+
+<https://astrea.linkeddata.es/shapes#bcbba4a996a2380291cd84d31b874a61>
+        a               sh:PropertyShape ;
+        rdfs:label      "device position" , "Property indication the position of a device" ;
+        sh:description  "Property indication the position of a device" ;
+        sh:name         "device position" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#devicePosition> .
+
+<https://astrea.linkeddata.es/shapes#b6101ff1bda65c2ac403d08af9453515>
+        a               sh:PropertyShape ;
+        rdfs:label      "is sub-task of" , "A property that relates an entity (especially a process:Task) to the task it belongs to" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the task it belongs to" ;
+        sh:name         "is sub-task of" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isSubTaskOf> .
+
+<https://astrea.linkeddata.es/shapes#26479f7070bef0b6f1f1565071e17edc>
+        a               sh:PropertyShape ;
+        rdfs:label      "is mitigated by element" , "A property relating an entity (especially a safety:SafetyIssue) to a safety:MitigationElement used to mitigate it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/safety#MitigationElement> ;
+        sh:description  "A property relating an entity (especially a safety:SafetyIssue) to a safety:MitigationElement used to mitigate it" ;
+        sh:name         "is mitigated by element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#isMitigatedByElement> .
+
+<https://astrea.linkeddata.es/shapes#3502f1ff9843ffa5ae37c038eb6b7d8d>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned early end date" , "A property indicating the earliest  date an entity can end" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the earliest  date an entity can end" ;
+        sh:name         "planned early end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedEarlyEndDate> .
+
+<https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  "http://purl.org/dc/terms" ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "description" ;
+        sh:name           "description" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/description> .
+
+<https://astrea.linkeddata.es/report/01438131235>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-facility-ontology/main/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#050145a791bd80a620883c69432971a1>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to element" , "Property that relates an entity (especially qual:QualityResult) to a facility:Element" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "Property that relates an entity (especially qual:QualityResult) to a facility:Element" ;
+        sh:name         "refers to element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#refersToElement> .
+
+<https://astrea.linkeddata.es/shapes#15529732aa4688139897c5d12604a607>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location MA" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a MA transformation" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a MA transformation" ;
+        sh:name         "has location MA" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/iot#hasLocationMA> .
+
+<https://astrea.linkeddata.es/shapes#5b1a044c425cadfa59d16cdccfe82542>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment Type" ;
+        sh:description  "The different kinds of (construction) equipment" ;
+        sh:name         "Equipment Type" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#EquipmentType> .
+
+<https://astrea.linkeddata.es/shapes#37e704097f0f7b140d6f732956826be8>
+        a               sh:PropertyShape ;
+        rdfs:label      "repairs element" , "A property that relates a process:Task to the facility:Element it repairs" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates a process:Task to the facility:Element it repairs" ;
+        sh:name         "repairs element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#repairsElelment> .
+
+<https://astrea.linkeddata.es/shapes#3c07d8d77b531dbd9f9a28c0ce8ec3d9>
+        a               sh:PropertyShape ;
+        rdfs:label      "crew number" , "Property used as resource multiplier factor to specify the number of crews assigned to the task in order to do the work with the provided duration" ;
+        sh:description  "Property used as resource multiplier factor to specify the number of crews assigned to the task in order to do the work with the provided duration" ;
+        sh:name         "crew number" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#crewNumber> .
+
+<https://astrea.linkeddata.es/shapes#d40eba48f84fa0fa683ba9452ee86083>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to tag group" , "Property relating an entity (especially an iot:TrackingTag) to an iot:TrackingTag" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/iot#TrackingTagGroup> ;
+        sh:description  "Property relating an entity (especially an iot:TrackingTag) to an iot:TrackingTag" ;
+        sh:name         "belongs to tag group" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/iot#belongsToTagGroup> .
+
+<https://astrea.linkeddata.es/shapes#087b9f263a6f690ac596f7600489829e>
+        a               sh:NodeShape ;
+        rdfs:label      "Work Order" ;
+        sh:description  "A command or instruction authorizing specific work, repairs, etc., to be done" ;
+        sh:name         "Work Order" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#WorkOrder> .
+
+<https://astrea.linkeddata.es/shapes#bab1a10ce983f31b5947e4974380cc44>
+        a               sh:PropertyShape ;
+        rdfs:label      "progress" , "A property indicating the progress of an entity (especially a process:Task)" ;
+        sh:datatype     xsd:float ;
+        sh:description  "A property indicating the progress of an entity (especially a process:Task)" ;
+        sh:name         "progress" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#progress> ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#9b7d180fbcaa4b8c3133662c954e9b2b>
+        a               sh:PropertyShape ;
+        rdfs:label      "first name" , "Property indicating the first name of an entity (especially a resource:Worker)" ;
+        sh:description  "Property indicating the first name of an entity (especially a resource:Worker)" ;
+        sh:name         "first name" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#firstName> .
+
+<https://astrea.linkeddata.es/shapes#f15b0505a1bacdc0a0d5650938f7d77e>
+        a               sh:PropertyShape ;
+        rdfs:label      "crew productivity penalty" , "Property used as factor to limit the maximum number of crew working in a task" ;
+        sh:description  "Property used as factor to limit the maximum number of crew working in a task" ;
+        sh:name         "crew productivity penalty" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#crewProductivityPenalty> .
+
+<https://astrea.linkeddata.es/shapes#5edb76fff9fb0810b5bc6de2acc59091>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "is measurement of" ;
+        sh:name           "is measurement of" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core#isMeasurementOf> .
+
+<https://astrea.linkeddata.es/shapes#eee84842ba6396ae47e7b2d0bf3e8c8d>
+        a               sh:PropertyShape ;
+        rdfs:label      "has location KF" , "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a KF transformation" ;
+        sh:description  "Property that relates an entity (especially a saref:Measurement) to the geo:Point it is located at using a KF transformation" ;
+        sh:name         "has location KF" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/iot#hasLocationKF> .
+
+<https://astrea.linkeddata.es/shapes#210d452cf7e541ba7bc4396a7425b1b2>
+        a               sh:PropertyShape ;
+        rdfs:label      "material type keywords" , "List of keywords related to the material type" ;
+        sh:description  "List of keywords related to the material type" ;
+        sh:name         "material type keywords" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#materialTypeKeyword> .
+
+<https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91>
+        a               sh:PropertyShape ;
+        rdfs:label      "is executed after" , "A property that relates an entity (especially a process:Task) to the task that have to be executed before it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the task that have to be executed before it" ;
+        sh:name         "is executed after" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isExecutedAfter> .
+
+<https://astrea.linkeddata.es/shapes#2eace57834fb38dfd5ba5977fb45bca2>
+        a               sh:PropertyShape ;
+        rdfs:label      "has Ifc" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its IFC file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its IFC file" ;
+        sh:name         "has Ifc" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasIfc .
+
+<https://astrea.linkeddata.es/shapes#76b55914acb958282e74ca727fa1bd13>
+        a               sh:PropertyShape ;
+        rdfs:label      "time step" , "A property indicating the time step of an entity (especially a process:Process)" ;
+        sh:description  "A property indicating the time step of an entity (especially a process:Process)" ;
+        sh:name         "time step" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#timeStep> .
+
+<https://astrea.linkeddata.es/shapes#3619dcd1ba77e1bef244c4abbef59e7f>
+        a               sh:PropertyShape ;
+        rdfs:label      "amount" , "A property indicating the amount of an entity" ;
+        sh:datatype     xsd:float ;
+        sh:description  "A property indicating the amount of an entity" ;
+        sh:name         "amount" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#amount> ;
+        sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN" .
+
+<https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41>
+        a               sh:NodeShape ;
+        rdfs:label      "Resource Type" ;
+        sh:description  "The kind of resources assigned to a process:Task or involved in a process:Process" ;
+        sh:name         "Resource Type" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
+
+<https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4>
+        a               sh:NodeShape ;
+        rdfs:label      "Information Resource" , "Quality Information" ;
+        sh:description  "Data regarding  the quality of an entity (especially a facility:Project or facility:Element) and that may have associated files in the platform" ;
+        sh:name         "Information Resource" , "Quality Information" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#InformationResource> .
+
+<https://astrea.linkeddata.es/shapes#b503396766d2be0e02842b69d29ade20>
+        a               sh:PropertyShape ;
+        rdfs:label      "has result image" , "Property that relates an entity (especially qual:ImageJob to a resulting qual:Image" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#Image> ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to a resulting qual:Image" ;
+        sh:name         "has result image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#hasResultImage> .
+
+<https://astrea.linkeddata.es/shapes#c0b53f8abf80173371631afbc8395cbe>
+        a               sh:NodeShape ;
+        rdfs:label      "Platform Thing" ;
+        sh:description  "An entity that is a td:thing (entity whose metadata and interfaces are described by a WoT Thing Description) in the platform" ;
+        sh:name         "Platform Thing" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :PlanformThing .
+
+<https://astrea.linkeddata.es/shapes#1275031e9a6a6b90566a116870107d96>
+        a               sh:PropertyShape ;
+        rdfs:label      "scalar result" , "Property indicating the scalar result" ;
+        sh:description  "Property indicating the scalar result" ;
+        sh:name         "scalar result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#scalarResult> .
+
+<https://astrea.linkeddata.es/shapes#9c3f722f3c27e264b70635a16b390297>
+        a               sh:NodeShape ;
+        rdfs:label      "Walkable Zone" ;
+        sh:description  "A zone where somebody or something can walk along" ;
+        sh:name         "Walkable Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#WalkableZone> .
+
+<https://astrea.linkeddata.es/shapes#a5fe018408970344b0bb4c16f7958395>
+        a               sh:NodeShape ;
+        rdfs:label      "Bridge" ;
+        sh:description  "A structure spanning and providing passage over a river, chasm, road, or the like" ;
+        sh:name         "Bridge" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Bridge> .
+
+<https://astrea.linkeddata.es/shapes#6c6eb8d8a82af4ea6f752e1e5e5eb4ae>
+        a               sh:PropertyShape ;
+        rdfs:label      "removes element" , "A property that relates a process:Task to the facility:Element it removes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates a process:Task to the facility:Element it removes" ;
+        sh:name         "removes element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#removesElement> .
+
+<https://astrea.linkeddata.es/shapes#005c11d466d10c8c19c0afa143d5a64c>
+        a               sh:PropertyShape ;
+        rdfs:label      "has result" , "Property that relates an entity (especially a saref:MEasurement) to its result" ;
+        sh:description  "Property that relates an entity (especially a saref:MEasurement) to its result" ;
+        sh:name         "has result" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/iot#hasResult> .
+
+<https://astrea.linkeddata.es/shapes#0221f2d012ca60ff6dd4002f9393bb0c>
+        a               sh:NodeShape ;
+        rdfs:label      "As-is Process" ;
+        sh:description  "A process in its current condition" ;
+        sh:name         "As-is Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#AsIsProcess> .
+
+<https://astrea.linkeddata.es/shapes#1a21dc375b61f75b72cb2bf3de802a15>
+        a               sh:PropertyShape ;
+        rdfs:label      "has file" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its file" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its file" ;
+        sh:name         "has file" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasFile .
+
+<https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has building" ;
+        sh:class          <https://cogito.iot.linkeddata.es/def/facility#Building> ;
+        sh:name           "has building" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasBuilding> .
+
+<https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has space" ;
+        sh:class          <https://cogito.iot.linkeddata.es/def/facility#Space> ;
+        sh:name           "has space" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasSpace> .
+
+<https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Feature of Interest" ;
+        sh:name           "Feature of Interest" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core#FeatureOfInterest> .
+
+<https://astrea.linkeddata.es/shapes#ad2d8ff1dc125d8583211a03b9948dd4>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to element" , "Property that relates an entity (especially qual:InformationResource) to a facility:Element" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "Property that relates an entity (especially qual:InformationResource) to a facility:Element" ;
+        sh:name         "is related to element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#isRelatedToElement> .
+
+<https://astrea.linkeddata.es/shapes#20a763b12226f595ed355e194823a9d7>
+        a               sh:NodeShape ;
+        rdfs:label      "Visual Quality Task" ;
+        sh:description  "A task related to the visual quality domain" ;
+        sh:name         "Visual Quality Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#VisualQualityTask> .
+
+<https://astrea.linkeddata.es/shapes#a550f9b6beac124b8d09387a6f05bfea>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracking Tag Group" ;
+        sh:description  "An entity used to group tracking tags" ;
+        sh:name         "Tracking Tag Group" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#TrackingTagGroup> .
+
+<https://astrea.linkeddata.es/report/0310287612>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-construction-process-ontology/master/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#14ffc5caa004487c821bf9987d25341b>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Measurement" ;
+        sh:name           "Measurement" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core/Measurement> .
+
+<https://astrea.linkeddata.es/shapes#3ae7810b96d1343071618de4dcb32a69>
+        a               sh:PropertyShape ;
+        rdfs:label      "tolerance reference" , "property indicating the tolerance reference" ;
+        sh:description  "property indicating the tolerance reference" ;
+        sh:name         "tolerance reference" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#toleranceReference> .
+
+<https://astrea.linkeddata.es/shapes#fb5edd3b022882e7eb6a0ede4e2a909e>
+        a               sh:PropertyShape ;
+        rdfs:label      "has component task" , "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+        sh:name         "has component task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasComponentTask> .
+
+<https://astrea.linkeddata.es/report/049271795>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-platform-ontology/main/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#138ba88c1b524d03a6a7e4760e8e8083>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned late end date" , "A property indicating the latest  date an entity can end" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the latest  date an entity can end" ;
+        sh:name         "planned late end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedLateEndDate> .
+
+<https://astrea.linkeddata.es/shapes#37f61406eb7f3a7446dbb41ce34aaa21>
+        a               sh:PropertyShape ;
+        rdfs:label      "implied by movement" , "A safety:impliedByZone sub-property whose range is a safety:MovementZone" ;
+        sh:class        <https://cogito.iot.linkeddata.es/safety#MovementZone> ;
+        sh:description  "A safety:impliedByZone sub-property whose range is a safety:MovementZone" ;
+        sh:name         "implied by movement" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#ImpliedByMovement> .
+
+<https://astrea.linkeddata.es/shapes#a8b72f7c26d9c03291c0e3bcb3e3a560>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to type" , "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#ResourceType> ;
+        sh:description  "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType" ;
+        sh:name         "belongs to type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#belongsToType> .
+
+<https://astrea.linkeddata.es/shapes#911e74eaa5485bb9e3f249a59cc91d56>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "Property indicating the status of an entity (especially a resource:Resource)" ;
+        sh:description  "Property indicating the status of an entity (especially a resource:Resource)" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#status> .
+
+<https://astrea.linkeddata.es/shapes#f31288f45557f654fc2db4a369bebfa7>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        <https://cogito.iot.linkeddata.es/def/created> ;
+        sh:name           <https://cogito.iot.linkeddata.es/def/created> ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/created> .
+
+<https://astrea.linkeddata.es/shapes#e851ef8f3e3e05588c932534d25c093a>
+        a               sh:PropertyShape ;
+        rdfs:label      "result" , "A property indicating the result of an entity (especially a process:Task)" ;
+        sh:description  "A property indicating the result of an entity (especially a process:Task)" ;
+        sh:name         "result" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#result> .
+
+<https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362>
+        a               sh:NodeShape ;
+        rdfs:label      "Element" ;
+        sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position." , "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+        sh:name         "Element" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f> ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Element> .
+
+<https://astrea.linkeddata.es/shapes#7767d82a9e8e617edb9ae3e8c1302360>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Space" ;
+        sh:name           "Space" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Space> .
+
+<https://astrea.linkeddata.es/shapes#a649ef47b44cd87375d797e29ccb9b66>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracked Zone" ;
+        sh:description  "An entity used to represent zones used by the IoT preprocessing module" ;
+        sh:name         "Tracked Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#TrackedZone> .
+
+<https://astrea.linkeddata.es/shapes#45ed579f7f6323455350d5815fe90866>
+        a               sh:PropertyShape ;
+        rdfs:label      "has mesh" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its mesh file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its mesh file" ;
+        sh:name         "has mesh" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasMesh .
+
+<https://astrea.linkeddata.es/shapes#393c5ba189a699fce169de01fede636e>
+        a               sh:PropertyShape ;
+        rdfs:label      "has schedule" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its schedule file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its schedule file" ;
+        sh:name         "has schedule" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasSchedule .
+
+<https://astrea.linkeddata.es/shapes#048232ce891a949415f166d3e36aa426>
+        a               sh:PropertyShape ;
+        rdfs:label      "has main provider" , "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#Worker> ;
+        sh:description  "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+        sh:name         "has main provider" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasMainProvider> .
+
+<https://astrea.linkeddata.es/shapes#fd9eb5a4b0a2ac348d9a2c9725522d10>
+        a               sh:NodeShape ;
+        rdfs:label      "Facility Part" ;
+        sh:description  "Something that is contained n a facility:Zone (especially a facility:Facility) and can contain more facility parts" ;
+        sh:name         "Facility Part" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#FacilityPart> .
+
+<https://astrea.linkeddata.es/shapes#f0799d69fff9f86419a5b5361fb45e42>
+        a               sh:PropertyShape ;
+        rdfs:label      "maximum number of units" , "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;
+        sh:description  "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;
+        sh:name         "maximum number of units" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#maxUnit> .
+
+<https://astrea.linkeddata.es/shapes#d4708507e57027690edfd75e5f9c62c9>
+        a               sh:PropertyShape ;
+        rdfs:label      "is repaired by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that repairs it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that repairs it" ;
+        sh:name         "is repaired by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isRepairedByTask> .
+
+<https://astrea.linkeddata.es/shapes#0c88f701f1940d718cca7c32c3d1f46c>
+        a               sh:PropertyShape ;
+        rdfs:label      "performed timestamp" , "Property indicating the actual time" ;
+        sh:description  "Property indicating the actual time" ;
+        sh:name         "performed timestamp" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#performedTimestamp> .
+
+<https://astrea.linkeddata.es/shapes#37ef0f8d8f807d2113a2d18d19bce11b>
+        a               sh:NodeShape ;
+        rdfs:label      "Equipment Tag Group" ;
+        sh:description  "A tracking tag group belonging to a piece of equipment" ;
+        sh:name         "Equipment Tag Group" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#EquipmentTagGroup> .
+
+<https://astrea.linkeddata.es/shapes#e2783fb4f5006c568bb3690d809914ca>
+        a               sh:NodeShape ;
+        rdfs:label      "Form" ;
+        sh:name         "Form" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://www.w3.org/2019/wot/hypermedia#Form> .
+
+<https://astrea.linkeddata.es/shapes#5744ae30a8a77fbac6b57d5ea027f772>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to process" , "A property that relates an entity (especially a facility:Project) to its processes" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Process> ;
+        sh:description  "A property that relates an entity (especially a facility:Project) to its processes" ;
+        sh:name         "is related to process" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isRelatedToProcess> .
+
+<https://astrea.linkeddata.es/shapes#f2a356b40f0587efbcbef558f92db6d5>
+        a               sh:NodeShape ;
+        rdfs:label      "Movement Zone" ;
+        sh:description  "An analysis zone where somebody can move" ;
+        sh:name         "Movement Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#MovementZone> .
+
+<https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a>
+        a               sh:NodeShape ;
+        rdfs:label      "Tracking Tag" ;
+        sh:description  "An entity" , "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location" ;
+        sh:name         "Tracking Tag" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#TrackingTag> .
+
+<https://astrea.linkeddata.es/shapes#964e79e6853232c2ef8e4f4ead800eb1>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "Space Building" ;
+        sh:name           "Space Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/saref4bldg#SpaceBuilding> .
+
+<https://astrea.linkeddata.es/shapes#ce4e9584ec3d179c50d601ea8db4c59b>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned start date" , "A property indicating the planned start date of an entity" ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "A property indicating the planned start date of an entity" ;
+        sh:name         "planned start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedStartDate> ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#99446dbcfcb5704d0eed9976ab1f0bd7>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects defect" , "Property that relates an entity (especially qual:ImageJob) to a qual:Defect" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#Defect> ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob) to a qual:Defect" ;
+        sh:name         "reflects defect" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#reflectsDefect> .
+
+<https://astrea.linkeddata.es/shapes#a92a7f566d1704b71734f2d734e84546>
+        a               sh:NodeShape ;
+        rdfs:label      "Facility" ;
+        sh:description  "Something designed and built to serve a specific function providing a convenience or a service." ;
+        sh:name         "Facility" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Facility> .
+
+<https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sub-element" , "A property that relates a facility:Element to another facility:Element it contains" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates a facility:Element to another facility:Element it contains" ;
+        sh:name         "has sub-element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#hasSubElement> .
+
+<https://astrea.linkeddata.es/shapes#c32ca14d3e344cde76ae464713549b66>
+        a               sh:NodeShape ;
+        rdfs:label      "Defect" ;
+        sh:description  "A shortcoming, fault, or imperfection regarding a particular facility:Element." ;
+        sh:name         "Defect" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#Defect> .
+
+<https://astrea.linkeddata.es/report/956176572>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-iot-ontology/main/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#d392605f2e9561b9b7d587fedf11eaad> , <https://astrea.linkeddata.es/shapes#ff44aea2ac8000b51a8243cd2ecfe636> , <https://astrea.linkeddata.es/shapes#e11e2760964de3984a7b97f876dd7362> , <https://astrea.linkeddata.es/shapes#feda1d30c2a4aaf5aebe979e5a0810da> , <https://astrea.linkeddata.es/shapes#df5e9feeedf06a9110a1aa7557e70000> , <https://astrea.linkeddata.es/shapes#1275031e9a6a6b90566a116870107d96> , <https://astrea.linkeddata.es/shapes#2555e2c5dd5daf03da7556c160443a79> , <https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c> , <https://astrea.linkeddata.es/shapes#2b40d19bdbc17026c35e5b5d82d7460b> , <https://astrea.linkeddata.es/shapes#5edb76fff9fb0810b5bc6de2acc59091> , <https://astrea.linkeddata.es/shapes#967f987e15e3bd62af601655742833a8> , <https://astrea.linkeddata.es/shapes#c0b53f8abf80173371631afbc8395cbe> , <https://astrea.linkeddata.es/shapes#26479f7070bef0b6f1f1565071e17edc> , <https://astrea.linkeddata.es/shapes#d2a3874972735954683a0650493a3eef> , <https://astrea.linkeddata.es/shapes#64ea1f13f6b8f9e615b74504d8440d94> , <https://astrea.linkeddata.es/shapes#f31288f45557f654fc2db4a369bebfa7> , <https://astrea.linkeddata.es/shapes#21e884c326728fcc86de5712bd90baec> , <https://astrea.linkeddata.es/shapes#6c8d5c38ed3ebddea66c581717b5b481> , <https://astrea.linkeddata.es/shapes#368f8b165056794dc86f4b3c92e65801> , <https://astrea.linkeddata.es/shapes#b1b6b268ab5d0cf0d149bb43735ddc2d> , <https://astrea.linkeddata.es/shapes#ad2d8ff1dc125d8583211a03b9948dd4> , <https://astrea.linkeddata.es/shapes#6e64945ca900acb9db18fa42c053915f> , <https://astrea.linkeddata.es/shapes#f73162148d76c37ee55306b23f1bc6d3> , <https://astrea.linkeddata.es/shapes#1d770b664c7e99e8cda00fbb97d9ee64> , <https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1> , <https://astrea.linkeddata.es/shapes#b46053099880c65381d4c5a1f62e4931> , <https://astrea.linkeddata.es/shapes#3502f1ff9843ffa5ae37c038eb6b7d8d> , <https://astrea.linkeddata.es/shapes#087b9f263a6f690ac596f7600489829e> , <https://astrea.linkeddata.es/shapes#ddcabce9d7ae5a7e1056590219d9b439> , <https://astrea.linkeddata.es/shapes#e2783fb4f5006c568bb3690d809914ca> , <https://astrea.linkeddata.es/shapes#e824bc3a07d17f8c2fe3656cc611c684> , <https://astrea.linkeddata.es/shapes#4f102e9cc4310d750da29cc6b18dc001> , <https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187> , <https://astrea.linkeddata.es/shapes#5cfe2a7b1f6d00d6c381234cd59b3592> , <https://astrea.linkeddata.es/shapes#bca5ac6b49a3871e9eea0afb763cab2d> , <https://astrea.linkeddata.es/shapes#104899729cad4644ce3aac869d87255f> , <https://astrea.linkeddata.es/shapes#b503396766d2be0e02842b69d29ade20> , <https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0> , <https://astrea.linkeddata.es/shapes#80098e102999b383203c2b7ee67e9118> , <https://astrea.linkeddata.es/shapes#168358958b05e5a5c28047737ce0e3fa> , <https://astrea.linkeddata.es/shapes#04c1f3e845ffd5c95b7f52031971093f> , <https://astrea.linkeddata.es/shapes#d4fccd920f0422b26e1ce542adab6a15> , <https://astrea.linkeddata.es/shapes#8a477cd76f4a28afbe02c6416fb48923> , <https://astrea.linkeddata.es/shapes#aaf9d54eda525c18e705e43a164a2334> , <https://astrea.linkeddata.es/shapes#a24b8cffdea9c608509b0d54b2cc2cbf> , <https://astrea.linkeddata.es/shapes#9a72b5c24c5a11e561181c50371437ff> , <https://astrea.linkeddata.es/shapes#c2b3cdd8022858071e845a64219f6e27> , <https://astrea.linkeddata.es/shapes#fd9eb5a4b0a2ac348d9a2c9725522d10> , <https://astrea.linkeddata.es/shapes#df3534c1d3d32b7b48eebd659b465ddf> , <https://astrea.linkeddata.es/shapes#c1a0fd5ca62b0a71c8b40a0364cdde4e> , <https://astrea.linkeddata.es/shapes#050145a791bd80a620883c69432971a1> , <https://astrea.linkeddata.es/shapes#34c0f55f8f3f3c58d9cb361df2984c77> , <https://astrea.linkeddata.es/shapes#eace9e05165dd048bd5d220effd61c53> , <https://astrea.linkeddata.es/shapes#bf96a28cf3a5fad8989b32f39f22f522> , <https://astrea.linkeddata.es/shapes#81b7f5eaf286a56aa540e9bb8cf5cba5> , <https://astrea.linkeddata.es/shapes#f15b0505a1bacdc0a0d5650938f7d77e> , <https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca> , <https://astrea.linkeddata.es/shapes#20a763b12226f595ed355e194823a9d7> , <https://astrea.linkeddata.es/shapes#9e8fc937658bda7beceb6a3c16537508> , <https://astrea.linkeddata.es/shapes#498ecea4906de70915739bdbdf3d1bc0> , <https://astrea.linkeddata.es/shapes#d4f6abf22e268b2c809d0405902bed8f> , <https://astrea.linkeddata.es/shapes#76b55914acb958282e74ca727fa1bd13> , <https://astrea.linkeddata.es/shapes#70dea406ce156986ffcd950471ed0080> , <https://astrea.linkeddata.es/shapes#9134b5fc4567260bbf012e7d1c614d67> , <https://astrea.linkeddata.es/shapes#a8b72f7c26d9c03291c0e3bcb3e3a560> , <https://astrea.linkeddata.es/shapes#6dc70a6f42f1a37eba36c24f94668883> , <https://astrea.linkeddata.es/shapes#da32c321993c6398f2726dfb5fd32717> , <https://astrea.linkeddata.es/shapes#9f7a28bb9c5d06a88580e98661040c77> , <https://astrea.linkeddata.es/shapes#837710a57279984962100ecb5678deb5> , <https://astrea.linkeddata.es/shapes#85a48d637012e5a48a7b24a8112360ab> , <https://astrea.linkeddata.es/shapes#0221f2d012ca60ff6dd4002f9393bb0c> , <https://astrea.linkeddata.es/shapes#d40eba48f84fa0fa683ba9452ee86083> , <https://astrea.linkeddata.es/shapes#50dc3a9469d59d68d43e5fe360019298> , <https://astrea.linkeddata.es/shapes#b6101ff1bda65c2ac403d08af9453515> , <https://astrea.linkeddata.es/shapes#964e79e6853232c2ef8e4f4ead800eb1> , <https://astrea.linkeddata.es/shapes#3f2ae919e9c05cd1b735ab4f438ab19b> , <https://astrea.linkeddata.es/shapes#1e4b015c13d74edd082668e96a799cb3> , <https://astrea.linkeddata.es/shapes#a64c42050c69176d7ff1b2b28ffb2957> , <https://astrea.linkeddata.es/shapes#a81604d66deaa9350d33f43ebdd46a3d> , <https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8> , <https://astrea.linkeddata.es/shapes#c8e8609e189c63bdd456a111d854855e> , <https://astrea.linkeddata.es/shapes#7767d82a9e8e617edb9ae3e8c1302360> , <https://astrea.linkeddata.es/shapes#0c7bfdb8c0070c333818670b1161f465> , <https://astrea.linkeddata.es/shapes#5a37a577b5fee2092c3dc5851a518b15> , <https://astrea.linkeddata.es/shapes#138ba88c1b524d03a6a7e4760e8e8083> , <https://astrea.linkeddata.es/shapes#0686da40e51fd01790daa7ef55a9ab03> , <https://astrea.linkeddata.es/shapes#bc1d65c9335ee61c26e6ba87318c6468> , <https://astrea.linkeddata.es/shapes#01109b8cf1846598baf66150280355e0> , <https://astrea.linkeddata.es/shapes#048232ce891a949415f166d3e36aa426> , <https://astrea.linkeddata.es/shapes#2eace57834fb38dfd5ba5977fb45bca2> , <https://astrea.linkeddata.es/shapes#c5a4ce5bcf93757808f380b1d6ad4277> , <https://astrea.linkeddata.es/shapes#abcbc6c65cb325168fe715e373960e7c> , <https://astrea.linkeddata.es/shapes#e1c4e4b9ce9ad056f28f1f256f066384> , <https://astrea.linkeddata.es/shapes#96ea172addc7eb5a2a49f01b8583ad5c> , <https://astrea.linkeddata.es/shapes#99446dbcfcb5704d0eed9976ab1f0bd7> , <https://astrea.linkeddata.es/shapes#45d2625f13dba3319778e2fc53e9cf94> , <https://astrea.linkeddata.es/shapes#911e74eaa5485bb9e3f249a59cc91d56> , <https://astrea.linkeddata.es/shapes#e7bfad223a5d170819fc688b4db36f99> , <https://astrea.linkeddata.es/shapes#d0c4ced02cf8a24e05a30a3bfc0468d2> , <https://astrea.linkeddata.es/shapes#5b1a044c425cadfa59d16cdccfe82542> , <https://astrea.linkeddata.es/shapes#7990c32d7287019c22f2b80cd6372da4> , <https://astrea.linkeddata.es/shapes#4c986b005e7b38c5a7dbd91e2179d2c6> , <https://astrea.linkeddata.es/shapes#45ed579f7f6323455350d5815fe90866> , <https://astrea.linkeddata.es/shapes#88d3f022bbe5ad4138183c6dd3f64ebf> , <https://astrea.linkeddata.es/shapes#15529732aa4688139897c5d12604a607> , <https://astrea.linkeddata.es/shapes#ed5729495b0f8778780de4f79e464539> , <https://astrea.linkeddata.es/shapes#5744ae30a8a77fbac6b57d5ea027f772> , <https://astrea.linkeddata.es/shapes#005c11d466d10c8c19c0afa143d5a64c> , <https://astrea.linkeddata.es/shapes#c97c0acee00786a5055b4fd9c4a636e4> , <https://astrea.linkeddata.es/shapes#062d55373c45af0fb1ce8e045ec3cab9> , <https://astrea.linkeddata.es/shapes#219f305d448cac604a8de1a1320b784f> , <https://astrea.linkeddata.es/shapes#bcbba4a996a2380291cd84d31b874a61> , <https://astrea.linkeddata.es/shapes#d264831fd3f3c03fdc2454d1f4c4abc3> , <https://astrea.linkeddata.es/shapes#735fdc5938cfefa151a3a9e88f95f019> , <https://astrea.linkeddata.es/shapes#139e4e244b43fa819f20f28632cfd6fa> , <https://astrea.linkeddata.es/shapes#e851ef8f3e3e05588c932534d25c093a> , <https://astrea.linkeddata.es/shapes#4164c607e6556e30a6bbd15fe711d8a2> , <https://astrea.linkeddata.es/shapes#8f4a68b2e16be86eb1f66df8d43b0a21> , <https://astrea.linkeddata.es/shapes#37f61406eb7f3a7446dbb41ce34aaa21> , <https://astrea.linkeddata.es/shapes#5dbf9b77bfd2190038c5625aaaacf47c> , <https://astrea.linkeddata.es/shapes#60bf39714069accef3e81542ed6f5176> , <https://astrea.linkeddata.es/shapes#fb5edd3b022882e7eb6a0ede4e2a909e> , <https://astrea.linkeddata.es/shapes#5373496c4f0968c7c4a1e1ee67317771> , <https://astrea.linkeddata.es/shapes#8cf57837086fb4dd966113542ef9b330> , <https://astrea.linkeddata.es/shapes#35ed44ad6c242e1906885810918b2a6f> , <https://astrea.linkeddata.es/shapes#d4fcbf3b6b6e53b5e5e731acb01a8ece> , <https://astrea.linkeddata.es/shapes#b3b504a4193632f9ee4b04cde2d138d1> , <https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91> , <https://astrea.linkeddata.es/shapes#c09e7368ba9600374c81ba969f462c2f> , <https://astrea.linkeddata.es/shapes#898c69f95b04d3caafe9b5a3b908b7b2> , <https://astrea.linkeddata.es/shapes#9b7d180fbcaa4b8c3133662c954e9b2b> , <https://astrea.linkeddata.es/shapes#3f18e793b39c90743a2c6e008a045f12> , <https://astrea.linkeddata.es/shapes#65dcbbbe8f92a8a723fa11c8ca4dc886> , <https://astrea.linkeddata.es/shapes#6633f6f9a681a2c4c8f51d232cf4501f> , <https://astrea.linkeddata.es/shapes#25ec003602564842d39f501bdffe113d> , <https://astrea.linkeddata.es/shapes#d4610d417a6ce29cd41a960551db9ef5> , <https://astrea.linkeddata.es/shapes#2754736927cccdc145874dcfd21c1d2c> , <https://astrea.linkeddata.es/shapes#5de58b9e4cdad68371da5bd5ebff2906> , <https://astrea.linkeddata.es/shapes#66dd06ea9319f3f8f8b40f1b1d70855a> , <https://astrea.linkeddata.es/shapes#6b9796aff8201fd6a21b0e6b91708120> , <https://astrea.linkeddata.es/shapes#532d0ab4f4476b0e24f326cf0294944b> , <https://astrea.linkeddata.es/shapes#1914cc5553d33255b5fe7f9c6734a355> , <https://astrea.linkeddata.es/shapes#363fbf7f179e9833abb312a158f8d3c3> , <https://astrea.linkeddata.es/shapes#5a8a1faad1b5cba16d43bd30a8950074> , <https://astrea.linkeddata.es/shapes#94055da5a1b9ee17ec625821f49ff794> , <https://astrea.linkeddata.es/shapes#6a537a2b2555850b42610ce00a29cd97> , <https://astrea.linkeddata.es/shapes#3619dcd1ba77e1bef244c4abbef59e7f> , <https://astrea.linkeddata.es/shapes#a92a7f566d1704b71734f2d734e84546> , <https://astrea.linkeddata.es/shapes#a550f9b6beac124b8d09387a6f05bfea> , <https://astrea.linkeddata.es/shapes#bab1a10ce983f31b5947e4974380cc44> , <https://astrea.linkeddata.es/shapes#d98b840e777a6cfb282ed4fd76abe6f4> , <https://astrea.linkeddata.es/shapes#2ad57886640d5195c5d4362d81d9cfcb> , <https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591> , <https://astrea.linkeddata.es/shapes#14ffc5caa004487c821bf9987d25341b> , <https://astrea.linkeddata.es/shapes#925e42c32e80d1fb57d19c374cd0864d> , <https://astrea.linkeddata.es/shapes#06cd35a991a1d383c67b3934f9fb142d> , <https://astrea.linkeddata.es/shapes#a3c67c015054f440136576215452ed7c> , <https://astrea.linkeddata.es/shapes#0dc15d417cc75f81972c2f5ddfaf9e69> , <https://astrea.linkeddata.es/shapes#7c718d8fdba094284ce93d04858a91f4> , <https://astrea.linkeddata.es/shapes#af2e63ddbbfc6f76bb498ee0bd798104> , <https://astrea.linkeddata.es/shapes#41593b5c39b411f02637833e1cefd1f1> , <https://astrea.linkeddata.es/shapes#79c6432ede8c2818efc44605505f8a92> , <https://astrea.linkeddata.es/shapes#2ee51acc231849e6a11051b71bbbad04> , <https://astrea.linkeddata.es/shapes#f0799d69fff9f86419a5b5361fb45e42> , <https://astrea.linkeddata.es/shapes#28a5e8832b998735500d8b000050cfed> , <https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08> , <https://astrea.linkeddata.es/shapes#298804f5948e0c382f1f0aa7650fe8ea> , <https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510> , <https://astrea.linkeddata.es/shapes#f2a356b40f0587efbcbef558f92db6d5> , <https://astrea.linkeddata.es/shapes#37e704097f0f7b140d6f732956826be8> , <https://astrea.linkeddata.es/shapes#0b47ca783b387c8553e9a3d6b94e304c> , <https://astrea.linkeddata.es/shapes#3c07d8d77b531dbd9f9a28c0ce8ec3d9> , <https://astrea.linkeddata.es/shapes#a5fe018408970344b0bb4c16f7958395> , <https://astrea.linkeddata.es/shapes#7c66eacd3eb9460118422509387c4af8> , <https://astrea.linkeddata.es/shapes#d2839b49f3065bc840b0fa730262b897> , <https://astrea.linkeddata.es/shapes#e3ef37989500f0e1d3a941dba1f5d09d> , <https://astrea.linkeddata.es/shapes#210d452cf7e541ba7bc4396a7425b1b2> , <https://astrea.linkeddata.es/shapes#e025b64b334d79a8f29d9f427e18f2a0> , <https://astrea.linkeddata.es/shapes#3ae7810b96d1343071618de4dcb32a69> , <https://astrea.linkeddata.es/shapes#ce4e9584ec3d179c50d601ea8db4c59b> , <https://astrea.linkeddata.es/shapes#d3a0ad1c0d6fab3dfd3aa0abedde86a6> , <https://astrea.linkeddata.es/shapes#1e2197548b1ffbff5ee8879bea0f06db> , <https://astrea.linkeddata.es/shapes#fdc15ade43fc71215a0eff8dfc90bd6e> , <https://astrea.linkeddata.es/shapes#e668f6b32baad9b7482380056b25512d> , <https://astrea.linkeddata.es/shapes#2347789a0a227ab598ec5ded8703f745> , <https://astrea.linkeddata.es/shapes#e72b1e77872e1ba2f4892b62f485450d> , <https://astrea.linkeddata.es/shapes#5123e0630e17eca0434b1a18f9f4a2b4> , <https://astrea.linkeddata.es/shapes#8433f3bd707b13982d67d48077c56c93> , <https://astrea.linkeddata.es/shapes#ab495ba755a75f9bd64ee2fb7b230bf4> , <https://astrea.linkeddata.es/shapes#63a3eb61c939631486d5058b51efb8ea> , <https://astrea.linkeddata.es/shapes#393c5ba189a699fce169de01fede636e> , <https://astrea.linkeddata.es/shapes#8ddb01fe19e5849467c63b01acb43f4c> , <https://astrea.linkeddata.es/shapes#d3b5ba212bebe17ef65785140e79dc3a> , <https://astrea.linkeddata.es/shapes#0c88f701f1940d718cca7c32c3d1f46c> , <https://astrea.linkeddata.es/shapes#1a21dc375b61f75b72cb2bf3de802a15> , <https://astrea.linkeddata.es/shapes#eee84842ba6396ae47e7b2d0bf3e8c8d> , <https://astrea.linkeddata.es/shapes#767c9e3e28f6819c678fd3930fbff540> , <https://astrea.linkeddata.es/shapes#073d85431f8d68a75a8d73057dabf570> , <https://astrea.linkeddata.es/shapes#6c6eb8d8a82af4ea6f752e1e5e5eb4ae> , <https://astrea.linkeddata.es/shapes#a649ef47b44cd87375d797e29ccb9b66> , <https://astrea.linkeddata.es/shapes#8fbe1e84f873b7240369f6f17a399d41> , <https://astrea.linkeddata.es/shapes#37ef0f8d8f807d2113a2d18d19bce11b> , <https://astrea.linkeddata.es/shapes#c32ca14d3e344cde76ae464713549b66> , <https://astrea.linkeddata.es/shapes#af4e534bc3b5b6e4a4016771a7068965> , <https://astrea.linkeddata.es/shapes#9c3f722f3c27e264b70635a16b390297> , <https://astrea.linkeddata.es/shapes#5d5893cb33739e1909b4efec8832151e> , <https://astrea.linkeddata.es/shapes#52d880b6219491eaedc377478b45cb1e> , <https://astrea.linkeddata.es/shapes#1556f970052fd7921f8ac68df1b6c93f> , <https://astrea.linkeddata.es/shapes#d4708507e57027690edfd75e5f9c62c9> , <https://astrea.linkeddata.es/shapes#7ff4c494e51f962b62eeec1d74c1b3b2> , <https://astrea.linkeddata.es/shapes#d65681aec8562882a2b131ea22f79f9a> , <https://astrea.linkeddata.es/shapes#4e41dc115f85be072b16536ddd4beb17> , <https://astrea.linkeddata.es/shapes#d6f29b3593a614106a573f5ca46d66d1> , <https://astrea.linkeddata.es/shapes#d7e41a30c21ecec35d84add6350ffc47> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/956176572> , <https://astrea.linkeddata.es/report/399541052> , <https://astrea.linkeddata.es/report/01569838997> , <https://astrea.linkeddata.es/report/0503228594> , <https://astrea.linkeddata.es/report/049271795> , <https://astrea.linkeddata.es/report/01438131235> , <https://astrea.linkeddata.es/report/0310287612> .
+
+<https://astrea.linkeddata.es/shapes#d3b5ba212bebe17ef65785140e79dc3a>
+        a               sh:NodeShape ;
+        rdfs:label      "Space" ;
+        sh:description  "A subclass of bot:Space and, as such, a part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically and provides for certain functions within the zone it is contained in." ;
+        sh:name         "Space" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Space> .
+
+<https://astrea.linkeddata.es/shapes#d4610d417a6ce29cd41a960551db9ef5>
+        a               sh:PropertyShape ;
+        rdfs:label      "priority" , "A property indicating the priority of an entity" ;
+        sh:datatype     xsd:integer ;
+        sh:description  "A property indicating the priority of an entity" ;
+        sh:name         "priority" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#priority> ;
+        sh:pattern      "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#2ee51acc231849e6a11051b71bbbad04>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to project" , "Property that relates an entity (especially qual:QualityInformation and quel:Rule) to a facility:Project" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Project> ;
+        sh:description  "Property that relates an entity (especially qual:QualityInformation and quel:Rule) to a facility:Project" ;
+        sh:name         "is related to project" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/quality#isRelatedToProject> .
+
+<https://astrea.linkeddata.es/shapes#219f305d448cac604a8de1a1320b784f>
+        a               sh:PropertyShape ;
+        rdfs:label      "scheduled timestamp" , "Property indicating the scheduled time" ;
+        sh:description  "Property indicating the scheduled time" ;
+        sh:name         "scheduled timestamp" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#scheduledTimestamp> .
+
+<https://astrea.linkeddata.es/shapes#925e42c32e80d1fb57d19c374cd0864d>
+        a                sh:PropertyShape ;
+        rdfs:label       "A property indicating the minimal number of days doing a task takes" , "duration" ;
+        sh:datatype      xsd:nonNegativeInteger ;
+        sh:description   "A property indicating the minimal number of days doing a task takes" ;
+        sh:minInclusive  0 ;
+        sh:name          "duration" ;
+        sh:nodeKind      sh:Literal ;
+        sh:path          <https://cogito.iot.linkeddata.es/def/process#duration> ;
+        sh:pattern       "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#04c1f3e845ffd5c95b7f52031971093f>
+        a               sh:PropertyShape ;
+        rdfs:label      "crew productivity" , "Property indicating  \"amount of work / unit of time\". At the moment, we only capture the list of elements to be built, so the productivity values we would use are \"units / time\". But, work quantity is typically measured as: m, m2, m3, units, depending on the type of activity. So, we could have a mixture of productivity metrics, m/time, m2/time, m3/time, depending on the type of activity." ;
+        sh:description  "Property indicating  \"amount of work / unit of time\". At the moment, we only capture the list of elements to be built, so the productivity values we would use are \"units / time\". But, work quantity is typically measured as: m, m2, m3, units, depending on the type of activity. So, we could have a mixture of productivity metrics, m/time, m2/time, m3/time, depending on the type of activity." ;
+        sh:name         "crew productivity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#crewProductivity> .
+
+<https://astrea.linkeddata.es/report/01569838997>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-quality-ontology/main/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#df3534c1d3d32b7b48eebd659b465ddf>
+        a               sh:PropertyShape ;
+        rdfs:label      "confidence level" , "Property indicating the level of confidence of a result (especially a qual:Defect)" ;
+        sh:description  "Property indicating the level of confidence of a result (especially a qual:Defect)" ;
+        sh:name         "confidence level" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#confidenceLevel> .
+
+<https://astrea.linkeddata.es/shapes#93d99516f713a11677b57ffbea4c83c1>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Zone" ;
+        sh:description  "An entity used to represent zones used by the Health and Safety module" ;
+        sh:name         "Construction Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#ConstructionZone> .
+
+<https://astrea.linkeddata.es/shapes#bca5ac6b49a3871e9eea0afb763cab2d>
+        a               sh:NodeShape ;
+        rdfs:label      "Safety Issue" ;
+        sh:description  "Data regarding a safety problem" ;
+        sh:name         "Safety Issue" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#SafetyIssue> .
+
+<https://astrea.linkeddata.es/shapes#45d2625f13dba3319778e2fc53e9cf94>
+        a               sh:PropertyShape ;
+        rdfs:label      "has IRI" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its IRI" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its IRI" ;
+        sh:name         "has IRI" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasIRI .
+
+<https://astrea.linkeddata.es/shapes#139e4e244b43fa819f20f28632cfd6fa>
+        a               sh:PropertyShape ;
+        rdfs:label      "status" , "A property indicating the status of an entity (especially a process:WorkOrder)" ;
+        sh:description  "A property indicating the status of an entity (especially a process:WorkOrder)" ;
+        sh:name         "status" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#status> .
+
+<https://astrea.linkeddata.es/shapes#8cf57837086fb4dd966113542ef9b330>
+        a               sh:PropertyShape ;
+        rdfs:label      "relates to resource type" , "A property that relates an entity (especially a process:ResourceTypeRequirement) to the resource type it refers to" ;
+        sh:description  "A property that relates an entity (especially a process:ResourceTypeRequirement) to the resource type it refers to" ;
+        sh:name         "relates to resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#relatesToResourceType> .
+
+<https://astrea.linkeddata.es/shapes#3aafc85be67a7730e7136de32c1ac9ca>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has storey" ;
+        sh:class          <https://cogito.iot.linkeddata.es/def/facility#Storey> ;
+        sh:name           "has storey" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasStorey> .
+
+<https://astrea.linkeddata.es/shapes#b46053099880c65381d4c5a1f62e4931>
+        a               sh:NodeShape ;
+        rdfs:label      "Process" ;
+        sh:description  "A series of actions aimed at accomplishing some result (in this case, related to a facility:Project)" ;
+        sh:name         "Process" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#Process> .
+
+<https://astrea.linkeddata.es/shapes#1e2197548b1ffbff5ee8879bea0f06db>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparq#> ;
+        rdfs:label        "Point" ;
+        sh:name           "Point" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <http://www.opengis.net/ont/geosparql#Point> .
+
+<https://astrea.linkeddata.es/shapes#ddcabce9d7ae5a7e1056590219d9b439>
+        a               sh:PropertyShape ;
+        rdfs:label      "has task" , "A property that relates an entity (especially a process:Process) to the tasks it involves" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the tasks it involves" ;
+        sh:name         "has task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasTask> .
+
+<https://astrea.linkeddata.es/shapes#6e64945ca900acb9db18fa42c053915f>
+        a               sh:PropertyShape ;
+        rdfs:label      "unit" , "Property indicating the unit of an entity" ;
+        sh:description  "Property indicating the unit of an entity" ;
+        sh:name         "unit" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#unit> .
+
+<https://astrea.linkeddata.es/shapes#eace9e05165dd048bd5d220effd61c53>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to resource type" , "A property that relates a resource:Resource to its type" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#ResourceType> ;
+        sh:description  "A property that relates a resource:Resource to its type" ;
+        sh:name         "belongs to resource type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#belongsToResourceType> .
+
+<https://astrea.linkeddata.es/shapes#d4f6abf22e268b2c809d0405902bed8f>
+        a               sh:NodeShape ;
+        rdfs:label      "Link" ;
+        sh:name         "Link" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://www.w3.org/2019/wot/hypermedia#Link> .
+
+<https://astrea.linkeddata.es/shapes#a81604d66deaa9350d33f43ebdd46a3d>
+        a               sh:NodeShape ;
+        rdfs:label      "Fall Hazard Zone" ;
+        sh:description  "A hazard zone where somebody can fall" ;
+        sh:name         "Fall Hazard Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#FallHazardZone> .
+
+<https://astrea.linkeddata.es/shapes#767c9e3e28f6819c678fd3930fbff540>
+        a               sh:NodeShape ;
+        rdfs:label      "Location Measurement" ;
+        sh:description  "The location measured by an entity (especially an iot:TrackingTag)" ;
+        sh:name         "Location Measurement" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#LocationMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#532d0ab4f4476b0e24f326cf0294944b>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to spatial zone" , "A property relating an entity (especially a facility:SpatialZone) to a facility:SpatialZone" ;
+        sh:description  "A property relating an entity (especially a facility:SpatialZone) to a facility:SpatialZone" ;
+        sh:name         "is related to spatial zone" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#isRelatedToSapatialZone> .
+
+<https://astrea.linkeddata.es/shapes#77ab099a02ba06ee6168cc7bfa6d5510>
+        a               sh:NodeShape ;
+        rdfs:label      "Worker" ;
+        sh:description  "A human resource that works in a project (especially performing a process:Task)" ;
+        sh:name         "Worker" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#Worker> .
+
+<https://astrea.linkeddata.es/report/399541052>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#source>
+                "https://raw.githubusercontent.com/oeg-upm/cogito-resources-ontology/master/documentation/ontology.ttl" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#d65681aec8562882a2b131ea22f79f9a>
+        a               sh:NodeShape ;
+        rdfs:label      "Hazard Zone" ;
+        sh:description  "An spatial zone defining a safety hazard" ;
+        sh:name         "Hazard Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#HazardZone> .
+
+<https://astrea.linkeddata.es/shapes#60bf39714069accef3e81542ed6f5176>
+        a               sh:PropertyShape ;
+        rdfs:label      "is critical" , "A property indicating if an entity (especially a task) is critical" ;
+        sh:datatype     xsd:boolean ;
+        sh:description  "A property indicating if an entity (especially a task) is critical" ;
+        sh:name         "is critical" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isCritical> ;
+        sh:pattern      "true|false|0|1" .
+
+<https://astrea.linkeddata.es/shapes#85a48d637012e5a48a7b24a8112360ab>
+        a               sh:NodeShape ;
+        rdfs:label      "Safety Removing Task" ;
+        sh:description  "A task related to the safety domain that removes elements" ;
+        sh:name         "Safety Removing Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#SatetyRemovingTask> .
+
+<https://astrea.linkeddata.es/shapes#2ad57886640d5195c5d4362d81d9cfcb>
+        a               sh:PropertyShape ;
+        rdfs:label      "is measured in" , "A property that relates an entity (especially a process:Cost) to the currency it is measured in" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#UnitOfCurrency> ;
+        sh:description  "A property that relates an entity (especially a process:Cost) to the currency it is measured in" ;
+        sh:name         "is measured in" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isMeasuredIn> .
+
+<https://astrea.linkeddata.es/shapes#c5a4ce5bcf93757808f380b1d6ad4277>
+        a               sh:NodeShape ;
+        rdfs:label      "Rule" ;
+        sh:description  "Information regarding what an entity (especially a faciity:Element) must fulfil" ;
+        sh:name         "Rule" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#Rule> .
+
+<https://astrea.linkeddata.es/shapes#96ea172addc7eb5a2a49f01b8583ad5c>
+        a               sh:NodeShape ;
+        rdfs:label      "Fall Zone" ;
+        sh:description  "A zone where somebody or something can fall through" ;
+        sh:name         "Fall Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#FallZone> .
+
+<https://astrea.linkeddata.es/shapes#c2b3cdd8022858071e845a64219f6e27>
+        a               sh:NodeShape ;
+        rdfs:label      "Image Job" ;
+        sh:description  "Data regarding an image and the results of processing it" ;
+        sh:name         "Image Job" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#ImageJob> .
+
+<https://astrea.linkeddata.es/shapes#4e41dc115f85be072b16536ddd4beb17>
+        a               sh:PropertyShape ;
+        rdfs:label      "capture device" , "Property identifying  the device that has captured an entity (especially a qual:Image)" ;
+        sh:description  "Property identifying  the device that has captured an entity (especially a qual:Image)" ;
+        sh:name         "capture device" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#captureDevice> .
+
+<https://astrea.linkeddata.es/shapes#b1b6b268ab5d0cf0d149bb43735ddc2d>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "Building" ;
+        sh:name           "Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/saref4bldg#Building> .
+
+<https://astrea.linkeddata.es/shapes#63a3eb61c939631486d5058b51efb8ea>
+        a               sh:PropertyShape ;
+        rdfs:label      "implied by zone" , "A property relating an entity (especially a safety:HazardZone) to the safety:AnalysisZones that define it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/safety#AnalysisZone> ;
+        sh:description  "A property relating an entity (especially a safety:HazardZone) to the safety:AnalysisZones that define it" ;
+        sh:name         "implied by zone" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#impliedByZone> .
+
+<https://astrea.linkeddata.es/shapes#8f4a68b2e16be86eb1f66df8d43b0a21>
+        a               sh:PropertyShape ;
+        rdfs:label      "has processed image" , "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#Image> ;
+        sh:description  "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
+        sh:name         "has processed image" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#hasProcessedImage> .
+
+<https://astrea.linkeddata.es/shapes#1040d034457377cfec179bf2807bae9c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "contains zone" ;
+        sh:class          <https://w3id.org/bot#Zone> ;
+        sh:name           "contains zone" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#containsZone> .
+
+<https://astrea.linkeddata.es/shapes#41593b5c39b411f02637833e1cefd1f1>
+        a               sh:NodeShape ;
+        rdfs:label      "Quality Result" ;
+        sh:description  "The result of the analysis of  information (especially qual:QuantityInformation)" ;
+        sh:name         "Quality Result" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#QualityResult> .
+
+<https://astrea.linkeddata.es/shapes#298804f5948e0c382f1f0aa7650fe8ea>
+        a               sh:PropertyShape ;
+        rdfs:label      "has point cloud" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its point cloud file" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating its point cloud file" ;
+        sh:name         "has point cloud" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasPointCloud .
+
+<https://astrea.linkeddata.es/shapes#52d880b6219491eaedc377478b45cb1e>
+        a               sh:NodeShape ;
+        rdfs:label      "Digital Twin" ;
+        sh:description  "Entity that is a digital twin in the platform" ;
+        sh:name         "Digital Twin" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  :DigitalTwin .
+
+<https://astrea.linkeddata.es/shapes#2347789a0a227ab598ec5ded8703f745>
+        a               sh:NodeShape ;
+        rdfs:label      "Geometric Quality Information" ;
+        sh:description  "Data informing a particular problem regarding a particular qual:Rule on a facility:Element" ;
+        sh:name         "Geometric Quality Information" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#GeometricQualityInformation> .
+
+<https://astrea.linkeddata.es/shapes#bc1d65c9335ee61c26e6ba87318c6468>
+        a               sh:PropertyShape ;
+        rdfs:label      "has cost" , "A property that relates an entity (especially a process:Task or a process:Process) to its cost" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Cost> ;
+        sh:description  "A property that relates an entity (especially a process:Task or a process:Process) to its cost" ;
+        sh:name         "has cost" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasCost> .
+
+<https://astrea.linkeddata.es/shapes#562850587ce4db0e8bdda7d7ac7f4aa8>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "has element" ;
+        sh:class          <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:name           "has element" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://w3id.org/bot#hasElement> .
+
+<https://astrea.linkeddata.es/shapes#06cd35a991a1d383c67b3934f9fb142d>
+        a               sh:PropertyShape ;
+        rdfs:label      "belongs to process" , "A property that relates an entity (especially a process:Task) to the process:Process it belongs to" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Process> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the process:Process it belongs to" ;
+        sh:name         "belongs to process" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#belongsToProcess> .
+
+<https://astrea.linkeddata.es/shapes#8ddb01fe19e5849467c63b01acb43f4c>
+        a               sh:NodeShape ;
+        rdfs:label      "Cost" ;
+        sh:description  "An entity representing the cost of another entity" ;
+        sh:name         "Cost" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#Cost> .
+
+<https://astrea.linkeddata.es/shapes#6b9796aff8201fd6a21b0e6b91708120>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://www.w3.org/2019/wot/td#> ;
+        rdfs:label        "Thing" ;
+        sh:name           "Thing" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://www.w3.org/2019/wot/td#Thing> .
+
+<https://astrea.linkeddata.es/shapes#abcbc6c65cb325168fe715e373960e7c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://purl.org/dc/terms/> ;
+        rdfs:label        "creator" ;
+        sh:name           "creator" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <http://purl.org/dc/terms/creator> .
+
+<https://astrea.linkeddata.es/shapes#79c6432ede8c2818efc44605505f8a92>
+        a               sh:PropertyShape ;
+        rdfs:label      "has tracking tag" , "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/iot#TrackingTag> ;
+        sh:description  "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" ;
+        sh:name         "has tracking tag" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#hasTackingTag> .
+
+<https://astrea.linkeddata.es/shapes#062d55373c45af0fb1ce8e045ec3cab9>
+        a               sh:NodeShape ;
+        rdfs:label      "Railway" ;
+        sh:description  "A permanent track composed of a line of parallel metal rails fixed to sleepers, for transport of passengers and goods in trains" ;
+        sh:name         "Railway" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Railway> .
+
+<https://astrea.linkeddata.es/shapes#368f8b165056794dc86f4b3c92e65801>
+        a               sh:NodeShape ;
+        rdfs:label      "Task" ;
+        sh:description  "A piece of work, which is performed in a process:Process" ;
+        sh:name         "Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#5f9659fe09fb5ecc2486d56d7a4f0a91> ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#Task> .
+
+<https://astrea.linkeddata.es/shapes#5373496c4f0968c7c4a1e1ee67317771>
+        a               sh:PropertyShape ;
+        rdfs:label      "has assigned resource" , "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/resource#Resource> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+        sh:name         "has assigned resource" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource> .
+
+<https://astrea.linkeddata.es/shapes#9a72b5c24c5a11e561181c50371437ff>
+        a               sh:PropertyShape ;
+        rdfs:label      "outcome" , "Property indicating if a result has been accepted or rejected" ;
+        sh:description  "Property indicating if a result has been accepted or rejected" ;
+        sh:name         "outcome" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#outcome> .
+
+<https://astrea.linkeddata.es/shapes#d264831fd3f3c03fdc2454d1f4c4abc3>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://w3id.org/bot#> ;
+        rdfs:label        "Building" ;
+        sh:name           "Building" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://w3id.org/bot#Building> .
+
+<https://astrea.linkeddata.es/shapes#1556f970052fd7921f8ac68df1b6c93f>
+        a               sh:PropertyShape ;
+        rdfs:label      "reflects geometric quality" , "Property that relates an entity (especially qual:PointCloud) to a qual:GeometricQualityInformation" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#GeometricQualityInformation> ;
+        sh:description  "Property that relates an entity (especially qual:PointCloud) to a qual:GeometricQualityInformation" ;
+        sh:name         "reflects geometric quality" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#reflectsGeometricQuality> .
+
+<https://astrea.linkeddata.es/shapes#0b47ca783b387c8553e9a3d6b94e304c>
+        a               sh:PropertyShape ;
+        rdfs:label      "time window" , "A property indicating the time window of an entity (especially a process:Process)" ;
+        sh:description  "A property indicating the time window of an entity (especially a process:Process)" ;
+        sh:name         "time window" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#timeWindow> .
+
+<https://astrea.linkeddata.es/shapes#6a537a2b2555850b42610ce00a29cd97>
+        a               sh:NodeShape ;
+        rdfs:label      "Safety Adding Task" ;
+        sh:description  "A task related to the safety domain that adds elements" ;
+        sh:name         "Safety Adding Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#SatetyAddingTask> .
+
+<https://astrea.linkeddata.es/shapes#50dc3a9469d59d68d43e5fe360019298>
+        a               sh:PropertyShape ;
+        rdfs:label      "is controlled by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
+        sh:name         "is controlled by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isControlledByTask> .
+
+<https://astrea.linkeddata.es/shapes#e1c4e4b9ce9ad056f28f1f256f066384>
+        a               sh:NodeShape ;
+        rdfs:label      "Storey" ;
+        sh:description  "A subclass of bot:Storey and, as such, is contained (bot:hasStorey) in one facility:Building, and is intended to contain (bot:hasSpace) one or more facility:Space that are horizontally connected." ;
+        sh:name         "Storey" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Storey> .
+
+<https://astrea.linkeddata.es/shapes#af4e534bc3b5b6e4a4016771a7068965>
+        a               sh:PropertyShape ;
+        rdfs:label      "refers to rule" , "Property that relates an entity (especially qual:Defect) to a qual:Rule" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#Rule> ;
+        sh:description  "Property that relates an entity (especially qual:Defect) to a qual:Rule" ;
+        sh:name         "refers to rule" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#refersToRule> .
+
+<https://astrea.linkeddata.es/shapes#837710a57279984962100ecb5678deb5>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to task" , "Property that relates an entity (especially qual:QuqlityInformation) to a process:Task" ;
+        sh:class        <https://cogito.iot.linkeddata.es/process#Task> ;
+        sh:description  "Property that relates an entity (especially qual:QuqlityInformation) to a process:Task" ;
+        sh:name         "is related to task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#isRelatedToTask> .
+
+<https://astrea.linkeddata.es/shapes#707744b14c4d52efe4cb6c8d0af782b0>
+        a               sh:NodeShape ;
+        rdfs:label      "As-built Mesh" ;
+        sh:description  "A mesh representing a built entity (especially a facility:Element)" ;
+        sh:name         "As-built Mesh" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#AsBuiltMesh> .
+
+<https://astrea.linkeddata.es/shapes#f158046edf9de61ed805a44f07572591>
+        a               sh:PropertyShape ;
+        rdfs:label      "has facility part" , "A property relating a facility:Zone (especially a facility:Facility or a facility:FacilityPart) to a facility:FacilityPart" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#FacilityPart> ;
+        sh:description  "A property relating a facility:Zone (especially a facility:Facility or a facility:FacilityPart) to a facility:FacilityPart" ;
+        sh:name         "has facility part" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/facility#hasFacilityPart> .
+
+<https://astrea.linkeddata.es/shapes#7c718d8fdba094284ce93d04858a91f4>
+        a               sh:PropertyShape ;
+        rdfs:label      "has safety issue" , "Property that relates an entity (especially a safety:HazardZone) to a safety:SafetyIssue" ;
+        sh:class        <https://cogito.iot.linkeddata.es/safety#SafetyIssue> ;
+        sh:description  "Property that relates an entity (especially a safety:HazardZone) to a safety:SafetyIssue" ;
+        sh:name         "has safety issue" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#hasSafetyIssue> .
+
+<https://astrea.linkeddata.es/shapes#9134b5fc4567260bbf012e7d1c614d67>
+        a               sh:PropertyShape ;
+        rdfs:label      "currency symbol" , "A property indicating the currency symbol of an entity (especially a process:UnitOfCurrency)" ;
+        sh:description  "A property indicating the currency symbol of an entity (especially a process:UnitOfCurrency)" ;
+        sh:name         "currency symbol" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#currencySymbol> .
+
+<https://astrea.linkeddata.es/shapes#34c0f55f8f3f3c58d9cb361df2984c77>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "Feature of Interest" ;
+        sh:name           "Feature of Interest" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    <https://saref.etsi.org/core/FeatureOfInterest> .
+
+<https://astrea.linkeddata.es/shapes#df5e9feeedf06a9110a1aa7557e70000>
+        a               sh:PropertyShape ;
+        rdfs:label      "has knowledge graph" , "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its knowledge graph" ;
+        sh:description  "A sub-property of td:forms that relates a ctt:ConstructionTwinThing to a td:Form indicating its knowledge graph" ;
+        sh:name         "has knowledge graph" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :hasKnowledgeGraph .
+
+<https://astrea.linkeddata.es/shapes#aaf9d54eda525c18e705e43a164a2334>
+        a               sh:PropertyShape ;
+        rdfs:label      "cost per hour" , "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" ;
+        sh:description  "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" ;
+        sh:name         "cost per hour" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#costPerHour> .
+
+<https://astrea.linkeddata.es/shapes#a24b8cffdea9c608509b0d54b2cc2cbf>
+        a               sh:NodeShape ;
+        rdfs:label      "Building" ;
+        sh:description  "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006]" ;
+        sh:name         "Building" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Building> .
+
+<https://astrea.linkeddata.es/shapes#5a8a1faad1b5cba16d43bd30a8950074>
+        a               sh:PropertyShape ;
+        rdfs:label      "last name" , "Property indicating the last name of an entity (especially a resource:Worker)" ;
+        sh:description  "Property indicating the last name of an entity (especially a resource:Worker)" ;
+        sh:name         "last name" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/resource#lastName> .
+
+<https://astrea.linkeddata.es/shapes#80098e102999b383203c2b7ee67e9118>
+        a               sh:NodeShape ;
+        rdfs:label      "Result" ;
+        sh:description  "An entity representing the result of a saref:Measurement" ;
+        sh:name         "Result" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/iot#Result> .
+
+<https://astrea.linkeddata.es/shapes#81b7f5eaf286a56aa540e9bb8cf5cba5>
+        a               sh:NodeShape ;
+        rdfs:label      "Worker Role" ;
+        sh:description  "The different kinds of roles a human worker can play in a (construction) project" ;
+        sh:name         "Worker Role" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/resource#WorkerRole> .
+
+<https://astrea.linkeddata.es/shapes#7ff4c494e51f962b62eeec1d74c1b3b2>
+        a               sh:NodeShape ;
+        rdfs:label      "Point Cloud" ;
+        sh:description  "A set of data points in space" ;
+        sh:name         "Point Cloud" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#PointCoud> .
+
+<https://astrea.linkeddata.es/shapes#7990c32d7287019c22f2b80cd6372da4>
+        a               sh:NodeShape ;
+        rdfs:label      "Geometric Quality Task" ;
+        sh:description  "A task related to the geometric quaity domain" ;
+        sh:name         "Geometric Quality Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#GeometricQualityTask> .
+
+<https://astrea.linkeddata.es/shapes#5d5893cb33739e1909b4efec8832151e>
+        a               sh:PropertyShape ;
+        rdfs:label      "origin document" , "Property indicating the origin document of an entity (especially a qual:GeometricQualityInformation)" ;
+        sh:description  "Property indicating the origin document of an entity (especially a qual:GeometricQualityInformation)" ;
+        sh:name         "origin document" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#originDocument> .
+
+<https://astrea.linkeddata.es/shapes#e7bfad223a5d170819fc688b4db36f99>
+        a               sh:PropertyShape ;
+        rdfs:label      "adds element" , "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
+        sh:name         "adds element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#addsElement> .
+
+<https://astrea.linkeddata.es/shapes#d7e41a30c21ecec35d84add6350ffc47>
+        a               sh:PropertyShape ;
+        rdfs:label      "quantity needed" , "A property indicating the needed quantity of an entity" ;
+        sh:description  "A property indicating the needed quantity of an entity" ;
+        sh:name         "quantity needed" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#quantityNeeded> .
+
+<https://astrea.linkeddata.es/shapes#c8e8609e189c63bdd456a111d854855e>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned early start date" , "A property indicating the earliest  date an entity can start" ;
+        sh:datatype     xsd:dateTimeStamp ;
+        sh:description  "A property indicating the earliest  date an entity can start" ;
+        sh:name         "planned early start date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedEarlyStartDate> .
+
+<https://astrea.linkeddata.es/shapes#168358958b05e5a5c28047737ce0e3fa>
+        a               sh:PropertyShape ;
+        rdfs:label      "severity" , "Property indicating de severity of a safety hazard" ;
+        sh:description  "Property indicating de severity of a safety hazard" ;
+        sh:name         "severity" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/safety#severity> .
+
+<https://astrea.linkeddata.es/shapes#e668f6b32baad9b7482380056b25512d>
+        a               sh:NodeShape ;
+        rdfs:label      "Unit of Currency" ;
+        sh:description  "The currency used to measure a process:Cost" ;
+        sh:name         "Unit of Currency" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#UnitOfCurrency> .
+
+<https://astrea.linkeddata.es/shapes#af2e63ddbbfc6f76bb498ee0bd798104>
+        a               sh:PropertyShape ;
+        rdfs:label      "planned end date" , "A property indicating the planned end date of an entity" ;
+        sh:datatype     xsd:dateTime ;
+        sh:description  "A property indicating the planned end date of an entity" ;
+        sh:name         "planned end date" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#plannedEndDate> ;
+        sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+<https://astrea.linkeddata.es/shapes#d98b840e777a6cfb282ed4fd76abe6f4>
+        a               sh:PropertyShape ;
+        rdfs:label      "has resource type requirement" , "Aproperty that relates an entity (especially a process:Task) to its requirements of resource types:" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#ResourceTypeRequirement> ;
+        sh:description  "Aproperty that relates an entity (especially a process:Task) to its requirements of resource types:" ;
+        sh:name         "has resource type requirement" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasResourceTypeRequirement> .
+
+<https://astrea.linkeddata.es/shapes#9f7a28bb9c5d06a88580e98661040c77>
+        a               sh:PropertyShape ;
+        rdfs:label      "controls element" , "A property that relates an entity (especially a process:Task) to the facility:Element it controls" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Element> ;
+        sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it controls" ;
+        sh:name         "controls element" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#controlsElement> .
+
+<https://astrea.linkeddata.es/shapes#19edf27768ca02e778a027054aeaa187>
+        a               sh:NodeShape ;
+        rdfs:label      "Project" ;
+        sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment." , "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+        sh:name         "Project" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Project> .
+
+<https://astrea.linkeddata.es/shapes#4f102e9cc4310d750da29cc6b18dc001>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core#> ;
+        rdfs:label        "has timestamp" ;
+        sh:description    "has timestamp" ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <https://saref.etsi.org/core#hasTimestamp> .
+
+<https://astrea.linkeddata.es/shapes#e025b64b334d79a8f29d9f427e18f2a0>
+        a               sh:PropertyShape ;
+        rdfs:label      "taken at time" , "Property indicating the time a data has been taken" ;
+        sh:description  "Property indicating the time a data has been taken" ;
+        sh:name         "taken at time" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#takenAtTime> .
+
+<https://astrea.linkeddata.es/shapes#4c986b005e7b38c5a7dbd91e2179d2c6>
+        a               sh:PropertyShape ;
+        rdfs:label      "has information resource" , "Property that relates an entity (especially a facility:Element) to a qual:InformationResource" ;
+        sh:class        <https://cogito.iot.linkeddata.es/quality#InformationResource> ;
+        sh:description  "Property that relates an entity (especially a facility:Element) to a qual:InformationResource" ;
+        sh:name         "has information resource" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/quality#hasInformationResource> .
+
+<https://astrea.linkeddata.es/shapes#d6f29b3593a614106a573f5ca46d66d1>
+        a               sh:NodeShape ;
+        rdfs:label      "Road" ;
+        sh:description  "A long, narrow stretch with a smoothed or paved surface, made for traveling by motor vehicle, carriage, etc., between two or more points;\nstreet or highway" ;
+        sh:name         "Road" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Road> .
+
+<https://astrea.linkeddata.es/shapes#70dea406ce156986ffcd950471ed0080>
+        a               sh:NodeShape ;
+        rdfs:label      "Site" ;
+        sh:description  "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent" ;
+        sh:name         "Site" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/facility#Site> .
+
+<https://astrea.linkeddata.es/shapes#1914cc5553d33255b5fe7f9c6734a355>
+        a               sh:PropertyShape ;
+        rdfs:label      "is related to project" , "A property that relates an entity (especially a process:Process) to its facility:Project" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/facility#Project> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to its facility:Project" ;
+        sh:name         "is related to project" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isRelatedToProject> .
+
+<https://astrea.linkeddata.es/shapes#eef73a6369feafd90359f8d22eef0a08>
+        a               sh:NodeShape ;
+        rdfs:label      "Raw Image" ;
+        sh:description  "An image that has not been processed" ;
+        sh:name         "Raw Image" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/quality#RawImage> .
+
+<https://astrea.linkeddata.es/shapes#ff44aea2ac8000b51a8243cd2ecfe636>
+        a               sh:PropertyShape ;
+        rdfs:label      "currency code" , "A property indicating the currency code of an entity (especially a process:UnitOfCurrency)" ;
+        sh:description  "A property indicating the currency code of an entity (especially a process:UnitOfCurrency)" ;
+        sh:name         "currency code" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#currencyCode> .
+
+<https://astrea.linkeddata.es/shapes#bf96a28cf3a5fad8989b32f39f22f522>
+        a               sh:PropertyShape ;
+        rdfs:label      "is removed by task" , "A property that relates an entity (especially a  facility:Element)  to the process:Task  that removes it" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#Task> ;
+        sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that removes it" ;
+        sh:name         "is removed by task" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#isRemovedByTask> .
+
+<https://astrea.linkeddata.es/shapes#a3c67c015054f440136576215452ed7c>
+        a               sh:PropertyShape ;
+        rdfs:label      "related thing description" , "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating a related thing description" ;
+        sh:description  "A sub-property of td:links that relates a ctt:ConstructionTwinThing to a td:Link indicating a related thing description" ;
+        sh:name         "related thing description" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         :relatedTD .
+
+<https://astrea.linkeddata.es/shapes#967f987e15e3bd62af601655742833a8>
+        a               sh:NodeShape ;
+        rdfs:label      "Construction Task" ;
+        sh:description  "A task related to a construction domain" ;
+        sh:name         "Construction Task" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/def/process#ConstructionTask> .
+
+<https://astrea.linkeddata.es/shapes#5cfe2a7b1f6d00d6c381234cd59b3592>
+        a               sh:PropertyShape ;
+        rdfs:label      "has work order" , "A property that relates an entity (especially a process:Process) to the work orders it contains" ;
+        sh:class        <https://cogito.iot.linkeddata.es/def/process#WorkOrder> ;
+        sh:description  "A property that relates an entity (especially a process:Process) to the work orders it contains" ;
+        sh:name         "has work order" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         <https://cogito.iot.linkeddata.es/def/process#hasWorkOrder> .
+
+<https://astrea.linkeddata.es/shapes#d4fccd920f0422b26e1ce542adab6a15>
+        a               sh:NodeShape ;
+        rdfs:label      "Analysis Zone" ;
+        sh:description  "A spatial zone that is inspected" ;
+        sh:name         "Analysis Zone" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://cogito.iot.linkeddata.es/safety#AnalysisZone> .
+
+<https://astrea.linkeddata.es/shapes#e72b1e77872e1ba2f4892b62f485450d>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/saref4bldg#> ;
+        rdfs:label        "has space" ;
+        sh:class          <https://saref.etsi.org/saref4bldg#SpaceBuilding> ;
+        sh:name           "has space" ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/saref4bldg#hasSpace> .
