@@ -1,0 +1,49 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+shape:Project
+    a               sh:NodeShape ;
+    rdfs:label      "Element" ;
+    sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment." ;
+    sh:name         "Project" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:identifier, shape:title , shape:description ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/project/" ;
+    sh:targetClass  facility:Project .
+
+shape:identifier
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "identifier" ;
+    sh:name           "identifier" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:identifier .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:title .
+
+shape:description
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "description" ;
+    sh:name           "description" ;
+    sh:nodeKind       sh:Literal ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:description .
