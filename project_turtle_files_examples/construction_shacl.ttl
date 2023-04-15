@@ -89,6 +89,7 @@ shape:belongsToSpatialZone
     sh:description  "A property relating an entity, especially a facility:Element to a facility:SpatialZone" ;
     sh:name         "belongs to spatial zone" ;
     sh:nodeKind     sh:IRI ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:path         facility:belongsToSpatialZone .
 
@@ -100,7 +101,7 @@ shape:isAddedByTask
     sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that adds it" ;
     sh:name         "is added by task" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
     sh:path         process:isAddedByTask .
 
