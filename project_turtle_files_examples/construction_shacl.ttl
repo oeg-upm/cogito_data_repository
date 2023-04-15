@@ -117,7 +117,7 @@ shape:Task
     sh:targetClass  process:Task .
 
 shape:addsElement
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "adds element" ;
     sh:class        facility:Element ;
     sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
@@ -176,7 +176,7 @@ shape:isRelatedToSpatialZone
 
 
 shape:hasElement 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "has element" ;
     sh:class        facility:Element ;
     sh:description  "Links a Zone to an Element that is either contained in, adjacent to or intersecting with the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building." ;
@@ -199,7 +199,7 @@ shape:Building
 
 
 shape:hasStorey
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "has storey" ;
     sh:class        facility:Storey ;
     sh:description  "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building." ;

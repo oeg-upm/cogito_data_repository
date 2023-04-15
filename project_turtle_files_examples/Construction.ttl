@@ -20,8 +20,8 @@
 element:71274  a            beo:Beam , bot:Element , facility:Element ;
         brick:isPartOf           building_storey:174 , spatial_zone:217758 ;
         process:isAddedByTask    task:AsPlanned_Original_School_9 ;
-        props:hasCompressedGuid  "2s$U3rTsz2Ag8ZA65PVR0K" ; # dcterms:identifier
-        props:hasName            "M_Concrete-Rectangular Beam:300 x 600mm:128473" ; # dcterms:title
+        props:hasCompressedGuid  "2s$U3rTsz2Ag8ZA65PVR0K" ;
+        props:hasName            "M_Concrete-Rectangular Beam:300 x 600mm:128473" ;
         props:hasVolume          "0.25307164471782"^^xsd:double .
 
 element:210558  a           beo:Beam , bot:Element , facility:Element ;

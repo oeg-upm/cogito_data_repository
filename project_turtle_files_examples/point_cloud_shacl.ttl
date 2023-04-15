@@ -122,7 +122,7 @@ shape:hasFileURL
     sh:path           platform:hasFileURL .
 
 shape:isRelatedToTask 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "is related to task" ;
     sh:class        process:Task ;
     sh:description  "Property that relates an entity (especially qual:QualityInformation) to a process:Task" ;

@@ -317,7 +317,7 @@ shape:plannedStartDate
     sh:pattern        "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
 
 shape:addsElement
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "adds element" ;
     sh:class        facility:Element ;
     sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;
@@ -327,7 +327,7 @@ shape:addsElement
     sh:path         process:addsElement .
 
 shape:controlsElement
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "controls element" ;
     sh:class        facility:Element ;
     sh:description  "A property that relates an entity (especially a process:Task) to the facility:Element it creates" ;

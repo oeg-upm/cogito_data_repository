@@ -198,7 +198,7 @@ shape:captureDevice
     sh:path           qual:captureDevice .
 
 shape:isRelatedToJob 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "is related to job" ;
     sh:class        qual:ImageJob ;
     sh:description  "" ;
@@ -243,7 +243,7 @@ shape:ImageJob
 
 
 shape:isRelatedToTask 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "is related to task" ;
     sh:class        process:Task ;
     sh:description  "Property that relates an entity (especially qual:QualityInformation) to a process:Task" ;
@@ -255,7 +255,7 @@ shape:isRelatedToTask
 
 
 shape:isRelatedToElement 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "is related to element" ;
     sh:class        facility:Element ;
     sh:description  "Property that relates an entity (especially qual:InformationResource) to a facility:Element" ;
@@ -266,7 +266,7 @@ shape:isRelatedToElement
     sh:path         qual:isRelatedToElement .
 
 shape:hasRawImage 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "has raw image" ;
     sh:class        qual:RawImage ;
     sh:description  "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
@@ -277,7 +277,7 @@ shape:hasRawImage
     sh:path         qual:hasRawImage .
 
 shape:hasProcessedImage 
-    a               sh:PropertyShape
+    a               sh:PropertyShape ;
     rdfs:label      "has processed image" ;
     sh:class        qual:Image ;
     sh:description  "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
