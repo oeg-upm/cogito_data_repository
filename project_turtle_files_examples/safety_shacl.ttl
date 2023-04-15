@@ -1,0 +1,111 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix qual: <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+shape:Element
+    a               sh:NodeShape ;
+    rdfs:label      "Element" ;
+    sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+    sh:name         "Element" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:isAddedByTask, shape:identifier, shape:title , shape:belongsToSpatialZone ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/element/" ;
+    sh:targetClass  facility:Element .
+
+shape:identifier
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "identifier" ;
+    sh:name           "identifier" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:identifier .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:title .
+
+
+shape:belongsToSpatialZone
+    a               sh:PropertyShape ;
+    rdfs:label      "belongs to spatial zone" ;
+    sh:or
+      ( [   a         sh:PropertyShape;
+            sh:class facility:Site;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/site/" ;
+        ]
+        [   a         sh:PropertyShape;
+            sh:class facility:SpatialZone;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/spatial_zone/" ;
+        ]
+        [   a         sh:PropertyShape;
+            sh:class facility:Storey;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/building_storey/" ;
+        ]
+        [   a         sh:PropertyShape;
+            sh:class facility:Space;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/space/" ;
+        ]
+        [   a         sh:PropertyShape;
+            sh:class facility:Facility;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/facility/" ;
+        ]
+        [   a         sh:PropertyShape;
+            sh:class facility:FacilityPart;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/facility_part/" ;
+        ] ) ;
+    sh:description  "A property relating an entity, especially a facility:Element to a facility:SpatialZone" ;
+    sh:name         "belongs to spatial zone" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         facility:belongsToSpatialZone .
+
+
+shape:isAddedByTask
+    a               sh:PropertyShape ;
+    rdfs:label      "is added by task" ;
+    sh:class        process:Task ;
+    sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that adds it" ;
+    sh:name         "is added by task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:path         process:isAddedByTask .

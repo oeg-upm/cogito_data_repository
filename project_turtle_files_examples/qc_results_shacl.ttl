@@ -1,0 +1,134 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix qual: <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+shape:Task
+    a               sh:NodeShape ;
+    rdfs:label      "Task" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:progress ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:targetClass  process:Task .
+
+shape:progress
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "progress" ;
+    sh:name           "progress" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:double ;
+    sh:path           process:progress .
+
+
+shape:GeometricQualityInformation
+    a               sh:NodeShape ;
+    rdfs:label      "Task" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:result , shape:scalarResult , shape:status , shape:performedTimestamp , shape:toleranceReference , shape:unit ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/qc/" ;
+    sh:targetClass  qual:GeometricQualityInformation .
+
+
+shape:unit
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "unit" ;
+    sh:name           "unit" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:unit .
+
+
+shape:toleranceReference
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "tolerance reference" ;
+    sh:name           "tolerance reference" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:toleranceReference .
+
+
+shape:status
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "status" ;
+    sh:name           "status" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:status .
+
+shape:scalarResult
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "scalar result" ;
+    sh:name           "scalar result" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:scalarResult .
+
+
+shape:performedTimestamp
+    a               sh:PropertyShape ;
+    rdfs:label      "performed timestamp" ;
+    sh:datatype     xsd:dateTime ;
+    sh:description  "Property indicating the performed time" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         qual:performedTimestamp ;
+    sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+
+shape:result
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "result" ;
+    sh:name           "result" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:result .

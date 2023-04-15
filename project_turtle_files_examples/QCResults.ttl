@@ -1,0 +1,183 @@
+@prefix schema: <http://schema.org#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix element:  <https://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix qc: <https://data.cogito.iot.linkeddata.es/resources/qc/> .
+
+
+task:AsPlanned_Enriched_School_12gqc
+        process:progress  "0.42857142857142855"^^xsd:double .
+
+qc:School_Project_School_QC3324
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.02437152203128079,1.1713947536406977E-5]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:52"^^xsd:dateTime ; # qual:timestampPerformed
+        qual:toleranceReference  "[0.015000025431315104,0.015]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2908
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.021274408354196694]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:49"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2651
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.022221031062152008]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:51"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2973
+        qual:result              "Pass" ;
+        qual:scalarResult        "[1.4065951431874169E-4]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:51"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3224
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.0021401144762880353,0.0235202956534728]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:50"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.015000001589457194,0.015]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3323
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.025130628088275625]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:52"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.025]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3329
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.0018331244697860072]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:53"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC312
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.01861415083022422,0.002315718831134461]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:52"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.015000025431315104,0.015]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3229
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.020064682595825722]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:50"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3223
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.02144461901570064]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:49"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.025]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2253
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.002778490925829935]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:48"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3328
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.021063907510693092]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:52"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC562
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.004403209744090586,0.019027804225828504]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:50"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.015000001589457194,0.015]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3228
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.0013349882946540603]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:50"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3321
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.006350318837619087]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:52"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.015]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2546
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.0010688277425199288]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:48"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2887
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.022269014181102165]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:48"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC2980
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.0010896301038876288]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:51"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3330
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.027785253374875474]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:53"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3218
+        qual:result              "Fail" ;
+        qual:scalarResult        "[0.02174679927798362]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:49"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.02]" ;
+        qual:unit                "metres" .
+
+qc:School_Project_School_QC3221
+        qual:result              "Pass" ;
+        qual:scalarResult        "[0.006428333558639008]" ;
+        qual:status              "Unchecked" ;
+        qual:performedTimestamp  "2023-01-17T11:43:49"^^xsd:dateTime ;
+        qual:toleranceReference  "[0.015]" ;
+        qual:unit                "metres" .

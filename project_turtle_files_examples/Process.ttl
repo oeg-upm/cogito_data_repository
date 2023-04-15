@@ -1,0 +1,883 @@
+@prefix schema: <http://schema.org#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix data_process:  <https://data.cogito.iot.linkeddata.es/resources/process/> .
+
+task:AsPlanned_Original_School_46
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ; # process:hasCreationDate
+        dcterms:identifier             "46" ; # process:hasID
+        dcterms:title           "Beams and Roof Slab" ; # process:hasName
+        process:isSubTaskOf     task:AsPlanned_Original_School_43 ; # process:hasParentTask
+        process:hasSubTask    task:AsPlanned_Original_School_45 ; # process:hasPredecessor
+        process:hasStatus         "Active" ; # ????????????????????????????????????????????
+        process:hasType           "NORMAL_TASK" ; # ???????????????????????????????????????
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ; # process:isPartOfProcess
+        process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_18
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  150
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "18" ;
+        dcterms:title           "Division 2" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_1 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_19 , task:AsPlanned_Original_School_28 , task:AsPlanned_Original_School_22 , task:AsPlanned_Original_School_25 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_40
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "40" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_39 ;
+        process:hasSubTask    task:AsPlanned_Original_School_38 , task:AsPlanned_Original_School_36 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      150 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_12
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "12" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_10 ;
+        process:hasSubTask    task:AsPlanned_Original_School_9 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_25
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:01:00"^^xsd:dateTime ;
+        dcterms:identifier             "25" ;
+        dcterms:title           "Floor 2" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_18 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_26 , task:AsPlanned_Original_School_27 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_7
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "7" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_6 ;
+        process:hasSubTask    task:AsPlanned_Original_School_5 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      150 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_38
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "38" ;
+        dcterms:title           "Beams and Floor Slab (Floor 1)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_35 ;
+        process:hasSubTask    task:AsPlanned_Original_School_37 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+data_process:AsPlanned_Original_Process_School
+        a                  process:Process ;
+        dcterms:creator  "DT Runtime" ; # process:hasAuthor
+        dcterms:title    "AsPlanned Original Schedule" ;
+        process:hasTask    task:AsPlanned_Original_School_6 , task:AsPlanned_Original_School_7 , task:AsPlanned_Original_School_4 , task:AsPlanned_Original_School_37 , task:AsPlanned_Original_School_46 , task:AsPlanned_Original_School_30 , task:AsPlanned_Original_School_25 , task:AsPlanned_Original_School_12 , task:AsPlanned_Original_School_41 , task:AsPlanned_Original_School_9 , task:AsPlanned_Original_School_24 , task:AsPlanned_Original_School_1 , task:AsPlanned_Original_School_39 , task:AsPlanned_Original_School_11 , task:AsPlanned_Original_School_34 , task:AsPlanned_Original_School_48 , task:AsPlanned_Original_School_27 , task:AsPlanned_Original_School_50 , task:AsPlanned_Original_School_45 , task:AsPlanned_Original_School_5 , task:AsPlanned_Original_School_33 , task:AsPlanned_Original_School_20 , task:AsPlanned_Original_School_38 , task:AsPlanned_Original_School_21 , task:AsPlanned_Original_School_35 , task:AsPlanned_Original_School_36 , task:AsPlanned_Original_School_23 , task:AsPlanned_Original_School_17 , task:AsPlanned_Original_School_18 , task:AsPlanned_Original_School_15 , task:AsPlanned_Original_School_44 , task:AsPlanned_Original_School_10 , task:AsPlanned_Original_School_49 , task:AsPlanned_Original_School_47 , task:AsPlanned_Original_School_22 , task:AsPlanned_Original_School_32 , task:AsPlanned_Original_School_13 , task:AsPlanned_Original_School_14 , task:AsPlanned_Original_School_40 , task:AsPlanned_Original_School_31 , task:AsPlanned_Original_School_26 , task:AsPlanned_Original_School_8 , task:AsPlanned_Original_School_2 , task:AsPlanned_Original_School_3 , task:AsPlanned_Original_School_29 , task:AsPlanned_Original_School_16 , task:AsPlanned_Original_School_19 , task:AsPlanned_Original_School_42 , task:AsPlanned_Original_School_43 , task:AsPlanned_Original_School_28 ;
+        process:hasType    "AsPlannedOriginal" . # ?????????????????????????????????
+
+task:AsPlanned_Original_School_1
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  190
+                                  ] ;
+        dcterms:created   "2013-02-21T15:50:00"^^xsd:dateTime ;
+        dcterms:identifier             "1" ;
+        dcterms:title           "RST Adv. Sample Project" ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_18 , task:AsPlanned_Original_School_2 , task:AsPlanned_Original_School_47 , task:AsPlanned_Original_School_31 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_32
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  18
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "32" ;
+        dcterms:title           "Substructure" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_31 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_33 , task:AsPlanned_Original_School_34 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_45
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "45" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_43 ;
+        process:hasSubTask    task:AsPlanned_Original_School_42 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_17
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "17" ;
+        dcterms:title           "Beams and Roof Slab" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_14 ;
+        process:hasSubTask    task:AsPlanned_Original_School_16 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_11
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "11" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_10 ;
+        process:hasSubTask    task:AsPlanned_Original_School_9 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      150 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_24
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "24" ;
+        dcterms:title           "Beams and Floor Slab (Floor 1)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_22 ;
+        process:hasSubTask    task:AsPlanned_Original_School_23 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_6
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T15:54:00"^^xsd:dateTime ;
+        dcterms:identifier             "6" ;
+        dcterms:title           "Floor 1" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_2 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_9 , task:AsPlanned_Original_School_7 , task:AsPlanned_Original_School_8 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_37
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "37" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_35 ;
+        process:hasSubTask    task:AsPlanned_Original_School_23 , task:AsPlanned_Original_School_34 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_31
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  160
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "31" ;
+        dcterms:title           "Division 3" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_1 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_43 , task:AsPlanned_Original_School_35 , task:AsPlanned_Original_School_32 , task:AsPlanned_Original_School_39 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_44
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "44" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_43 ;
+        process:hasSubTask    task:AsPlanned_Original_School_42 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-18T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      50 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_16
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "16" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_14 ;
+        process:hasSubTask    task:AsPlanned_Original_School_13 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_29
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "29" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_28 ;
+        process:hasSubTask    task:AsPlanned_Original_School_27 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_10
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:01:00"^^xsd:dateTime ;
+        dcterms:identifier             "10" ;
+        dcterms:title           "Floor 2" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_2 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_13 , task:AsPlanned_Original_School_11 , task:AsPlanned_Original_School_12 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_23
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "23" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_22 ;
+        process:hasSubTask    task:AsPlanned_Original_School_21 , task:AsPlanned_Original_School_8 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_5
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  10
+                                  ] ;
+        dcterms:created   "2013-02-21T15:58:00"^^xsd:dateTime ;
+        dcterms:identifier             "5" ;
+        dcterms:title           "Floor Slab (Floor 0)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_3 ;
+        process:hasSubTask    task:AsPlanned_Original_School_4 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      200 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_36
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "36" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_35 ;
+        process:hasSubTask    task:AsPlanned_Original_School_34 , task:AsPlanned_Original_School_7 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      150 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_49
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  1
+                                  ] ;
+        dcterms:created   "2013-02-21T16:10:00"^^xsd:dateTime ;
+        dcterms:identifier             "49" ;
+        dcterms:title           "Steel" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_47 ;
+        process:hasSubTask    task:AsPlanned_Original_School_48 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      800 ;
+        process:workQuantityUnit  "m" .
+
+task:AsPlanned_Original_School_30
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "30" ;
+        dcterms:title           "Beams and Roof Slab" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_28 ;
+        process:hasSubTask    task:AsPlanned_Original_School_29 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_43
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:02:00"^^xsd:dateTime ;
+        dcterms:identifier             "43" ;
+        dcterms:title           "Floor 3" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_31 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_44 , task:AsPlanned_Original_School_45 , task:AsPlanned_Original_School_46 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_15
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  7
+                                  ] ;
+        dcterms:created   "2013-02-21T16:05:00"^^xsd:dateTime ;
+        dcterms:identifier             "15" ;
+        dcterms:title           "Emergency staircase shaft" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_14 ;
+        process:hasSubTask    task:AsPlanned_Original_School_13 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      150 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_28
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:02:00"^^xsd:dateTime ;
+        dcterms:identifier             "28" ;
+        dcterms:title           "Floor 3" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_18 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_30 , task:AsPlanned_Original_School_29 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_50
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  5
+                                  ] ;
+        dcterms:created   "2013-02-21T16:43:00"^^xsd:dateTime ;
+        dcterms:identifier             "50" ;
+        dcterms:title           "Concrete Roof" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_47 ;
+        process:hasSubTask    task:AsPlanned_Original_School_49 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      100 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_22
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T15:54:00"^^xsd:dateTime ;
+        dcterms:identifier             "22" ;
+        dcterms:title           "Floor 1" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_18 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_24 , task:AsPlanned_Original_School_23 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_4
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "4" ;
+        dcterms:title           "Piles and Caps" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_3 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      50 ;
+        process:workQuantityUnit  "units" .
+
+task:AsPlanned_Original_School_35
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  62
+                                  ] ;
+        dcterms:created   "2013-02-21T15:54:00"^^xsd:dateTime ;
+        dcterms:identifier             "35" ;
+        dcterms:title           "Floor 1" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_31 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_38 , task:AsPlanned_Original_School_37 , task:AsPlanned_Original_School_36 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_48
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  5
+                                  ] ;
+        dcterms:created   "2013-02-21T16:09:00"^^xsd:dateTime ;
+        dcterms:identifier             "48" ;
+        dcterms:title           "Round foundations" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_47 ;
+        process:hasSubTask    task:AsPlanned_Original_School_30 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      200 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_42
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "42" ;
+        dcterms:title           "Beams and Floor Slab (Floor 2)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_39 ;
+        process:hasSubTask    task:AsPlanned_Original_School_41 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_14
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:02:00"^^xsd:dateTime ;
+        dcterms:identifier             "14" ;
+        dcterms:title           "Floor 3" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_2 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_16 , task:AsPlanned_Original_School_15 , task:AsPlanned_Original_School_17 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_27
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "27" ;
+        dcterms:title           "Beams and Floor Slab (Floor 2)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_25 ;
+        process:hasSubTask    task:AsPlanned_Original_School_26 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_9
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "9" ;
+        dcterms:title           "Beams and Floor Slab (Floor 1)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_6 ;
+        process:hasSubTask    task:AsPlanned_Original_School_8 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_21
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  8
+                                  ] ;
+        dcterms:created   "2013-02-21T15:58:00"^^xsd:dateTime ;
+        dcterms:identifier             "21" ;
+        dcterms:title           "Floor Slab (Floor 0)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_19 ;
+        process:hasSubTask    task:AsPlanned_Original_School_20 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      200 ;
+        process:workQuantityUnit  "m2" .
+
+task:AsPlanned_Original_School_3
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  30
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "3" ;
+        dcterms:title           "Substructure" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_2 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_5 , task:AsPlanned_Original_School_4 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_34
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  8
+                                  ] ;
+        dcterms:created   "2013-02-21T15:58:00"^^xsd:dateTime ;
+        dcterms:identifier             "34" ;
+        dcterms:title           "Floor Slab (Floor 0)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_32 ;
+        process:hasSubTask    task:AsPlanned_Original_School_33 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_47
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  11
+                                  ] ;
+        dcterms:created   "2013-02-21T16:09:00"^^xsd:dateTime ;
+        dcterms:identifier             "47" ;
+        dcterms:title           "Entrance canopy" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_1 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_49 , task:AsPlanned_Original_School_50 , task:AsPlanned_Original_School_48 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      10 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_19
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  18
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "19" ;
+        dcterms:title           "Substructure" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_18 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_21 , task:AsPlanned_Original_School_20 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_41
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "41" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_39 ;
+        process:hasSubTask    task:AsPlanned_Original_School_38 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_13
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T16:00:00"^^xsd:dateTime ;
+        dcterms:identifier             "13" ;
+        dcterms:title           "Beams and Floor Slab (Floor 2)" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_10 ;
+        process:hasSubTask    task:AsPlanned_Original_School_12 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      1000 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_26
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "26" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_25 ;
+        process:hasSubTask    task:AsPlanned_Original_School_24 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_8
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  20
+                                  ] ;
+        dcterms:created   "2013-02-21T15:59:00"^^xsd:dateTime ;
+        dcterms:identifier             "8" ;
+        dcterms:title           "Concrete Rd Columns" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_6 ;
+        process:hasSubTask    task:AsPlanned_Original_School_5 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      500 ;
+        process:workQuantityUnit  "m3" .
+
+task:AsPlanned_Original_School_39
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  40
+                                  ] ;
+        dcterms:created   "2013-02-21T16:01:00"^^xsd:dateTime ;
+        dcterms:identifier             "39" ;
+        dcterms:title           "Floor 2" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_31 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_40 , task:AsPlanned_Original_School_42 , task:AsPlanned_Original_School_41 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_20
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  10
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "20" ;
+        dcterms:title           "Piles and Caps" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_19 ;
+        process:hasSubTask    task:AsPlanned_Original_School_4 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      50 ;
+        process:workQuantityUnit  "units" .
+
+task:AsPlanned_Original_School_2
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  150
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "2" ;
+        dcterms:title           "Division 1" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_1 ;
+        process:hasStatus         "Active" ;
+        process:hasSubTask        task:AsPlanned_Original_School_6 , task:AsPlanned_Original_School_14 , task:AsPlanned_Original_School_3 , task:AsPlanned_Original_School_10 ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
+
+task:AsPlanned_Original_School_33
+        a                         process:Task ;
+        time:hasDuration          [ a          time:DurationDescription ;
+                                    time:days  10
+                                  ] ;
+        dcterms:created   "2013-02-21T15:52:00"^^xsd:dateTime ;
+        dcterms:identifier             "33" ;
+        dcterms:title           "Piles and Caps" ;
+        process:isSubTaskOf     task:AsPlanned_Original_School_32 ;
+        process:hasSubTask    task:AsPlanned_Original_School_20 ;
+        process:hasStatus         "Active" ;
+        process:hasType           "NORMAL_TASK" ;
+        process:belongsToProcess   data_process:AsPlanned_Original_Process_School ;
+        process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
+        process:workQuantity      50 ;
+        process:workQuantityUnit  "units" .

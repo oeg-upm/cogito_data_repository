@@ -1,0 +1,113 @@
+@prefix schema: <http://schema.org#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix resource_type:  <https://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix data:  <https://data.cogito.iot.linkeddata.es/resources/> .
+
+resource_type:School_9
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ; # ????????????????????????? resource:hasCostPerUse
+        dcterms:identifier          "9" ; # resource:hasID
+        resource:hasInitials    2 ; # ?????????????????????????????????
+        resource:maxUnit    4 ; # resource:hasMaxUnits
+        dcterms:title        "Welder" . # resource:hasName
+
+resource_type:School_2
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "1500"^^xsd:decimal ;
+        dcterms:identifier          "2" ;
+        resource:hasInitials    2 ;
+        resource:maxUnit    4 ;
+        dcterms:title        "Concrete mixer truck" .
+
+resource_type:School_7
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ;
+        dcterms:identifier          "7" ;
+        resource:hasInitials    2 ;
+        resource:maxUnit    4 ;
+        dcterms:title        "Finisher" .
+
+resource_type:School_12
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ;
+        dcterms:identifier          "12" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    1 ;
+        dcterms:title        "Foreman" .
+
+resource_type:School_5
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "1500"^^xsd:decimal ;
+        dcterms:identifier          "5" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    1 ;
+        dcterms:title        "Truck mounted crane" .
+
+resource_type:School_10
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "300"^^xsd:decimal ;
+        dcterms:identifier          "10" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    1 ;
+        dcterms:title        "Surveyor" .
+
+resource_type:School_3
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "1500"^^xsd:decimal ;
+        dcterms:identifier          "3" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    2 ;
+        dcterms:title        "Dump truck" .
+
+resource_type:School_8
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ;
+        dcterms:identifier          "8" ;
+        resource:hasInitials    5 ;
+        resource:maxUnit    10 ;
+        dcterms:title        "Worker" .
+
+resource_type:School_13
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ;
+        dcterms:identifier          "13" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    1 ;
+        dcterms:title        "Crane operator" .
+
+resource_type:School_1
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "2000"^^xsd:decimal ;
+        dcterms:identifier          "1" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    2 ;
+        dcterms:title        "Truck mounted concrete boom pump" .
+
+resource_type:School_6
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "200"^^xsd:decimal ;
+        dcterms:identifier          "6" ;
+        resource:hasInitials    4 ;
+        resource:maxUnit    6 ;
+        dcterms:title        "Concrete vibrator machine" .
+
+resource_type:School_11
+        a                       resource:WorkerRole ;
+        resource:hasCostPerHour  "300"^^xsd:decimal ;
+        dcterms:identifier          "11" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    1 ;
+        dcterms:title        "Site supervisor" .
+
+resource_type:School_4
+        a                       resource:EquipmentType ;
+        resource:hasCostPerHour  "1500"^^xsd:decimal ;
+        dcterms:identifier          "4" ;
+        resource:hasInitials    1 ;
+        resource:maxUnit    2 ;
+        dcterms:title        "Excavator" .

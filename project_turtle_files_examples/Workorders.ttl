@@ -1,0 +1,86 @@
+@prefix schema: <http://schema.org#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix const: <https://cogito.iot.linkeddata.es/def/construction#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix tag:  <https://data.cogito.iot.linkeddata.es/resources/tag/> .
+@prefix tag_group:  <https://data.cogito.iot.linkeddata.es/resources/tag_group/> .
+@prefix equipment:  <https://data.cogito.iot.linkeddata.es/resources/equipment/> .
+@prefix human:  <https://data.cogito.iot.linkeddata.es/resources/human/> .
+@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix work_order:  <https://data.cogito.iot.linkeddata.es/resources/work_order/> .
+
+equipment:School_wodm_e2_0
+        process:hasTrackingTag  tag:School_ec774843-17e6-48e9-a05f-53a947dd1b81 ;
+        dcterms:title        "Concrete mixer truck" . # resource:hasName
+
+equipment:School_wodm_e4_0
+        dcterms:title  "Excavator" .
+
+task:AsPlanned_Enriched_School_12vqc
+        process:hasAssignedResource  human:School_3e2bdf37-b270-43e8-9143-dfbca5679906 , equipment:School_wodm_e1_0 ;
+        process:hasMainProvider      human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 .
+
+task:AsPlanned_Enriched_School_12gqc
+        process:hasAssignedResource  human:School_3f911cab-8a76-46e4-8e4d-9dc4a529701f , equipment:School_wodm_e1_0 ;
+        process:hasMainProvider      human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 .
+
+task:AsPlanned_Enriched_School_12sub
+        process:hasAssignedResource  human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 , equipment:School_wodm_e6_0 , equipment:School_wodm_e5_0 , equipment:School_wodm_e4_0 , equipment:School_wodm_e3_0 , equipment:School_wodm_e2_0 ;
+        process:hasMainProvider      human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 .
+
+work_order:School_wodm_w2
+        a                         process:Workorder ;
+        process:hasComponentTask  task:AsPlanned_Enriched_School_12gqc ;
+        process:hasMainProvider   human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
+
+equipment:School_wodm_e6_0
+        process:hasTrackingTag  tag:School_ab1163a2-2f70-436f-a366-61d4b010a798 ;
+        dcterms:title        "Concrete vibrator machine" .
+
+equipment:School_wodm_e1_0
+        dcterms:title  "Camera - LiDAR Scanner" .
+
+equipment:School_wodm_e3_0
+        dcterms:title  "Dump truck" .
+
+human:School_3f911cab-8a76-46e4-8e4d-9dc4a529701f
+        process:hasTrackingTag  tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5 ;
+        resource:email       "damiano.falcioni@boc-group.com" ; # resource:hasEmail
+        resource:firstName   "Damiano" ; # resource:hasFirstName
+        resource:lastName    "Falcioni" . # resource:hasLastName
+
+work_order:School_wodm_w3
+        a                         process:Workorder ;
+        process:hasComponentTask  task:AsPlanned_Enriched_School_12vqc ;
+        process:hasMainProvider   human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
+
+equipment:School_wodm_e5_0
+        dcterms:title  "Truck mounted crane" .
+
+human:School_1b20a241-c5fe-422e-8043-01461da1a2c3
+        process:hasTrackingTag  tag:School_108cd97a-3028-4cde-b0e0-a5e30ba6078b ;
+        resource:email       "katsigarakis@gmail.com" ;
+        resource:firstName   "Kyriakos" ;
+        resource:lastName    "Katsigarakis" .
+
+human:School_3e2bdf37-b270-43e8-9143-dfbca5679906
+        process:hasTrackingTag  tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5 ;
+        resource:email       "a.papafragkakis@hypertech.gr" ;
+        resource:firstName   "Apostolos" ;
+        resource:lastName    "Papafragkakis" .
+
+work_order:School_wodm_w1
+        a                         process:Workorder ;
+        process:hasComponentTask  task:AsPlanned_Enriched_School_12sub ;
+        process:hasMainProvider   human:School_1b20a241-c5fe-422e-8043-01461da1a2c3 ;
+        process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
+        process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .

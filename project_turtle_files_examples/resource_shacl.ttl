@@ -1,0 +1,84 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix qual: <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+shape:ResourceType
+    a               sh:NodeShape ;
+    rdfs:label      "resource type requirement" ;
+    sh:description  "An entity that includes the requitrments that a task has pertaining a resource type" ;
+    sh:name         "resource type requirement" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasCostPerHour  , shape:identifier , shape:title , shape:maxUnit ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/" ;
+    sh:targetClass  resource:ResourceType .
+
+shape:identifier
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "identifier" ;
+    sh:name           "identifier" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:identifier .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:title .
+
+shape:hasCostPerHour
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "has cost per hour" ;
+    sh:name           "has cost per hour" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:string ;
+    sh:path           resource:hasCostPerHour .
+
+shape:maxUnit
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "max unit" ;
+    sh:name           "max unit" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:integer ;
+    sh:path           resource:maxUnit .

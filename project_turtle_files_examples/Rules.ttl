@@ -1,0 +1,171 @@
+@prefix schema: <http://schema.org#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix const: <https://cogito.iot.linkeddata.es/def/construction#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix rule:  <https://data.cogito.iot.linkeddata.es/resources/rule/> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+
+rule:School_QC_5
+        a                              qual:Rule ;
+        dcterms:description               "Beam-to-column location" ; # qual:description
+        qual:elementTypeKeywords       "COLUMN" , "BEAM" ;
+        dcterms:identifier                     "QC_5" ; # qual:hasID
+        dcterms:title                     "BeamsAndSlabs_a" ; # qual:label
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "CONNECTION" .
+
+rule:School_QC_12
+        a                          qual:Rule ;
+        dcterms:description           "Inclination of a beam or a slab" ;
+        qual:elementTypeKeywords   "SLAB" , "BEAM" ;
+        dcterms:identifier                 "QC_12" ;
+        dcterms:title                 "BeamsAndSlabs_annex_c" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_17
+        a                          qual:Rule ;
+        dcterms:description           "Wall position in plane" ;
+        qual:elementTypeKeywords   "WALL" ;
+        dcterms:identifier                 "QC_17" ;
+        dcterms:title                 "ColumnsAndWalls_annex_b" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_3
+        a                          qual:Rule ;
+        dcterms:description           "Curvature between adjacent storeys levels" ;
+        qual:elementTypeKeywords   "WALL" , "COLUMN" ;
+        dcterms:identifier                 "QC_3" ;
+        dcterms:title                 "ColumnsAndWalls_c" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_8
+        a                          qual:Rule ;
+        dcterms:description           "Lap-joints" ;
+        qual:elementTypeKeywords   "WALL" , "SLAB" ;
+        dcterms:identifier                 "QC_8" ;
+        dcterms:title                 "Sections_c" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_10
+        a                          qual:Rule ;
+        dcterms:description           "Horizontal straightness of beams" ;
+        qual:elementTypeKeywords   "BEAM" ;
+        dcterms:identifier                 "QC_10" ;
+        dcterms:title                 "BeamsAndSlabs_annex_a" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_15
+        a                          qual:Rule ;
+        dcterms:description           "Orthogonality of a cross-section" ;
+        qual:elementTypeKeywords   "COLUMN" , "WALL" , "SLAB" , "BEAM" ;
+        dcterms:identifier                 "QC_15" ;
+        dcterms:title                 "Sections_annex_a" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_1
+        a                          qual:Rule ;
+        dcterms:description           "Inclination of element" ;
+        qual:elementTypeKeywords   "WALL" , "COLUMN" ;
+        dcterms:identifier                 "QC_1" ;
+        dcterms:title                 "ColumnsAndWalls_a" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_6
+        a                          qual:Rule ;
+        dcterms:description           "Position of bearing axis of support" ;
+        qual:elementTypeKeywords   "BEAM" ;
+        dcterms:identifier                 "QC_6" ;
+        dcterms:title                 "BeamsAndSlabs_b" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_13
+        a                              qual:Rule ;
+        dcterms:description               "Level of adjacent beams" ;
+        qual:elementTypeKeywords       "BEAM" ;
+        dcterms:identifier                     "QC_13" ;
+        dcterms:title                     "BeamsAndSlabs_annex_d" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "STOREY" .
+
+rule:School_QC_4
+        a                              qual:Rule ;
+        dcterms:description               "Deviation of centre wrt to base level" ;
+        qual:elementTypeKeywords       "WALL" , "COLUMN" ;
+        dcterms:identifier                     "QC_4" ;
+        dcterms:title                     "ColumnsAndWalls_d" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "ABOVE" , "BELOW" .
+
+rule:School_QC_9
+        a                              qual:Rule ;
+        dcterms:description               "Free space between adjacent elements" ;
+        qual:elementTypeKeywords       "COLUMN" , "WALL" ;
+        dcterms:identifier                     "QC_9" ;
+        dcterms:title                     "ColumnsAndWalls_annex_c" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "STOREY" .
+
+rule:School_QC_11
+        a                              qual:Rule ;
+        dcterms:description               "Distance between adjacent beams" ;
+        qual:elementTypeKeywords       "BEAM" ;
+        dcterms:identifier                     "QC_11" ;
+        dcterms:title                     "BeamsAndSlabs_annex_b" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "STOREY" .
+
+rule:School_QC_16
+        a                          qual:Rule ;
+        dcterms:description           "Column position in plane" ;
+        qual:elementTypeKeywords   "COLUMN" ;
+        dcterms:identifier                 "QC_16" ;
+        dcterms:title                 "ColumnsAndWalls_annex_a" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_2
+        a                              qual:Rule ;
+        dcterms:description               "Deviation between centres" ;
+        qual:elementTypeKeywords       "WALL" , "COLUMN" ;
+        dcterms:identifier                     "QC_2" ;
+        dcterms:title                     "ColumnsAndWalls_b" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "ABOVE" , "BELOW" .
+
+rule:School_QC_7
+        a                          qual:Rule ;
+        dcterms:description           "Cross-sectional dimensions" ;
+        qual:elementTypeKeywords   "SLAB" , "COLUMN" , "BEAM" ;
+        dcterms:identifier                 "QC_7" ;
+        dcterms:title                 "Sections_a" ;
+        qual:materialTypeKeywords  "CONCRETE" ;
+        qual:originDocument        "BS EN 13670-2009" .
+
+rule:School_QC_14
+        a                              qual:Rule ;
+        dcterms:description               "Levels of adjacent floors at supports" ;
+        qual:elementTypeKeywords       "SLAB" ;
+        dcterms:identifier                     "QC_14" ;
+        dcterms:title                     "BeamsAndSlabs_annex_e" ;
+        qual:materialTypeKeywords      "CONCRETE" ;
+        qual:originDocument            "BS EN 13670-2009" ;
+        qual:relationshipTypeKeywords  "ADJACENT" .

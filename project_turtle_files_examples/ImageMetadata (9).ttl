@@ -1,0 +1,45 @@
+@prefix schema: <http://schema.org#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facilityruction#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix raw_image: <https://data.cogito.iot.linkeddata.es/resources/raw_image/> .
+@prefix image_job: <https://data.cogito.iot.linkeddata.es/resources/image_job/> .
+@prefix element: <https://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix image: <https://data.cogito.iot.linkeddata.es/resources/image/> .
+@prefix dcterms: <http://purl.org/dc/terms> .
+
+task:AsPlanned_Enriched_School_12vqc
+        qual:hasJobs  image_job:School_12vqc_51 .
+
+raw_image:School_12vqc_51
+        a                    qual:RawImage ;
+        qual:isReatedToJob   image_job:School_12vqc_51 ; # ??????????????????????????
+        platform:hasFileFormat  "jpg" ; # qual:rawImageFormat
+        platform:hasFileURL     "https://dtp.cogito-project.com/file/578b1696-df56-49c7-8634-fb96b2f83e18/download" . # qual:rawImageUrl
+
+element:123861  qual:refersToJob  image_job:School_12vqc_51 .
+
+image_job:School_12vqc_51
+        a                        qual:ImageJob ;
+        qual:captureDevice       "2" ; # ??????????????????????????????????
+        qual:deviceOrientation   "[null,null,null]" ;
+        qual:devicePosition      "[null,null,null]" ;
+        dcterms:identifier       "51" ; # qual:hasId
+        qual:hasProcessedImage   image:School_12vqc_51 ;
+        qual:hasRawImage         raw_image:School_12vqc_51 ;
+        qual:isRelatedToElement  element:123861 ;
+        qual:isRelatedToTask     task:AsPlanned_Enriched_School_12vqc ;
+        qual:performedTimestamp  "2023-01-12T11:46:44"^^xsd:dateTime ; # qual:timestampPerformed
+        qual:scheduledTimestamp   "2023-01-23T01:18:24"^^xsd:dateTime . # qual:timestampUploaded
+
+image:School_12vqc_51
+        a                   qual:Image ;
+        platform:hasFileFormat    "jpg" ; # qual:imageFormat
+        platform:hasFileURL       "https://dtp.cogito-project.com/file/74340a9c-f258-43bf-9996-a1ec967f2d92/download" ; # qual:imageUrl
+        qual:isReatedToJob  image_job:School_12vqc_51 . # ????????????????????????????

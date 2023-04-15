@@ -1,0 +1,299 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix qual: <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+
+shape:Element
+    a               sh:NodeShape ;
+    rdfs:label      "Element" ;
+    sh:description  "A subclass or bot:Element and, as such, a constituent of a construction entity with a characteristic technical function, form, or position" ;
+    sh:name         "Element" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasInformationResource ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/element/" ;
+    sh:targetClass  facility:Element .
+
+shape:Task
+    a               sh:NodeShape ;
+    rdfs:label      "Task" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:relatesToInformationResource ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:targetClass  process:Task .
+
+shape:relatesToInformationResource
+    a               sh:PropertyShape ;
+    rdfs:label      "relates to information resource" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        qual:Mesh;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/mesh/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:AsBuiltMesh;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/as_built_mesh/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:PointCloud;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/point_cloud/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:Image;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:RawImage;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/raw_image/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:ImageJob;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image_job/" ;
+        ] ) ;
+    sh:description  "" ;
+    sh:name         "relates to information resource" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         qual:relatesToInformationResource .
+
+shape:identifier
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "identifier" ;
+    sh:name           "identifier" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:identifier .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:title .
+
+shape:hasInformationResource
+    a               sh:PropertyShape ;
+    rdfs:label      "has information resource" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        qual:Mesh;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/mesh/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:AsBuiltMesh;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/as_built_mesh/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:PointCloud;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/point_cloud/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:Image;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:RawImage;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/raw_image/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        qual:ImageJob;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image_job/" ;
+        ] ) ;
+    sh:description  "Property that relates an entity (especially a facility:Element) to a qual:InformationResource" ;
+    sh:name         "has information resource" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         qual:hasInformationResource .
+
+
+shape:RawImage
+    a               sh:NodeShape ;
+    rdfs:label      "RawImage" ;
+    sh:description  "An image that has not been processed" ;
+    sh:name         "RawImage" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:isRelatedToJob , shape:hasFileFormat , shape:hasFileURL , shape:captureDevice , shape:deviceOrientation , shape:devicePosition , shape:performedTimestamp ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/raw_image/" ;
+    sh:targetClass  qual:RawImage .
+
+shape:performedTimestamp
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "performed timestamp" ;
+    sh:name           "performed timestamp" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:dateTime ;
+    sh:path           qual:performedTimestamp .
+
+shape:devicePosition
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "device position" ;
+    sh:name           "device position" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:devicePosition .
+
+shape:deviceOrientation
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "device orientation" ;
+    sh:name           "device orientation" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:deviceOrientation .
+
+shape:captureDevice
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  qual: ;
+    rdfs:label        "capture device" ;
+    sh:name           "capture device" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           qual:captureDevice .
+
+shape:isRelatedToJob 
+    a               sh:PropertyShape
+    rdfs:label      "is related to job" ;
+    sh:class        qual:ImageJob ;
+    sh:description  "" ;
+    sh:name         "is related to job" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image_job/" ;
+    sh:path         qual:isRelatedToJob .
+
+shape:hasFileFormat
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  platform: ;
+    rdfs:label        "has file format" ;
+    sh:name           "has file format" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           platform:hasFileFormat .
+
+shape:hasFileURL
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  platform: ;
+    rdfs:label        "has file url" ;
+    sh:name           "has file url" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           platform:hasFileURL .
+
+
+shape:ImageJob
+    a               sh:NodeShape ;
+    rdfs:label      "ImageJob" ;
+    sh:description  "An image that has not been processed" ;
+    sh:name         "ImageJob" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:identifier , shape:hasProcessedImage , shape:hasRawImage , shape:isRelatedToElement , shape:isRelatedToTask ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image_job/" ;
+    sh:targetClass  qual:ImageJob .
+
+
+shape:isRelatedToTask 
+    a               sh:PropertyShape
+    rdfs:label      "is related to task" ;
+    sh:class        process:Task ;
+    sh:description  "Property that relates an entity (especially qual:QualityInformation) to a process:Task" ;
+    sh:name         "is related to task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:path         qual:isRelatedToTask .
+
+
+shape:isRelatedToElement 
+    a               sh:PropertyShape
+    rdfs:label      "is related to element" ;
+    sh:class        facility:Element ;
+    sh:description  "Property that relates an entity (especially qual:InformationResource) to a facility:Element" ;
+    sh:name         "is related to element" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/element/" ;
+    sh:path         qual:isRelatedToElement .
+
+shape:hasRawImage 
+    a               sh:PropertyShape
+    rdfs:label      "has raw image" ;
+    sh:class        qual:RawImage ;
+    sh:description  "Property that relates an entity (especially qual:ImageJob to an original qual:Image" ;
+    sh:name         "has raw image" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/raw_image/" ;
+    sh:path         qual:hasRawImage .
+
+shape:hasProcessedImage 
+    a               sh:PropertyShape
+    rdfs:label      "has processed image" ;
+    sh:class        qual:Image ;
+    sh:description  "Property that relates an entity (especially qual:ImageJob to a processed qual:Image" ;
+    sh:name         "has processed image" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image/" ;
+    sh:path         qual:hasProcessedImage .
+
+
+shape:Image
+    a               sh:NodeShape ;
+    rdfs:label      "Image" ;
+    sh:description  "A picture of an entity" ;
+    sh:name         "Image" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:isRelatedToJob , shape:hasFileFormat , shape:hasFileURL ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image/" ;
+    sh:targetClass  qual:Image .
