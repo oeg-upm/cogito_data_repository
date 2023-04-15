@@ -81,7 +81,7 @@ shape:relatesToInformationResource
     sh:description  "" ;
     sh:name         "relates to information resource" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:path         qual:relatesToInformationResource .
 
@@ -138,7 +138,7 @@ shape:hasInformationResource
     sh:description  "Property that relates an entity (especially a facility:Element) to a qual:InformationResource" ;
     sh:name         "has information resource" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:path         qual:hasInformationResource .
 
@@ -149,7 +149,7 @@ shape:RawImage
     sh:description  "An image that has not been processed" ;
     sh:name         "RawImage" ;
     sh:nodeKind     sh:IRI ;
-    sh:property     shape:isRelatedToJob , shape:hasFileFormat , shape:hasFileURL , shape:captureDevice , shape:deviceOrientation , shape:devicePosition , shape:performedTimestamp ;
+    sh:property     shape:isRelatedToJob , shape:hasFileFormat , shape:hasFileURL , shape:captureDevice , shape:deviceOrientation , shape:devicePosition ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/raw_image/" ;
     sh:targetClass  qual:RawImage .
 
@@ -170,7 +170,7 @@ shape:devicePosition
     rdfs:label        "device position" ;
     sh:name           "device position" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:devicePosition .
@@ -181,7 +181,7 @@ shape:deviceOrientation
     rdfs:label        "device orientation" ;
     sh:name           "device orientation" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:deviceOrientation .
@@ -192,7 +192,7 @@ shape:captureDevice
     rdfs:label        "capture device" ;
     sh:name           "capture device" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:captureDevice .
@@ -204,7 +204,7 @@ shape:isRelatedToJob
     sh:description  "" ;
     sh:name         "is related to job" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/image_job/" ;
     sh:path         qual:isRelatedToJob .
 

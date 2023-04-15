@@ -93,7 +93,7 @@ shape:takenAtTime
     rdfs:label        "taken at time" ;
     sh:name           "taken at time" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:datatype       xsd:dateTime ;
     sh:path           qual:takenAtTime .

@@ -1,89 +1,90 @@
 @prefix schema: <http://schema.org#> .
 @prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/terms> .
-@prefix tag:  <https://data.cogito.iot.linkeddata.es/resources/tag/> .
-@prefix tag_group:  <https://data.cogito.iot.linkeddata.es/resources/tag_group/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix tag:  <http://data.cogito.iot.linkeddata.es/resources/tag/> .
+@prefix tag_group:  <http://data.cogito.iot.linkeddata.es/resources/tag_group/> .
 
 tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier      "c87541be-e1b8-4122-be14-1ba44807d3e5" ; # resource:hasID
-        resource:isPartOfGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
+        iot:belongsToTagGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
 
 tag:School_3511bac3-f210-40e2-b4f5-c48d9f5fe324
-        a                       resource:EquipmentTrackingTag ;
+        a                       iot:EquipmentTrackingTag ;
         dcterms:identifier          "3511bac3-f210-40e2-b4f5-c48d9f5fe324" ;
-        resource:isPartOfGroup  tag_group:School_779c5ea2-5e0a-4253-b28a-e7a27e5006d6 .
+        iot:belongsToTagGroup  tag_group:School_779c5ea2-5e0a-4253-b28a-e7a27e5006d6 .
 
 tag:School_c3940c8f-2f12-4528-b056-a30d410622f7
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "c3940c8f-2f12-4528-b056-a30d410622f7" ;
-        resource:isPartOfGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
+        iot:belongsToTagGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
 
 tag:School_03f2c6f0-f199-4614-a41d-69b710b2ed54
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "03f2c6f0-f199-4614-a41d-69b710b2ed54" ;
-        resource:isPartOfGroup  tag_group:School_3af109b6-c39e-4152-b222-61304046ebfe .
+        iot:belongsToTagGroup  tag_group:School_3af109b6-c39e-4152-b222-61304046ebfe .
 
 tag_group:School_3af109b6-c39e-4152-b222-61304046ebfe
-        a                        resource:HumanTrackingTagGroup ;
+        a                        iot:HumanTrackingTagGroup ;
         dcterms:identifier           "3af109b6-c39e-4152-b222-61304046ebfe" ;
         dcterms:title         "Finisher" ; # resource:hasName
-        resource:hasTrackingTag  tag:School_03f2c6f0-f199-4614-a41d-69b710b2ed54 , tag:School_108cd97a-3028-4cde-b0e0-a5e30ba6078b .
+        iot:hasTrackingTag  tag:School_03f2c6f0-f199-4614-a41d-69b710b2ed54 , tag:School_108cd97a-3028-4cde-b0e0-a5e30ba6078b .
 
 tag_group:School_779c5ea2-5e0a-4253-b28a-e7a27e5006d6
-        a                        resource:EquipmentTrackingTagGroup ;
+        a                        iot:EquipmentTrackingTagGroup ;
         dcterms:identifier           "779c5ea2-5e0a-4253-b28a-e7a27e5006d6" ;
         dcterms:title         "Concrete vibrator machine" ;
-        resource:hasTrackingTag  tag:School_ab1163a2-2f70-436f-a366-61d4b010a798 , tag:School_3511bac3-f210-40e2-b4f5-c48d9f5fe324 .
+        iot:hasTrackingTag  tag:School_ab1163a2-2f70-436f-a366-61d4b010a798 , tag:School_3511bac3-f210-40e2-b4f5-c48d9f5fe324 .
 
 tag:School_ec774843-17e6-48e9-a05f-53a947dd1b81
-        a                       resource:EquipmentTrackingTag ;
+        a                       iot:EquipmentTrackingTag ;
         dcterms:identifier          "ec774843-17e6-48e9-a05f-53a947dd1b81" ;
-        resource:isPartOfGroup  tag_group:School_4f6fa036-9585-4304-a9ef-46870c9cf94e .
+        iot:belongsToTagGroup  tag_group:School_4f6fa036-9585-4304-a9ef-46870c9cf94e .
 
 tag:School_317a5c70-5b0a-4cfd-bfaf-585a378ac6fb
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "317a5c70-5b0a-4cfd-bfaf-585a378ac6fb" ;
-        resource:isPartOfGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
+        iot:belongsToTagGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
 
 tag:School_381ed25e-39e7-4241-846d-b81b1b831c36
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "381ed25e-39e7-4241-846d-b81b1b831c36" ;
-        resource:isPartOfGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
+        iot:belongsToTagGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
 
 tag:School_5f1703ad-45e2-4fa9-ae73-839910bcfc60
-        a                       resource:EquipmentTrackingTag ;
+        a                       iot:EquipmentTrackingTag ;
         dcterms:identifier          "5f1703ad-45e2-4fa9-ae73-839910bcfc60" ;
-        resource:isPartOfGroup  tag_group:School_4f6fa036-9585-4304-a9ef-46870c9cf94e .
+        iot:belongsToTagGroup  tag_group:School_4f6fa036-9585-4304-a9ef-46870c9cf94e .
 
 tag:School_108cd97a-3028-4cde-b0e0-a5e30ba6078b
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "108cd97a-3028-4cde-b0e0-a5e30ba6078b" ;
-        resource:isPartOfGroup  tag_group:School_3af109b6-c39e-4152-b222-61304046ebfe .
+        iot:belongsToTagGroup  tag_group:School_3af109b6-c39e-4152-b222-61304046ebfe .
 
 tag:School_f94216b4-31f7-425e-a31e-77eeb52c2f0b
-        a                       resource:HumanTrackingTag ;
+        a                       iot:HumanTrackingTag ;
         dcterms:identifier          "f94216b4-31f7-425e-a31e-77eeb52c2f0b" ;
-        resource:isPartOfGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
+        iot:belongsToTagGroup  tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0 .
 
 tag:School_ab1163a2-2f70-436f-a366-61d4b010a798
-        a                       resource:EquipmentTrackingTag ;
+        a                       iot:EquipmentTrackingTag ;
         dcterms:identifier          "ab1163a2-2f70-436f-a366-61d4b010a798" ;
-        resource:isPartOfGroup  tag_group:School_779c5ea2-5e0a-4253-b28a-e7a27e5006d6 .
+        iot:belongsToTagGroup  tag_group:School_779c5ea2-5e0a-4253-b28a-e7a27e5006d6 .
 
 tag_group:School_4f6fa036-9585-4304-a9ef-46870c9cf94e
-        a                        resource:EquipmentTrackingTagGroup ;
+        a                        iot:EquipmentTrackingTagGroup ;
         dcterms:identifier           "4f6fa036-9585-4304-a9ef-46870c9cf94e" ;
         dcterms:title         "Concrete mixer truck" ;
-        resource:hasTrackingTag  tag:School_ec774843-17e6-48e9-a05f-53a947dd1b81 , tag:School_5f1703ad-45e2-4fa9-ae73-839910bcfc60 .
+        iot:hasTrackingTag  tag:School_ec774843-17e6-48e9-a05f-53a947dd1b81 , tag:School_5f1703ad-45e2-4fa9-ae73-839910bcfc60 .
 
 tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0
-        a                        resource:HumanTrackingTagGroup ;
+        a                        iot:HumanTrackingTagGroup ;
         dcterms:identifier           "fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0" ;
         dcterms:title         "Worker" ;
-        resource:hasTrackingTag  tag:School_c3940c8f-2f12-4528-b056-a30d410622f7 , tag:School_317a5c70-5b0a-4cfd-bfaf-585a378ac6fb , tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5 , tag:School_f94216b4-31f7-425e-a31e-77eeb52c2f0b , tag:School_381ed25e-39e7-4241-846d-b81b1b831c36 .
+        iot:hasTrackingTag  tag:School_c3940c8f-2f12-4528-b056-a30d410622f7 , tag:School_317a5c70-5b0a-4cfd-bfaf-585a378ac6fb , tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5 , tag:School_f94216b4-31f7-425e-a31e-77eeb52c2f0b , tag:School_381ed25e-39e7-4241-846d-b81b1b831c36 .

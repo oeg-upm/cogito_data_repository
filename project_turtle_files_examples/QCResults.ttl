@@ -6,9 +6,10 @@
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
-@prefix element:  <https://data.cogito.iot.linkeddata.es/resources/element/> .
-@prefix qc: <https://data.cogito.iot.linkeddata.es/resources/qc/> .
+@prefix qual:  <http://cogito.iot.linkeddata.es/def/quality#> .
+@prefix element:  <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix qc: <http://data.cogito.iot.linkeddata.es/resources/qc/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
 
 
 task:AsPlanned_Enriched_School_12gqc

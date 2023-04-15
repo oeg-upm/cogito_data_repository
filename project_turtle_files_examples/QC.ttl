@@ -7,10 +7,10 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
-@prefix element:  <https://data.cogito.iot.linkeddata.es/resources/element/> .
-@prefix rule:  <https://data.cogito.iot.linkeddata.es/resources/rule/> .
-@prefix qc: <https://data.cogito.iot.linkeddata.es/resources/qc/> .
-@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix element:  <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix rule:  <http://data.cogito.iot.linkeddata.es/resources/rule/> .
+@prefix qc: <http://data.cogito.iot.linkeddata.es/resources/qc/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 qc:School_Project_RevitSchoolCylinders_QC4014
         a                        qual:GQInf ;

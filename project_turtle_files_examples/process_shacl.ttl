@@ -116,7 +116,7 @@ shape:belongsToProcess
     sh:name         "belongs to process" ;
     sh:nodeKind     sh:IRI ;
     sh:minCount     1 ;
-    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/process/" ;
     sh:path         process:belongsToProcess .
 
 shape:hasSubTask
@@ -191,7 +191,7 @@ shape:workQuantityUnit
     rdfs:label        "work quantity unit" ;
     sh:name           "work quantity unit" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
+    #sh:minCount       1 ;
     sh:maxCount       1 ;
     sh:datatype       xsd:string ;
     sh:path           process:workQuantityUnit .
@@ -202,7 +202,7 @@ shape:workQuantity
     rdfs:label        "work quantity" ;
     sh:name           "work quantity" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
+    #sh:minCount       1 ;
     sh:maxCount       1 ;
     sh:datatype       xsd:integer ;
     sh:path           process:workQuantity .
@@ -238,7 +238,7 @@ shape:duration
     rdfs:label        "duration" ;
     sh:name           "duration" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
+    #sh:minCount       1 ;
     sh:maxCount       1 ;
     sh:datatype       xsd:integer ;
     sh:path           process:duration .
@@ -349,7 +349,6 @@ shape:hasTask
     sh:name         "has task" ;
     sh:nodeKind     sh:IRI ;
     sh:minCount     1 ;
-    sh:maxCount     1 ;
     sh:path         process:hasTask .
 
 shape:creator

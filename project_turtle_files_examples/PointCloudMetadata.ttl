@@ -4,17 +4,18 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
-@prefix point_cloud:  <https://data.cogito.iot.linkeddata.es/resources/point_cloud/> .
-@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix point_cloud:  <http://data.cogito.iot.linkeddata.es/resources/point_cloud/> .
+@prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
 
 point_cloud:School_12gqc_0
         a                        qual:PointCloud ;
         qual:isRelatedToTask     task:AsPlanned_Enriched_School_12gqc ;
         platform:hasFileFormat    "ply" ; # qual:pointCloudFormat
-        platform:hasFileUrl       "https://dtp.cogito-project.com/file/50b51444-2414-411b-b207-0a473387c9c9/download" ; # qual:pointCloudUrl
+        platform:hasFileURL       "https://dtp.cogito-project.com/file/50b51444-2414-411b-b207-0a473387c9c9/download" ; # qual:pointCloudUrl
         qual:timestampPerformed  "2022-12-18T14:42:55"^^xsd:dateTime ; # qual:timestampPerformed
         qual:timestampUploaded   "2023-01-12T01:43:05"^^xsd:dateTime . # qual:timestampUploaded
 

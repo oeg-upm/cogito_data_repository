@@ -4,21 +4,22 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
-@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
-@prefix raw_image: <https://data.cogito.iot.linkeddata.es/resources/raw_image/> .
-@prefix image_job: <https://data.cogito.iot.linkeddata.es/resources/image_job/> .
-@prefix element: <https://data.cogito.iot.linkeddata.es/resources/element/> .
-@prefix image: <https://data.cogito.iot.linkeddata.es/resources/image/> .
+@prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix raw_image: <http://data.cogito.iot.linkeddata.es/resources/raw_image/> .
+@prefix image_job: <http://data.cogito.iot.linkeddata.es/resources/image_job/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix image: <http://data.cogito.iot.linkeddata.es/resources/image/> .
 @prefix dcterms: <http://purl.org/dc/terms> .
 
 raw_image:School_12vqc_1
         a                     qual:RawImage ;
         qual:isRelatedToTask  task:AsPlanned_Enriched_School_12vqc ;
         platform:hasFileFormat   "jpg" ;
-        platform:hasFileUrl      "https://dtp.cogito-project.com/file/9e882fb3-8409-4c1a-9cd1-8bc04e2c26f2/download" .
+        platform:hasFileURL      "https://dtp.cogito-project.com/file/9e882fb3-8409-4c1a-9cd1-8bc04e2c26f2/download" .
 
 image_job:School_12vqc_1
         qual:deviceId            "2" ;
@@ -32,20 +33,20 @@ image_job:School_12vqc_1
 
 image:School_12vqc_0
         a                     qual:Image ;
-        qual:imageFormat      "jpg" ;
-        qual:imageUrl         "https://dtp.cogito-project.com/file/aff593e4-f52f-4869-ab88-1fdfbf0d61d4/download" ;
+        platform:hasFileFormat      "jpg" ;
+        platform:hasFileURL         "https://dtp.cogito-project.com/file/aff593e4-f52f-4869-ab88-1fdfbf0d61d4/download" ;
         qual:isRelatedToTask  task:AsPlanned_Enriched_School_12vqc .
 
 raw_image:School_12vqc_0
         a                     qual:RawImage ;
         qual:isRelatedToTask  task:AsPlanned_Enriched_School_12vqc ;
-        platform:hasFormat   "jpg" ;
-        platform:hasFile      "https://dtp.cogito-project.com/file/894ed705-4917-4e34-9020-c685f2170426/download" .
+        platform:hasFileFormat   "jpg" ;
+        platform:hasFileURL      "https://dtp.cogito-project.com/file/894ed705-4917-4e34-9020-c685f2170426/download" .
 
 image:School_12vqc_1
         a                     qual:Image ;
-        qual:imageFormat      "jpg" ;
-        qual:imageUrl         "https://dtp.cogito-project.com/file/c9896008-7280-43ec-b24d-63f7dc3f1558/download" ;
+        platform:hasFileFormat      "jpg" ;
+        platform:hasFileURL         "https://dtp.cogito-project.com/file/c9896008-7280-43ec-b24d-63f7dc3f1558/download" ;
         qual:isRelatedToTask  task:AsPlanned_Enriched_School_12vqc .
 
 image_job:School_12vqc_0

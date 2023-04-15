@@ -94,7 +94,7 @@ shape:belongsToSpatialZone
     sh:description  "A property relating an entity, especially a facility:Element to a facility:SpatialZone" ;
     sh:name         "belongs to spatial zone" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:maxCount     1 ;
     sh:path         facility:belongsToSpatialZone .
 

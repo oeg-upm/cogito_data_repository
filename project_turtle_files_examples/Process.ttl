@@ -5,9 +5,9 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
-@prefix dcterms: <http://purl.org/dc/terms> .
-@prefix task:  <https://data.cogito.iot.linkeddata.es/resources/task/> .
-@prefix data_process:  <https://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix data_process:  <http://data.cogito.iot.linkeddata.es/resources/process/> .
 
 task:AsPlanned_Original_School_46
         a                         process:Task ;

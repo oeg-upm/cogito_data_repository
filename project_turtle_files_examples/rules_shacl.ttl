@@ -46,7 +46,7 @@ shape:originDocument
     rdfs:label        "origin document" ;
     sh:name           "origin document" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
+    #sh:minCount       1 ;
     sh:maxCount       1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:originDocument .
@@ -58,8 +58,8 @@ shape:relationshipTypeKeywords
     rdfs:label        "relationship type keywords" ;
     sh:name           "relationship type keywords" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
-    sh:maxCount       1 ;
+    #sh:minCount       1 ;
+    #sh:maxCount       1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:relationshipTypeKeywords .
 
@@ -69,8 +69,8 @@ shape:materialTypeKeywords
     rdfs:label        "material type keywords" ;
     sh:name           "material type keywords" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
-    sh:maxCount       1 ;
+    #sh:minCount       1 ;
+    #sh:maxCount       1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:materialTypeKeywords .
 
@@ -80,8 +80,8 @@ shape:elementTypeKeywords
     rdfs:label        "element type keywords" ;
     sh:name           "element type keywords" ;
     sh:nodeKind       sh:Literal ;
-    sh:minCount       1 ;
-    sh:maxCount       1 ;
+    #sh:minCount       1 ;
+    #sh:maxCount       1 ;
     sh:datatype       xsd:string ;
     sh:path           qual:elementTypeKeywords .
 

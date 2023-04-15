@@ -170,7 +170,7 @@ shape:isRelatedToSpatialZone
     sh:description      "A property relating an entity (especially a facility:SpatialZone) to a facility:SpatialZone" ;
     sh:name             "is related to spatial zone" ;
     sh:nodeKind         sh:IRI ;
-    sh:minCount         1 ;
+    #sh:minCount         1 ;
     sh:maxCount         1 ;
     sh:path             facility:isRelatedToSpatialZone .
 
@@ -182,7 +182,7 @@ shape:hasElement
     sh:description  "Links a Zone to an Element that is either contained in, adjacent to or intersecting with the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building." ;
     sh:name         "has element" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/element/" ;
     sh:path         bot:hasElement .
 

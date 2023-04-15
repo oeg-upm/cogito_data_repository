@@ -1,0 +1,238 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <https://data.cogito.iot.linkeddata.es/resources/shape/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
+@prefix qual: <https://cogito.iot.linkeddata.es/def/quality#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix process_data: <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix tracking_tag: <http://data.cogito.iot.linkeddata.es/resources/tracking_tag/> .
+@prefix resource_data: <http://data.cogito.iot.linkeddata.es/resources/resource/> .
+@prefix resource_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix work_order: <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix res_type_req: <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
+@prefix res_type: <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
+@prefix beo:   <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix props: <https://w3id.org/props#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+shape:Equipment
+    a               sh:NodeShape ;
+    rdfs:label      "Equipment" ;
+    sh:description  "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)" ;
+    sh:name         "Equipment" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:title , shape:status, shape:belongsToType, shape:hasTrackingTag ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/equipment/" ;
+    sh:targetClass  resource:Equipment .
+
+shape:Worker
+    a               sh:NodeShape ;
+    rdfs:label      "Worker" ;
+    sh:description  "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)" ;
+    sh:name         "Worker" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:email , shape:firstName, shape:lastName, shape:belongsToType, shape:hasTrackingTag ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/worker/" ;
+    sh:targetClass  resource:Worker .
+
+shape:title
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  dcterms: ;
+    rdfs:label        "title" ;
+    sh:name           "title" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           dcterms:title .
+
+shape:email
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  resource: ;
+    rdfs:label        "email" ;
+    sh:name           "email" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           resource:email .
+
+shape:firstName
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  resource: ;
+    rdfs:label        "first Name" ;
+    sh:name           "first Name" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           resource:firstName .
+
+shape:lastName
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  resource: ;
+    rdfs:label        "last Name" ;
+    sh:name           "last Name" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           resource:lastName .
+
+shape:status
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  resource: ;
+    rdfs:label        "status" ;
+    sh:name           "status" ;
+    sh:nodeKind       sh:Literal ;
+    #sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           resource:status .
+
+shape:hasTrackingTag
+    a               sh:PropertyShape ;
+    rdfs:label      "has Tracking Tag" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        iot:HumanTrackingTag;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/tag/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        iot:EquipmentTrackingTag;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/tag/" ;
+        ] ) ;
+    sh:description  "" ;
+    sh:name         "has Tracking Tag" ;
+    sh:nodeKind     sh:IRI ;
+    #sh:minCount     1 ;
+    #sh:maxCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/tag/" ;
+    sh:path         iot:hasTrackingTag .
+
+shape:belongsToType
+    a               sh:PropertyShape ;
+    rdfs:label      "belongs to Type" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        resource:EquipmentType;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/equipment_type/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        resource:WorkerRole;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/worker_role/" ;
+        ] ) ;
+    sh:description  "" ;
+    sh:name         "belongs to Type" ;
+    sh:nodeKind     sh:IRI ;
+    #sh:minCount     1 ;
+    #sh:maxCount     1 ;
+    sh:path         resource:belongsToType .
+
+shape:Task
+    a               sh:NodeShape ;
+    rdfs:label      "Task" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasAssignedResource , shape:hasMainProvider  ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:targetClass  process:Task .
+
+shape:hasAssignedResource
+    a               sh:PropertyShape ;
+    rdfs:label      "has Assigned Resource" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        resource:Equipment;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/equipment/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        resource:Worker;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/worker/" ;
+        ] ) ;
+    sh:description  "A property that relates an entity (especially a process:Task) to the resource:Resource it has assigned" ;
+    sh:name         "has Assigned Resource" ;
+    sh:nodeKind     sh:IRI ;
+    #sh:minCount     1 ;
+    #sh:maxCount     1 ;
+    sh:path         resource:hasAssignedResource .
+
+shape:hasMainProvider
+    a               sh:PropertyShape ;
+    rdfs:label      "has Main Provider" ;
+    sh:or
+      ( [   a               sh:PropertyShape;
+            sh:class        resource:Equipment;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/equipment/" ;
+        ]
+        [   a               sh:PropertyShape;
+            sh:class        resource:Worker;
+            sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/worker/" ;
+        ] ) ;
+    sh:description  "A property that relates an entity (especially a process:WorkOrder) to the resource:Worker that acts as its main provider" ;
+    sh:name         "has Main Provider" ;
+    sh:nodeKind     sh:IRI ;
+    #sh:minCount     1 ;
+    #sh:maxCount     1 ;
+    sh:path         process:hasMainProvider .
+
+shape:WorkOrder
+    a               sh:NodeShape ;
+    rdfs:label      "Work Order" ;
+    sh:description  "A piece of work, which is performed in a process:Process" ;
+    sh:name         "Work Order" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasComponentTask , shape:hasMainProvider, shape:plannedEndDate, shape:plannedStartDate  ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/work_order/" ;
+    sh:targetClass  process:WorkOrder .
+
+shape:hasComponentTask
+    a               sh:PropertyShape ;
+    rdfs:label      "has Component Task" ;
+    sh:description  "A property that relates an entity (especially a process:WorkOrder) to its tasks" ;
+    sh:name         "has Component Task" ;
+    sh:nodeKind     sh:IRI ;
+    sh:minCount     1 ;
+    #sh:maxCount     1 ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:path         process:hasComponentTask .
+
+shape:plannedEndDate
+    a               sh:PropertyShape ;
+    rdfs:label      "planned end date" ;
+    sh:datatype     xsd:dateTime ;
+    sh:description  "A property indicating the planned end date of an entity" ;
+    sh:name         "planned end date" ;
+    sh:nodeKind     sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:path         process:plannedEndDate ;
+    sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
+
+shape:plannedStartDate
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  process: ;
+    rdfs:label        "planned start date" ;
+    sh:name           "planned start date" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount       1 ;
+    sh:maxCount       1 ;
+    sh:datatype       xsd:dateTime ;
+    sh:path           process:plannedStartDate ;
+    sh:lessThan       process:plannedEndDate ;
+    sh:pattern        "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .

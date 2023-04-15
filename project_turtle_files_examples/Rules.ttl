@@ -7,8 +7,8 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
-@prefix rule:  <https://data.cogito.iot.linkeddata.es/resources/rule/> .
-@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix rule:  <http://data.cogito.iot.linkeddata.es/resources/rule/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 rule:School_QC_5
         a                              qual:Rule ;

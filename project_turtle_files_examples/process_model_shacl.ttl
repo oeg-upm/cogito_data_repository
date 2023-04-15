@@ -364,7 +364,7 @@ shape:isControlledByTask
     sh:description  "A property that relates an entity (especially a  facility:Element)  to the process:Task  that controls it" ;
     sh:name         "is controlled by task" ;
     sh:nodeKind     sh:IRI ;
-    sh:minCount     1 ;
+    #sh:minCount     1 ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
     sh:path         process:isControlledByTask .
 

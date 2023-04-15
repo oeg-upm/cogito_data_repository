@@ -4,9 +4,8 @@
 @prefix resource: <https://cogito.iot.linkeddata.es/def/resource#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix resource_type:  <https://data.cogito.iot.linkeddata.es/resources/resource_type/> .
-@prefix dcterms: <http://purl.org/dc/terms> .
-@prefix data:  <https://data.cogito.iot.linkeddata.es/resources/> .
+@prefix resource_type:  <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 
 resource_type:School_9
         a                       resource:WorkerRole ;
