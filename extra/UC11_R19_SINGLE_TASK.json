@@ -1,0 +1,83 @@
+{
+    "project_id": "e7899888-2d01-41da-81d7-9100a288a42c",
+    "tasks": {
+        "4": {
+            "name": "Piles and Caps",
+            "type": "NORMAL_TASK",
+            "parent_task": "3",
+            "sub_task_list": [],
+            "start_time": "2009-10-12T09:00:00",
+            "end_time": "2009-11-06T16:00:00",
+            "previous_task_list": ["4saf1"],
+            "resource_list": [{
+                    "quantity_needed": 1,
+                    "resource_id": "1"
+                }, {
+                    "quantity_needed": 1,
+                    "resource_id": "8"
+                }
+            ],
+            "element_list": ["01U2Ox69TF78CjGAzXHAwi", "01U2Ox69TF78CjGAzXHAQ0", "01U2Ox69TF78CjGAzXHDUX", "01U2Ox69TF78CjGAzXHAO6", "01U2Ox69TF78CjGAzXHALO", "01U2Ox69TF78CjGAzXHDZ4", "01U2Ox69TF78CjGAzXHAuq", "01U2Ox69TF78CjGAzXHDXV", "01U2Ox69TF78CjGAzXHASv", "01U2Ox69TF78CjGAzXHAss", "01U2Ox69TF78CjGAzXHAxX", "01U2Ox69TF78CjGAzXHATY", "01U2Ox69TF78CjGAzXHA$0", "01U2Ox69TF78CjGAzXHALt", "01U2Ox69TF78CjGAzXHDbw", "01U2Ox69TF78CjGAzXHANq", "01U2Ox69TF78CjGAzXHAKy", "01U2Ox69TF78CjGAzXHAy5", "01U2Ox69TF78CjGAzXHDQo", "01U2Ox69TF78CjGAzXHDYJ", "01U2Ox69TF78CjGAzXHAvw", "01U2Ox69TF78CjGAzXHAvR", "01U2Ox69TF78CjGAzXHDcw", "01U2Ox69TF78CjGAzXHAQr", "01U2Ox69TF78CjGAzXHANR", "01U2Ox69TF78CjGAzXHAIE", "01U2Ox69TF78CjGAzXHA_Q", "01U2Ox69TF78CjGAzXHAAU", "01U2Ox69TF78CjGAzXHAIv", "01U2Ox69TF78CjGAzXHAuP", "01U2Ox69TF78CjGAzXHARH", "01U2Ox69TF78CjGAzXHAVw", "01U2Ox69TF78CjGAzXHAMH", "01U2Ox69TF78CjGAzXHDQP", "01U2Ox69TF78CjGAzXHAsT"]
+        },
+        "4saf1": {
+            "name": "Piles and Caps-SAF",
+            "type": "SAFETY",
+            "parent_task": "3",
+            "sub_task_list": [],
+            "start_time": "2009-10-12T08:00:00",
+            "end_time": "2009-10-12T09:00:00",
+            "previous_task_list": [],
+            "resource_list": [{
+                    "quantity_needed": 1,
+                    "resource_id": "8"
+                }
+            ],
+            "element_list": []
+        },
+        "4vqc": {
+            "name": "Piles and Caps-VQC",
+            "type": "VISUAL_QUALITY_CONTROL",
+            "parent_task": "3",
+            "sub_task_list": [],
+            "start_time": "2009-11-06T16:00:00",
+            "end_time": "2009-11-06T16:30:00",
+            "previous_task_list": ["4"],
+            "resource_list": [{
+                    "quantity_needed": 1,
+                    "resource_id": "12"
+                }
+            ],
+            "element_list": ["01U2Ox69TF78CjGAzXHAwi", "01U2Ox69TF78CjGAzXHAQ0", "01U2Ox69TF78CjGAzXHDUX", "01U2Ox69TF78CjGAzXHAO6", "01U2Ox69TF78CjGAzXHALO", "01U2Ox69TF78CjGAzXHDZ4", "01U2Ox69TF78CjGAzXHAuq", "01U2Ox69TF78CjGAzXHDXV", "01U2Ox69TF78CjGAzXHASv", "01U2Ox69TF78CjGAzXHAss", "01U2Ox69TF78CjGAzXHAxX", "01U2Ox69TF78CjGAzXHATY", "01U2Ox69TF78CjGAzXHA$0", "01U2Ox69TF78CjGAzXHALt", "01U2Ox69TF78CjGAzXHDbw", "01U2Ox69TF78CjGAzXHANq", "01U2Ox69TF78CjGAzXHAKy", "01U2Ox69TF78CjGAzXHAy5", "01U2Ox69TF78CjGAzXHDQo", "01U2Ox69TF78CjGAzXHDYJ", "01U2Ox69TF78CjGAzXHAvw", "01U2Ox69TF78CjGAzXHAvR", "01U2Ox69TF78CjGAzXHDcw", "01U2Ox69TF78CjGAzXHAQr", "01U2Ox69TF78CjGAzXHANR", "01U2Ox69TF78CjGAzXHAIE", "01U2Ox69TF78CjGAzXHA_Q", "01U2Ox69TF78CjGAzXHAAU", "01U2Ox69TF78CjGAzXHAIv", "01U2Ox69TF78CjGAzXHAuP", "01U2Ox69TF78CjGAzXHARH", "01U2Ox69TF78CjGAzXHAVw", "01U2Ox69TF78CjGAzXHAMH", "01U2Ox69TF78CjGAzXHDQP", "01U2Ox69TF78CjGAzXHAsT"]
+        },
+        "4gqc": {
+            "name": "Piles and Caps-GQC",
+            "type": "GEOMETRIC_QUALITY_CONTROL",
+            "parent_task": "3",
+            "sub_task_list": [],
+            "start_time": "2009-11-06T16:00:00",
+            "end_time": "2009-11-06T16:30:00",
+            "previous_task_list": ["4vqc"],
+            "resource_list": [{
+                    "quantity_needed": 1,
+                    "resource_id": "12"
+                }
+            ],
+            "element_list": ["01U2Ox69TF78CjGAzXHAwi", "01U2Ox69TF78CjGAzXHAQ0", "01U2Ox69TF78CjGAzXHDUX", "01U2Ox69TF78CjGAzXHAO6", "01U2Ox69TF78CjGAzXHALO", "01U2Ox69TF78CjGAzXHDZ4", "01U2Ox69TF78CjGAzXHAuq", "01U2Ox69TF78CjGAzXHDXV", "01U2Ox69TF78CjGAzXHASv", "01U2Ox69TF78CjGAzXHAss", "01U2Ox69TF78CjGAzXHAxX", "01U2Ox69TF78CjGAzXHATY", "01U2Ox69TF78CjGAzXHA$0", "01U2Ox69TF78CjGAzXHALt", "01U2Ox69TF78CjGAzXHDbw", "01U2Ox69TF78CjGAzXHANq", "01U2Ox69TF78CjGAzXHAKy", "01U2Ox69TF78CjGAzXHAy5", "01U2Ox69TF78CjGAzXHDQo", "01U2Ox69TF78CjGAzXHDYJ", "01U2Ox69TF78CjGAzXHAvw", "01U2Ox69TF78CjGAzXHAvR", "01U2Ox69TF78CjGAzXHDcw", "01U2Ox69TF78CjGAzXHAQr", "01U2Ox69TF78CjGAzXHANR", "01U2Ox69TF78CjGAzXHAIE", "01U2Ox69TF78CjGAzXHA_Q", "01U2Ox69TF78CjGAzXHAAU", "01U2Ox69TF78CjGAzXHAIv", "01U2Ox69TF78CjGAzXHAuP", "01U2Ox69TF78CjGAzXHARH", "01U2Ox69TF78CjGAzXHAVw", "01U2Ox69TF78CjGAzXHAMH", "01U2Ox69TF78CjGAzXHDQP", "01U2Ox69TF78CjGAzXHAsT"]
+        },
+        "4saf2": {
+            "name": "Piles and Caps-SAF",
+            "type": "SAFETY",
+            "parent_task": "3",
+            "sub_task_list": [],
+            "start_time": "2009-11-06T16:30:00",
+            "end_time": "2009-11-06T17:00:00",
+            "previous_task_list": ["4gqc"],
+            "resource_list": [{
+                    "quantity_needed": 1,
+                    "resource_id": "8"
+                }
+            ],
+            "element_list": []
+        }
+    }
+}

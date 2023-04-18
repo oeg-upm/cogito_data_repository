@@ -6,6 +6,9 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix resource_type:  <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 resource_type:School_9
         a                       resource:WorkerRole ;
@@ -110,3 +113,7 @@ resource_type:School_4
         resource:hasInitials    1 ;
         resource:maxUnit    2 ;
         dcterms:title        "Excavator" .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

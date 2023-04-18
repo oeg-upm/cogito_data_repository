@@ -13,6 +13,9 @@
 @prefix worker:  <http://data.cogito.iot.linkeddata.es/resources/worker/> .
 @prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
 @prefix work_order:  <http://data.cogito.iot.linkeddata.es/resources/work_order/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 equipment:School_wodm_e2_0
         a resource:Equipment ;
@@ -96,3 +99,8 @@ work_order:School_wodm_w1
         process:hasMainProvider   worker:School_1b20a241-c5fe-422e-8043-01461da1a2c3 ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

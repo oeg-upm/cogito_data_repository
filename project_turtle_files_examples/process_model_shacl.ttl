@@ -180,7 +180,7 @@ shape:belongsToProcess
     sh:name         "belongs to process" ;
     sh:nodeKind     sh:IRI ;
     sh:minCount     1 ;
-    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/task/" ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/process/" ;
     sh:path         process:belongsToProcess .
 
 shape:Process
@@ -399,3 +399,24 @@ shape:relatesToResourceType
     sh:minCount     1 ;
     sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/resource_type/" ;
     sh:path         process:relatesToResourceType .
+
+shape:Project
+    a               sh:NodeShape ;
+    rdfs:label      "Project" ;
+    sh:description  "A large or major undertaking, especially one involving considerable money, personnel, and equipment" ;
+    sh:name         "Project" ;
+    sh:nodeKind     sh:IRI ;
+    sh:property     shape:hasFileURL ;
+    sh:pattern      "http://data.cogito.iot.linkeddata.es/resources/project/" ;
+    sh:targetClass  facility:Project .
+
+shape:hasFileURL
+    a                 sh:PropertyShape ;
+    rdfs:isDefinedBy  platform: ;
+    rdfs:label        "has file url" ;
+    sh:name           "has file url" ;
+    sh:nodeKind       sh:Literal ;
+    sh:minCount     1 ;
+    sh:maxCount     1 ;
+    sh:datatype       xsd:string ;
+    sh:path           platform:hasFileURL .

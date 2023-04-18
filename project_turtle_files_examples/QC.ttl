@@ -11,6 +11,9 @@
 @prefix rule:  <http://data.cogito.iot.linkeddata.es/resources/rule/> .
 @prefix qc: <http://data.cogito.iot.linkeddata.es/resources/qc/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
+
 
 qc:School_Project_RevitSchoolCylinders_QC4014
         a                        qual:GQInf ;
@@ -31995,3 +31998,8 @@ qc:School_Project_RevitSchoolCylinders_QC1339
         qual:refersToElements    element:26353 ;
         qual:refersToRule        rule:School_QC_6 ;
         qual:scheduledTimestamp  "2022-01-17T00:00:00" .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

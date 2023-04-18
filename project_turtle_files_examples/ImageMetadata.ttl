@@ -13,7 +13,8 @@
 @prefix image_job: <http://data.cogito.iot.linkeddata.es/resources/image_job/> .
 @prefix element: <http://data.cogito.iot.linkeddata.es/resources/element/> .
 @prefix image: <http://data.cogito.iot.linkeddata.es/resources/image/> .
-@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
 
 raw_image:School_12vqc_1
         a                     qual:RawImage ;
@@ -58,3 +59,7 @@ image_job:School_12vqc_0
         qual:hasRawImage         raw_image:School_12vqc_0 ;
         qual:isRelatedToElement  element:120781 ;
         qual:performedTimestamp  "2023-01-11T12:08:04" .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

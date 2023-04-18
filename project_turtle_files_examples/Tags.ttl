@@ -9,6 +9,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix tag:  <http://data.cogito.iot.linkeddata.es/resources/tag/> .
 @prefix tag_group:  <http://data.cogito.iot.linkeddata.es/resources/tag_group/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5
         a                       iot:HumanTrackingTag ;
@@ -88,3 +91,7 @@ tag_group:School_fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0
         dcterms:identifier           "fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0" ;
         dcterms:title         "Worker" ;
         iot:hasTrackingTag  tag:School_c3940c8f-2f12-4528-b056-a30d410622f7 , tag:School_317a5c70-5b0a-4cfd-bfaf-585a378ac6fb , tag:School_c87541be-e1b8-4122-be14-1ba44807d3e5 , tag:School_f94216b4-31f7-425e-a31e-77eeb52c2f0b , tag:School_381ed25e-39e7-4241-846d-b81b1b831c36 .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

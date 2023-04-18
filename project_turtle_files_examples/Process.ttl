@@ -8,6 +8,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
 @prefix data_process:  <http://data.cogito.iot.linkeddata.es/resources/process/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 task:AsPlanned_Original_School_46
         a                         process:Task ;
@@ -881,3 +884,7 @@ task:AsPlanned_Original_School_33
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
         process:workQuantity      50 ;
         process:workQuantityUnit  "units" .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

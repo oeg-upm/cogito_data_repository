@@ -11,7 +11,9 @@
 @prefix resource_type_requirement:  <http://data.cogito.iot.linkeddata.es/resources/resource_type_requirement/> .
 @prefix resource_type:  <http://data.cogito.iot.linkeddata.es/resources/resource_type/> .
 @prefix data_process:  <http://data.cogito.iot.linkeddata.es/resources/process/> .
-@prefix dcterms: <http://purl.org/dc/terms> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 element:189543  
 a       facility:Element ;
@@ -74,7 +76,7 @@ task:AsPlanned_Enriched_School_37gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1047 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -102,7 +104,7 @@ task:AsPlanned_Enriched_School_7sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1141 , resource_type_requirement:School_1140 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -249,7 +251,7 @@ task:AsPlanned_Enriched_School_30gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1171 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -384,7 +386,7 @@ task:AsPlanned_Enriched_School_13saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1174 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -433,7 +435,7 @@ task:AsPlanned_Enriched_School_29sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1055 , resource_type_requirement:School_1056 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -601,7 +603,7 @@ task:AsPlanned_Enriched_School_13vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1088 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -672,7 +674,7 @@ task:AsPlanned_Enriched_School_15gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1169 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -712,7 +714,7 @@ task:AsPlanned_Enriched_School_8saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1168 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -737,7 +739,7 @@ task:AsPlanned_Enriched_School_12sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1143 , resource_type_requirement:School_1144 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -788,7 +790,7 @@ task:AsPlanned_Enriched_School_44vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1098 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -812,7 +814,7 @@ task:AsPlanned_Enriched_School_7saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1032 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime ;
         process:removesElement    element:320018 , element:319106 , element:316414 , element:317966 , element:321570 , element:318650 , element:318270 , element:315063 , element:316262 , element:319182 , element:319866 , element:315479 , element:317586 , element:320094 , element:319714 , element:317340 , element:319486 , element:322026 , element:316566 , element:317814 , element:317143 , element:321038 , element:316991 , element:320582 , element:320886 , element:321646 , element:317228 , element:316159 , element:319334 , element:316879 , element:320810 , element:319942 , element:315555 , element:319562 , element:321418 , element:316642 , element:321114 , element:317510 , element:321190 , element:315291 , element:321874 , element:320962 , element:317890 , element:320421 , element:321266 , element:320269 , element:318118 , element:316490 , element:321798 , element:318194 , element:318878 , element:321950 , element:319410 , element:319790 , element:320345 , element:315667 , element:320497 , element:317662 , element:314387 , element:314808 , element:314539 , element:316803 , element:318726 , element:318498 , element:315139 , element:316338 , element:318954 , element:321342 , element:316727 , element:318346 , element:320658 , element:314463 , element:321722 , element:318042 , element:315743 , element:319258 , element:315819 , element:318422 , element:314615 , element:314960 , element:321494 , element:318574 , element:317738 , element:317416 , element:315215 , element:315895 , element:316074 , element:319638 , element:315971 , element:314884 , element:320734 , element:317067 , element:319030 , element:318802 , element:315367 .
@@ -867,7 +869,7 @@ task:AsPlanned_Enriched_School_46gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1003 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -884,7 +886,7 @@ task:AsPlanned_Enriched_School_7vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1085 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -943,7 +945,7 @@ task:AsPlanned_Enriched_School_24saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1191 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -1235,7 +1237,7 @@ task:AsPlanned_Enriched_School_29vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1149 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -1311,7 +1313,7 @@ task:AsPlanned_Enriched_School_17saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1073 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -1330,7 +1332,7 @@ task:AsPlanned_Enriched_School_50gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1048 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime .
 
@@ -1351,9 +1353,9 @@ a       facility:Element ;
                 task:AsPlanned_Enriched_School_17sub ;
         process:isControlledByTask  task:AsPlanned_Enriched_School_17vqc , task:AsPlanned_Enriched_School_17gqc .
 
-data_process:AsPlanned_Enriched_Process_School:
+data_process:AsPlanned_Enriched_Process_School
         a                  process:Process ;
-        process:hasAuthor  "DT Runtime" ;
+        dcterms:creator  "DT Runtime" ;
         dcterms:title    "AsPlanned Enriched Schedule" ;
         process:hasTask    task:AsPlanned_Enriched_School_45vqc , task:AsPlanned_Enriched_School_38saf2 , task:AsPlanned_Enriched_School_21sub , task:AsPlanned_Enriched_School_26vqc , task:AsPlanned_Enriched_School_49saf1 , task:AsPlanned_Enriched_School_17sub , task:AsPlanned_Enriched_School_21vqc , task:AsPlanned_Enriched_School_30gqc , task:AsPlanned_Enriched_School_34saf2 , task:AsPlanned_Enriched_School_17saf1 , task:AsPlanned_Enriched_School_9gqc , task:AsPlanned_Enriched_School_9saf2 , task:AsPlanned_Enriched_School_13sub , task:AsPlanned_Enriched_School_41sub , task:AsPlanned_Enriched_School_30saf1 , task:AsPlanned_Enriched_School_50saf1 , task:AsPlanned_Enriched_School_40gqc , task:AsPlanned_Enriched_School_45gqc , task:AsPlanned_Enriched_School_46sub , task:AsPlanned_Enriched_School_38gqc , task:AsPlanned_Enriched_School_36saf1 , task:AsPlanned_Enriched_School_41gqc , task:AsPlanned_Enriched_School_21saf1 , task:AsPlanned_Enriched_School_15saf1 , task:AsPlanned_Enriched_School_11saf1 , task:AsPlanned_Enriched_School_36sub , task:AsPlanned_Enriched_School_16gqc , task:AsPlanned_Enriched_School_48vqc , task:AsPlanned_Enriched_School_48gqc , task:AsPlanned_Enriched_School_7gqc , task:AsPlanned_Enriched_School_37gqc , task:AsPlanned_Enriched_School_44saf2 , task:AsPlanned_Enriched_School_16vqc , task:AsPlanned_Enriched_School_41saf1 , task:AsPlanned_Enriched_School_38sub , task:AsPlanned_Enriched_School_20sub , task:AsPlanned_Enriched_School_37saf1 , task:AsPlanned_Enriched_School_5gqc , task:AsPlanned_Enriched_School_48sub , task:AsPlanned_Enriched_School_12vqc , task:AsPlanned_Enriched_School_34sub , task:AsPlanned_Enriched_School_40vqc , task:AsPlanned_Enriched_School_44saf1 , task:AsPlanned_Enriched_School_5saf2 , task:AsPlanned_Enriched_School_7saf2 , task:AsPlanned_Enriched_School_34vqc , task:AsPlanned_Enriched_School_15saf2 , task:AsPlanned_Enriched_School_16sub , task:AsPlanned_Enriched_School_29sub , task:AsPlanned_Enriched_School_48saf2 , task:AsPlanned_Enriched_School_40saf2 , task:AsPlanned_Enriched_School_29saf1 , task:AsPlanned_Enriched_School_8gqc , task:AsPlanned_Enriched_School_20vqc , task:AsPlanned_Enriched_School_27gqc , task:AsPlanned_Enriched_School_16saf1 , task:AsPlanned_Enriched_School_24saf2 , task:AsPlanned_Enriched_School_46saf2 , task:AsPlanned_Enriched_School_5vqc , task:AsPlanned_Enriched_School_50gqc , task:AsPlanned_Enriched_School_38saf1 , task:AsPlanned_Enriched_School_49sub , task:AsPlanned_Enriched_School_24saf1 , task:AsPlanned_Enriched_School_46saf1 , task:AsPlanned_Enriched_School_34saf1 , task:AsPlanned_Enriched_School_23saf1 , task:AsPlanned_Enriched_School_44vqc , task:AsPlanned_Enriched_School_26saf2 , task:AsPlanned_Enriched_School_12saf2 , task:AsPlanned_Enriched_School_9saf1 , task:AsPlanned_Enriched_School_27sub , task:AsPlanned_Enriched_School_34gqc , task:AsPlanned_Enriched_School_45saf2 , task:AsPlanned_Enriched_School_11saf2 , task:AsPlanned_Enriched_School_13gqc , task:AsPlanned_Enriched_School_4gqc , task:AsPlanned_Enriched_School_23gqc , task:AsPlanned_Enriched_School_42gqc , task:AsPlanned_Enriched_School_12gqc , task:AsPlanned_Enriched_School_9vqc , task:AsPlanned_Enriched_School_49vqc , task:AsPlanned_Enriched_School_50vqc , task:AsPlanned_Enriched_School_24sub , task:AsPlanned_Enriched_School_30sub , task:AsPlanned_Enriched_School_24vqc , task:AsPlanned_Enriched_School_38vqc , task:AsPlanned_Enriched_School_33saf2 , task:AsPlanned_Enriched_School_27vqc , task:AsPlanned_Enriched_School_20gqc , task:AsPlanned_Enriched_School_44gqc , task:AsPlanned_Enriched_School_49saf2 , task:AsPlanned_Enriched_School_8vqc , task:AsPlanned_Enriched_School_45sub , task:AsPlanned_Enriched_School_33saf1 , task:AsPlanned_Enriched_School_44sub , task:AsPlanned_Enriched_School_13saf2 , task:AsPlanned_Enriched_School_8sub , task:AsPlanned_Enriched_School_23saf2 , task:AsPlanned_Enriched_School_33gqc , task:AsPlanned_Enriched_School_4vqc , task:AsPlanned_Enriched_School_12sub , task:AsPlanned_Enriched_School_30vqc , task:AsPlanned_Enriched_School_30saf2 , task:AsPlanned_Enriched_School_21gqc , task:AsPlanned_Enriched_School_50saf2 , task:AsPlanned_Enriched_School_23sub , task:AsPlanned_Enriched_School_42saf2 , task:AsPlanned_Enriched_School_37sub , task:AsPlanned_Enriched_School_23vqc , task:AsPlanned_Enriched_School_17gqc , task:AsPlanned_Enriched_School_49gqc , task:AsPlanned_Enriched_School_42vqc , task:AsPlanned_Enriched_School_13saf1 , task:AsPlanned_Enriched_School_8saf2 , task:AsPlanned_Enriched_School_26sub , task:AsPlanned_Enriched_School_11gqc , task:AsPlanned_Enriched_School_7saf1 , task:AsPlanned_Enriched_School_27saf2 , task:AsPlanned_Enriched_School_5saf1 , task:AsPlanned_Enriched_School_29gqc , task:AsPlanned_Enriched_School_29vqc , task:AsPlanned_Enriched_School_36saf2 , task:AsPlanned_Enriched_School_17vqc , task:AsPlanned_Enriched_School_42saf1 , task:AsPlanned_Enriched_School_27saf1 , task:AsPlanned_Enriched_School_46vqc , task:AsPlanned_Enriched_School_21saf2 , task:AsPlanned_Enriched_School_5sub , task:AsPlanned_Enriched_School_40sub , task:AsPlanned_Enriched_School_36gqc , task:AsPlanned_Enriched_School_8saf1 , task:AsPlanned_Enriched_School_37saf2 , task:AsPlanned_Enriched_School_13vqc , task:AsPlanned_Enriched_School_9sub , task:AsPlanned_Enriched_School_37vqc , task:AsPlanned_Enriched_School_41vqc , task:AsPlanned_Enriched_School_4sub , task:AsPlanned_Enriched_School_48saf1 , task:AsPlanned_Enriched_School_4saf2 , task:AsPlanned_Enriched_School_40saf1 , task:AsPlanned_Enriched_School_41saf2 , task:AsPlanned_Enriched_School_15vqc , task:AsPlanned_Enriched_School_50sub , task:AsPlanned_Enriched_School_46gqc , task:AsPlanned_Enriched_School_4saf1 , task:AsPlanned_Enriched_School_26gqc , task:AsPlanned_Enriched_School_20saf2 , task:AsPlanned_Enriched_School_12saf1 , task:AsPlanned_Enriched_School_7vqc , task:AsPlanned_Enriched_School_15gqc , task:AsPlanned_Enriched_School_24gqc , task:AsPlanned_Enriched_School_36vqc , task:AsPlanned_Enriched_School_45saf1 , task:AsPlanned_Enriched_School_7sub , task:AsPlanned_Enriched_School_29saf2 , task:AsPlanned_Enriched_School_33sub , task:AsPlanned_Enriched_School_33vqc , task:AsPlanned_Enriched_School_20saf1 , task:AsPlanned_Enriched_School_26saf1 , task:AsPlanned_Enriched_School_16saf2 , task:AsPlanned_Enriched_School_15sub , task:AsPlanned_Enriched_School_11sub , task:AsPlanned_Enriched_School_42sub , task:AsPlanned_Enriched_School_11vqc , task:AsPlanned_Enriched_School_17saf2 ;
         process:hasType    "AsPlannedEnriched" .
@@ -1382,7 +1384,7 @@ task:AsPlanned_Enriched_School_16saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1039 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -1457,7 +1459,7 @@ task:AsPlanned_Enriched_School_11saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1194 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -1518,7 +1520,7 @@ task:AsPlanned_Enriched_School_30saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1164 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -1552,7 +1554,7 @@ task:AsPlanned_Enriched_School_12vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1107 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -1620,7 +1622,7 @@ task:AsPlanned_Enriched_School_11sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1180 , resource_type_requirement:School_1179 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -1712,7 +1714,7 @@ task:AsPlanned_Enriched_School_45gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1091 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -1760,7 +1762,7 @@ task:AsPlanned_Enriched_School_42sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1190 , resource_type_requirement:School_1189 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -1831,7 +1833,7 @@ task:AsPlanned_Enriched_School_5sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1187 , resource_type_requirement:School_1186 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -1911,7 +1913,7 @@ task:AsPlanned_Enriched_School_5saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1033 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -1929,7 +1931,7 @@ task:AsPlanned_Enriched_School_27saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1111 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -1991,7 +1993,7 @@ task:AsPlanned_Enriched_School_46saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1043 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -2102,7 +2104,7 @@ task:AsPlanned_Enriched_School_21saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1024 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -2140,7 +2142,7 @@ task:AsPlanned_Enriched_School_40saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1054 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -2202,7 +2204,7 @@ task:AsPlanned_Enriched_School_27sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1001 , resource_type_requirement:School_1000 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -2372,7 +2374,7 @@ task:AsPlanned_Enriched_School_11vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1023 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -2385,7 +2387,7 @@ task:AsPlanned_Enriched_School_20sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1120 , resource_type_requirement:School_1118 , resource_type_requirement:School_1119 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -2409,7 +2411,7 @@ task:AsPlanned_Enriched_School_38saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1090 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -2427,7 +2429,7 @@ task:AsPlanned_Enriched_School_13gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1123 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -2548,7 +2550,7 @@ task:AsPlanned_Enriched_School_42vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1050 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -2583,7 +2585,7 @@ task:AsPlanned_Enriched_School_13saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1170 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -2602,7 +2604,7 @@ task:AsPlanned_Enriched_School_44gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1159 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -2631,7 +2633,7 @@ task:AsPlanned_Enriched_School_5vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1133 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -2660,7 +2662,7 @@ task:AsPlanned_Enriched_School_41sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1072 , resource_type_requirement:School_1071 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -2709,7 +2711,7 @@ task:AsPlanned_Enriched_School_7gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1046 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -2738,7 +2740,7 @@ task:AsPlanned_Enriched_School_4sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1113 , resource_type_requirement:School_1115 , resource_type_requirement:School_1114 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
 
@@ -2921,7 +2923,7 @@ task:AsPlanned_Enriched_School_8saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1173 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -2979,7 +2981,7 @@ task:AsPlanned_Enriched_School_49saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1060 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime .
 
@@ -3004,7 +3006,7 @@ task:AsPlanned_Enriched_School_7saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1031 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-01T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -3021,7 +3023,7 @@ task:AsPlanned_Enriched_School_27vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1092 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -3051,7 +3053,7 @@ task:AsPlanned_Enriched_School_36sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1017 , resource_type_requirement:School_1016 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
 
@@ -3096,7 +3098,7 @@ task:AsPlanned_Enriched_School_29gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1161 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -3108,7 +3110,7 @@ task:AsPlanned_Enriched_School_48saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1167 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -3138,7 +3140,7 @@ task:AsPlanned_Enriched_School_26sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1131 , resource_type_requirement:School_1130 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -3168,7 +3170,7 @@ task:AsPlanned_Enriched_School_24saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1200 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -3256,7 +3258,7 @@ task:AsPlanned_Enriched_School_20vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1162 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -3381,7 +3383,7 @@ task:AsPlanned_Enriched_School_12gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1037 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -3463,7 +3465,7 @@ task:AsPlanned_Enriched_School_41vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1127 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -3515,7 +3517,7 @@ task:AsPlanned_Enriched_School_4vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1064 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
 
@@ -3546,7 +3548,7 @@ task:AsPlanned_Enriched_School_40sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1134 , resource_type_requirement:School_1135 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -3564,7 +3566,7 @@ task:AsPlanned_Enriched_School_17saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1129 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -3657,7 +3659,7 @@ task:AsPlanned_Enriched_School_16saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1038 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -3826,7 +3828,7 @@ task:AsPlanned_Enriched_School_36vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1030 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
 
@@ -3923,7 +3925,7 @@ task:AsPlanned_Enriched_School_26vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1125 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -4143,7 +4145,7 @@ task:AsPlanned_Enriched_School_27saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1112 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -4214,7 +4216,7 @@ task:AsPlanned_Enriched_School_21gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1152 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -4232,7 +4234,7 @@ task:AsPlanned_Enriched_School_46saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1036 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -4283,7 +4285,7 @@ task:AsPlanned_Enriched_School_9sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1096 , resource_type_requirement:School_1095 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -4296,7 +4298,7 @@ task:AsPlanned_Enriched_School_11gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1070 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -4383,7 +4385,7 @@ task:AsPlanned_Enriched_School_40vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1192 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -4423,7 +4425,7 @@ task:AsPlanned_Enriched_School_42gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1108 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -4535,7 +4537,7 @@ task:AsPlanned_Enriched_School_5gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1097 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -4605,7 +4607,7 @@ task:AsPlanned_Enriched_School_4saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1124 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
 
@@ -4725,7 +4727,7 @@ task:AsPlanned_Enriched_School_38saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1087 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -4780,7 +4782,7 @@ task:AsPlanned_Enriched_School_20saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1142 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -4835,7 +4837,7 @@ task:AsPlanned_Enriched_School_34sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1165 , resource_type_requirement:School_1166 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime .
 
@@ -4871,7 +4873,7 @@ task:AsPlanned_Enriched_School_27gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1109 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -4928,7 +4930,7 @@ task:AsPlanned_Enriched_School_24sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1079 , resource_type_requirement:School_1080 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -5070,7 +5072,7 @@ task:AsPlanned_Enriched_School_20gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1086 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -5088,7 +5090,7 @@ task:AsPlanned_Enriched_School_9vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1040 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -5150,7 +5152,7 @@ task:AsPlanned_Enriched_School_8sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1011 , resource_type_requirement:School_1012 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -5234,7 +5236,7 @@ task:AsPlanned_Enriched_School_12saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1081 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime ;
         process:removesElement    element:327192 , element:345670 , element:345518 , element:323521 , element:344247 , element:355017 , element:359970 , element:366255 , element:327975 , element:323154 , element:326584 , element:326356 , element:357180 , element:326660 , element:323901 , element:345048 , element:365346 , element:358812 , element:344516 , element:359064 , element:345849 , element:328583 , element:366060 , element:325216 , element:365019 , element:328431 , element:346887 , element:327040 , element:327268 , element:336686 , element:357030 , element:360741 , element:355433 , element:323597 , element:323825 , element:364944 , element:336994 , element:354786 , element:328507 , element:323986 , element:344592 , element:357447 , element:322850 , element:327116 , element:345746 , element:358176 , element:355510 , element:325824 , element:359550 , element:360120 , element:322662 , element:358287 , element:327671 , element:324138 , element:325976 , element:325140 , element:355356 , element:358662 , element:357105 , element:344820 , element:365196 , element:354398 , element:328127 , element:355587 , element:324675 , element:346690 , element:357897 , element:325444 , element:325748 , element:326204 , element:358362 , element:336270 , element:358962 , element:354940 , element:326812 , element:335882 , element:346990 , element:345934 , element:360315 , element:365496 , element:365094 , element:323078 , element:366330 , element:324062 , element:360591 , element:324326 , element:327344 , element:328735 , element:357522 , element:355664 , element:325368 , element:346350 , element:326964 , element:355279 , element:323002 , element:346775 , element:326432 , element:326736 , element:328051 , element:360045 , element:345594 , element:323445 , element:364686 , element:345442 , element:357672 , element:324599 , element:356880 , element:322205 , element:327899 , element:324760 , element:327747 , element:357372 , element:328659 , element:359859 , element:326128 , element:356955 , element:359625 , element:365421 , element:346113 , element:357597 , element:358887 , element:325064 , element:359709 , element:346614 , element:336347 , element:322398 , element:359325 , element:358101 , element:328203 , element:355094 , element:360816 , element:344171 , element:326280 , element:346426 , element:345330 , element:358512 , element:358437 , element:327496 , element:354664 , element:328355 , element:346538 , element:322774 , element:326052 , element:360204 , element:344972 , element:346189 , element:365271 , element:345142 , element:346274 , element:323257 , element:324402 , element:357747 , element:325900 , element:336840 , element:322474 , element:324836 , element:359475 , element:325596 , element:323749 , element:359148 , element:347165 , element:358587 , element:324988 , element:360417 , element:360666 , element:323342 , element:366180 , element:336424 , element:347326 , element:336609 , element:328887 , element:328811 , element:326508 , element:322129 , element:364869 , element:344668 , element:359784 , element:359250 , element:324250 , element:359400 , element:360900 , element:344323 , element:354863 , element:365571 , element:365721 , element:336763 , element:344744 , element:325672 , element:326888 , element:357822 , element:345254 , element:322586 , element:325292 , element:327823 , element:322926 , element:357990 , element:346037 , element:328279 , element:365646 , element:336917 , element:324487 , element:358737 , element:327420 , element:347241 , element:336148 , element:325520 , element:364611 , element:323673 , element:365796 , element:344896 , element:324912 .
@@ -5252,7 +5254,7 @@ task:AsPlanned_Enriched_School_49saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1058 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime .
 
@@ -5339,7 +5341,7 @@ task:AsPlanned_Enriched_School_41gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1176 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -5368,7 +5370,7 @@ task:AsPlanned_Enriched_School_48saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1172 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -5392,7 +5394,7 @@ task:AsPlanned_Enriched_School_50saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1049 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime .
 
@@ -5437,7 +5439,7 @@ task:AsPlanned_Enriched_School_4gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1020 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
 
@@ -5756,7 +5758,7 @@ task:AsPlanned_Enriched_School_34vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1184 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime .
 
@@ -5820,7 +5822,7 @@ task:AsPlanned_Enriched_School_36gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1126 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
 
@@ -5871,7 +5873,7 @@ task:AsPlanned_Enriched_School_24vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1074 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -5884,7 +5886,7 @@ task:AsPlanned_Enriched_School_33sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1006 , resource_type_requirement:School_1005 , resource_type_requirement:School_1004 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -5933,7 +5935,7 @@ task:AsPlanned_Enriched_School_26gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1034 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -5951,7 +5953,7 @@ task:AsPlanned_Enriched_School_23saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1063 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -5970,7 +5972,7 @@ task:AsPlanned_Enriched_School_23sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1100 , resource_type_requirement:School_1099 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -6033,7 +6035,7 @@ task:AsPlanned_Enriched_School_42saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1084 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -6123,7 +6125,7 @@ task:AsPlanned_Enriched_School_41saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1188 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -6242,7 +6244,7 @@ task:AsPlanned_Enriched_School_8vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1158 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -6395,7 +6397,7 @@ task:AsPlanned_Enriched_School_40gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1057 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -6455,7 +6457,7 @@ task:AsPlanned_Enriched_School_15saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1151 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -6512,7 +6514,7 @@ task:AsPlanned_Enriched_School_34saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1025 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime .
 
@@ -6525,7 +6527,7 @@ task:AsPlanned_Enriched_School_49sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1077 , resource_type_requirement:School_1076 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime .
 
@@ -6585,7 +6587,7 @@ task:AsPlanned_Enriched_School_33saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1137 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -6749,7 +6751,7 @@ task:AsPlanned_Enriched_School_33vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1065 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -6829,7 +6831,7 @@ task:AsPlanned_Enriched_School_23vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1197 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -6898,7 +6900,7 @@ task:AsPlanned_Enriched_School_9saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1061 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime ;
         process:removesElement    element:311402 , element:310508 , element:311663 , element:338603 , element:338108 , element:338030 , element:339401 , element:340754 , element:338447 , element:340493 , element:339245 , element:311507 , element:338759 , element:312254 , element:310847 , element:338681 , element:341345 , element:312332 , element:310430 , element:340832 , element:339557 , element:311003 , element:340676 , element:338525 , element:338924 , element:337952 , element:339845 , element:339158 , element:339080 , element:339635 , element:310586 , element:341423 , element:310691 , element:310274 , element:311819 , element:341501 , element:309836 , element:311741 , element:340910 , element:340571 , element:311159 , element:311081 , element:341579 , element:338837 , element:339323 , element:311246 , element:340988 , element:311324 , element:310352 , element:338213 , element:310769 , element:339002 , element:312488 , element:311585 , element:340055 , element:339923 , element:310925 , element:339479 , element:312176 , element:338369 , element:338291 , element:339767 , element:312410 .
@@ -7060,7 +7062,7 @@ task:AsPlanned_Enriched_School_4saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1128 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-06T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-10-12T08:00:00"^^xsd:dateTime .
 
@@ -7082,7 +7084,7 @@ task:AsPlanned_Enriched_School_26saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1022 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -7151,7 +7153,7 @@ task:AsPlanned_Enriched_School_45saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1102 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -7198,7 +7200,7 @@ task:AsPlanned_Enriched_School_44saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1013 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -7217,7 +7219,7 @@ task:AsPlanned_Enriched_School_9gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1193 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -7256,7 +7258,7 @@ task:AsPlanned_Enriched_School_20saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1148 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -7356,7 +7358,7 @@ task:AsPlanned_Enriched_School_17sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1116 , resource_type_requirement:School_1117 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -7437,7 +7439,7 @@ task:AsPlanned_Enriched_School_49vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1122 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime .
 
@@ -7519,7 +7521,7 @@ task:AsPlanned_Enriched_School_48sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1156 , resource_type_requirement:School_1157 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -7592,7 +7594,7 @@ task:AsPlanned_Enriched_School_38sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1069 , resource_type_requirement:School_1068 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -7650,7 +7652,7 @@ task:AsPlanned_Enriched_School_37saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1196 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -7735,7 +7737,7 @@ task:AsPlanned_Enriched_School_36saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1007 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
 
@@ -7788,7 +7790,7 @@ task:AsPlanned_Enriched_School_12saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1082 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -7816,7 +7818,7 @@ task:AsPlanned_Enriched_School_34gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1075 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime .
 
@@ -7883,7 +7885,7 @@ task:AsPlanned_Enriched_School_24gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1182 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -7905,7 +7907,7 @@ task:AsPlanned_Enriched_School_50saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1051 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime .
 
@@ -7934,7 +7936,7 @@ task:AsPlanned_Enriched_School_21sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1094 , resource_type_requirement:School_1093 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -8147,7 +8149,7 @@ task:AsPlanned_Enriched_School_8gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1121 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -8169,7 +8171,7 @@ task:AsPlanned_Enriched_School_29saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1105 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -8254,7 +8256,7 @@ task:AsPlanned_Enriched_School_17vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1183 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -8350,7 +8352,7 @@ task:AsPlanned_Enriched_School_16sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1045 , resource_type_requirement:School_1044 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -8390,7 +8392,7 @@ task:AsPlanned_Enriched_School_23saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1062 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -8431,7 +8433,7 @@ task:AsPlanned_Enriched_School_48vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1195 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -8459,7 +8461,7 @@ task:AsPlanned_Enriched_School_42saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1078 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -8536,7 +8538,7 @@ task:AsPlanned_Enriched_School_38vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1083 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -8553,7 +8555,7 @@ task:AsPlanned_Enriched_School_41saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1185 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -8597,7 +8599,7 @@ task:AsPlanned_Enriched_School_37sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1146 , resource_type_requirement:School_1145 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -8744,7 +8746,7 @@ task:AsPlanned_Enriched_School_33gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1150 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -8796,7 +8798,7 @@ task:AsPlanned_Enriched_School_21vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1136 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -8809,7 +8811,7 @@ task:AsPlanned_Enriched_School_30sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1029 , resource_type_requirement:School_1028 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -8846,7 +8848,7 @@ task:AsPlanned_Enriched_School_23gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1002 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -8910,7 +8912,7 @@ task:AsPlanned_Enriched_School_15saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1153 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -8982,7 +8984,7 @@ task:AsPlanned_Enriched_School_34saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1027 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-16T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-07T08:00:00"^^xsd:dateTime .
 
@@ -9059,7 +9061,7 @@ task:AsPlanned_Enriched_School_33saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1139 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -9214,7 +9216,7 @@ task:AsPlanned_Enriched_School_16vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1009 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -9275,7 +9277,7 @@ task:AsPlanned_Enriched_School_15sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1066 , resource_type_requirement:School_1067 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -9307,7 +9309,7 @@ task:AsPlanned_Enriched_School_9saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1059 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-15T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-21T08:00:00"^^xsd:dateTime .
 
@@ -9342,7 +9344,7 @@ task:AsPlanned_Enriched_School_49gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1181 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-14T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-14T08:00:00"^^xsd:dateTime .
 
@@ -9370,7 +9372,7 @@ task:AsPlanned_Enriched_School_37vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1160 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -9383,7 +9385,7 @@ task:AsPlanned_Enriched_School_46sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1104 , resource_type_requirement:School_1103 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -9427,7 +9429,7 @@ task:AsPlanned_Enriched_School_26saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1019 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -9496,7 +9498,7 @@ task:AsPlanned_Enriched_School_45saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1101 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -9541,7 +9543,7 @@ task:AsPlanned_Enriched_School_44saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1018 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-18T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -9597,7 +9599,7 @@ task:AsPlanned_Enriched_School_30vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1089 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -9826,7 +9828,7 @@ task:AsPlanned_Enriched_School_50sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1155 , resource_type_requirement:School_1154 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime .
 
@@ -9873,7 +9875,7 @@ task:AsPlanned_Enriched_School_37saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1198 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-02-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -9947,7 +9949,7 @@ task:AsPlanned_Enriched_School_36saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1008 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-25T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-12-17T08:00:00"^^xsd:dateTime .
 
@@ -10021,7 +10023,7 @@ task:AsPlanned_Enriched_School_15vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1132 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -10061,7 +10063,7 @@ task:AsPlanned_Enriched_School_17gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1021 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -10174,7 +10176,7 @@ task:AsPlanned_Enriched_School_46vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1138 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-07-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -10210,7 +10212,7 @@ task:AsPlanned_Enriched_School_48gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1053 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-11T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-07T08:00:00"^^xsd:dateTime .
 
@@ -10240,7 +10242,7 @@ task:AsPlanned_Enriched_School_45sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1177 , resource_type_requirement:School_1178 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -10292,7 +10294,7 @@ task:AsPlanned_Enriched_School_38gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1175 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -10385,7 +10387,7 @@ task:AsPlanned_Enriched_School_29saf1
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1106 ;
         process:hasType           "SAFETY_ADDED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-05-07T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-04-12T08:00:00"^^xsd:dateTime .
 
@@ -10419,7 +10421,7 @@ task:AsPlanned_Enriched_School_11saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1199 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-01-26T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-01-18T08:00:00"^^xsd:dateTime .
 
@@ -10463,7 +10465,7 @@ task:AsPlanned_Enriched_School_30saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1163 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -10652,7 +10654,7 @@ task:AsPlanned_Enriched_School_50vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1110 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-21T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-06-15T08:00:00"^^xsd:dateTime .
 
@@ -10783,7 +10785,7 @@ task:AsPlanned_Enriched_School_5saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1035 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-11-20T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-09T08:00:00"^^xsd:dateTime .
 
@@ -10837,7 +10839,7 @@ task:AsPlanned_Enriched_School_16gqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1147 ;
         process:hasType           "GEOMETRIC_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-04-09T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
 
@@ -10898,7 +10900,7 @@ task:AsPlanned_Enriched_School_13sub
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1014 , resource_type_requirement:School_1015 ;
         process:hasType           "NORMAL_TASK" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-12T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-02-15T08:00:00"^^xsd:dateTime .
 
@@ -10950,7 +10952,7 @@ task:AsPlanned_Enriched_School_21saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1026 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2009-12-02T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2009-11-23T08:00:00"^^xsd:dateTime .
 
@@ -10972,7 +10974,7 @@ task:AsPlanned_Enriched_School_45vqc
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1010 ;
         process:hasType           "VISUAL_QUALITY_CONTROL" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-06-04T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-05-10T08:00:00"^^xsd:dateTime .
 
@@ -11022,6 +11024,11 @@ task:AsPlanned_Enriched_School_40saf2
         process:hasResourceTypeRequirement
                 resource_type_requirement:School_1052 ;
         process:hasType           "SAFETY_REMOVED" ;
-        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School: ;
+        process:belongsToProcess   data_process:AsPlanned_Enriched_Process_School ;
         process:plannedEndDate    "2010-03-23T17:00:00"^^xsd:dateTime ;
         process:plannedStartDate  "2010-03-15T08:00:00"^^xsd:dateTime .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

@@ -9,6 +9,9 @@
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
 @prefix rule:  <http://data.cogito.iot.linkeddata.es/resources/rule/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 rule:School_QC_5
         a                              qual:Rule ;
@@ -169,3 +172,8 @@ rule:School_QC_14
         qual:materialTypeKeywords      "CONCRETE" ;
         qual:originDocument            "BS EN 13670-2009" ;
         qual:relationshipTypeKeywords  "ADJACENT" .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

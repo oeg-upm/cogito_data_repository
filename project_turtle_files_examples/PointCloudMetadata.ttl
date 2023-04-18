@@ -1,5 +1,6 @@
 @prefix schema: <http://schema.org#> .
 @prefix process: <https://cogito.iot.linkeddata.es/def/process#> .
+@prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
 @prefix const: <https://cogito.iot.linkeddata.es/def/construction#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,6 +11,7 @@
 @prefix qual:  <https://cogito.iot.linkeddata.es/def/quality#> .
 @prefix point_cloud:  <http://data.cogito.iot.linkeddata.es/resources/point_cloud/> .
 @prefix task:  <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
 
 point_cloud:School_12gqc_0
         a                        qual:PointCloud ;
@@ -20,4 +22,9 @@ point_cloud:School_12gqc_0
         qual:timestampUploaded   "2023-01-12T01:43:05"^^xsd:dateTime . # qual:timestampUploaded
 
 task:AsPlanned_Enriched_School_12gqc
+        a                   process:Task;
         qual:hasPointCloud  point_cloud:School_12gqc_0 .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

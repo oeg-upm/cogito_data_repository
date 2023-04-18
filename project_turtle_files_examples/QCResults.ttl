@@ -10,6 +10,8 @@
 @prefix element:  <http://data.cogito.iot.linkeddata.es/resources/element/> .
 @prefix qc: <http://data.cogito.iot.linkeddata.es/resources/qc/> .
 @prefix task: <http://data.cogito.iot.linkeddata.es/resources/task/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 
 task:AsPlanned_Enriched_School_12gqc
@@ -182,3 +184,7 @@ qc:School_Project_School_QC3221
         qual:performedTimestamp  "2023-01-17T11:43:49"^^xsd:dateTime ;
         qual:toleranceReference  "[0.015]" ;
         qual:unit                "metres" .
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .

@@ -1,0 +1,87 @@
+{
+  "projectId": "1cf55b98-db69-46f8-a64e-a531d512d4d3",
+  "projectTitle": "School_1",
+  "projectLocation": "Project Location",
+  "startDate": "2022-03-18T15:24:28",
+  "trackingType": 0,
+  "coordSystem": 1,
+  "trackedGroups": 0,
+  "coordsOrigin": null,
+  "noTrackedItems": 10,
+  "lastActive": "2022-04-06T19:16:18.656634",
+  "estAccuracy": 0.236,
+  "groups": [
+    {
+      "groupId": "4f6fa036-9585-4304-a9ef-46870c9cf94e",
+      "groupName": "Concrete mixer truck",
+      "groupType": 1,
+      "tags": [
+        {
+          "tagId": "5f1703ad-45e2-4fa9-ae73-839910bcfc60",
+          "lastSeen": "2022-04-06T18:20:48"
+        },
+        {
+          "tagId": "ec774843-17e6-48e9-a05f-53a947dd1b81",
+          "lastSeen": "2022-04-01T18:15:12"
+        }
+      ]
+    },  
+    {
+      "groupId": "779c5ea2-5e0a-4253-b28a-e7a27e5006d6",
+      "groupName": "Concrete vibrator machine",
+      "groupType": 1,
+      "tags": [
+        {
+          "tagId": "3511bac3-f210-40e2-b4f5-c48d9f5fe324",
+          "lastSeen": "2022-04-06T18:20:48"
+        },
+        {
+          "tagId": "ab1163a2-2f70-436f-a366-61d4b010a798",
+          "lastSeen": "2022-04-01T18:15:12"
+        }
+      ]
+    }, 	
+    {
+      "groupId": "3af109b6-c39e-4152-b222-61304046ebfe",
+      "groupName": "Finisher",
+      "groupType": 0,
+      "tags": [
+        {
+          "tagId": "108cd97a-3028-4cde-b0e0-a5e30ba6078b",
+          "lastSeen": "2022-04-06T18:20:48"
+        },
+        {
+          "tagId": "03f2c6f0-f199-4614-a41d-69b710b2ed54",
+          "lastSeen": "2022-04-01T18:15:12"
+        }
+      ]
+    },
+    {
+      "groupId": "fb06c20f-8ec0-4de3-bfa0-0dde279c4bc0",
+      "groupName": "Worker",
+      "groupType": 0,
+      "tags": [
+        {
+          "tagId": "381ed25e-39e7-4241-846d-b81b1b831c36",
+          "lastSeen": "2022-04-06T18:20:48"
+        },
+        {
+          "tagId": "f94216b4-31f7-425e-a31e-77eeb52c2f0b",
+          "lastSeen": "2022-04-01T18:15:12"
+        },
+        {
+          "tagId": "c87541be-e1b8-4122-be14-1ba44807d3e5",
+          "lastSeen": "2022-04-01T18:15:12"
+        },
+        {
+          "tagId": "317a5c70-5b0a-4cfd-bfaf-585a378ac6fb",
+          "lastSeen": "2022-04-01T18:15:12"
+        },
+        {
+          "tagId": "c3940c8f-2f12-4528-b056-a30d410622f7",
+          "lastSeen": "2022-04-01T18:15:12"
+        }
+      ]
+    }
+  ]
+}

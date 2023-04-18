@@ -17,6 +17,8 @@
 @prefix site:  <http://data.cogito.iot.linkeddata.es/resources/site/> .
 @prefix facility: <https://cogito.iot.linkeddata.es/def/facility#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix project: <http://data.cogito.iot.linkeddata.es/resources/project/> .
+@prefix platform: <https://cogito.iot.linkeddata.es/def/platform#> .
 
 element:71274  a            beo:Beam , bot:Element , facility:Element ;
         brick:isPartOf           building_storey:174 , spatial_zone:217758 ;
@@ -6657,3 +6659,8 @@ element:105775  a           beo:Slab , bot:Element , facility:Element ;
         dcterms:identifier  "01U2Ox69TF78CjGAzXHAso" ;
         dcterms:title            "M_Pile-Steel Pipe:500mm Diameter:150012" ;
         props:hasVolume          "1.1779606897044"^^xsd:double .
+
+
+project:079637bb-87d5-4fef-9704-d556364d90ba
+    a   facility:Project ;
+    platform:hasFileURL "https://raw.githubusercontent.com/oeg-upm/cogito_data_repository/main/ifc/file.ifc" .
