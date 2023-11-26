@@ -1,0 +1,163 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix iot: <https://cogito.iot.linkeddata.es/def/iot#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix tag_group: <https://data.cogito.iot.linkeddata.es/resources/tag_group/> .
+@prefix tag: <https://data.cogito.iot.linkeddata.es/resources/tag/> .
+@prefix data: <https://data.cogito.iot.linkeddata.es/resources/> .
+
+
+tag_group:779c5ea2-5e0a-4253-b28a-e7a27e5006d6
+    a iot:EquipmentTagGroup ;
+    dcterms:identifier  "779c5ea2-5e0a-4253-b28a-e7a27e5006d6"^^xsd:string ;
+    dcterms:title  "Equipments"^^xsd:string .
+
+tag:3511bac3-f210-40e2-b4f5-c48d9f5fe324
+    a   iot:TrackingTag , iot:EquipmentTrackingTag ;
+    dcterms:identifier  "3511bac3-f210-40e2-b4f5-c48d9f5fe324"^^xsd:string ;
+    iot:hasTrajectory  [
+        a iot:Trajectory ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.162451047204025"^^xsd:float ;
+            wgs:lat  "37.97290392262493"^^xsd:float ;
+            iot:order  "1"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.162279385827072"^^xsd:float ;
+            wgs:lat  "37.9729250665244"^^xsd:float ;
+            iot:order  "2"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.162066150210388"^^xsd:float ;
+            wgs:lat  "37.972953610779044"^^xsd:float ;
+            iot:order  "3"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1620500569562986"^^xsd:float ;
+            wgs:lat  "37.972850005653704"^^xsd:float ;
+            iot:order  "4"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.162039328120239"^^xsd:float ;
+            wgs:lat  "37.97278023069095"^^xsd:float ;
+            iot:order  "5"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1622968201856687"^^xsd:float ;
+            wgs:lat  "37.97274217159244"^^xsd:float ;
+            iot:order  "6"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1620366459112241"^^xsd:float ;
+            wgs:lat  "37.97278023069095"^^xsd:float ;
+            iot:order  "7"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1618220691900327"^^xsd:float ;
+            wgs:lat  "37.97279926023283"^^xsd:float ;
+            iot:order  "8"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1615511660795286"^^xsd:float ;
+            wgs:lat  "37.97282674734016"^^xsd:float ;
+            iot:order  "9"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1613070850591733"^^xsd:float ;
+            wgs:lat  "37.972850005653704"^^xsd:float ;
+            iot:order  "10"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1611005549650266"^^xsd:float ;
+            wgs:lat  "37.972873263959876"^^xsd:float ;
+            iot:order  "11"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1610200886945798"^^xsd:float ;
+            wgs:lat  "37.9729176661603"^^xsd:float ;
+            iot:order  "12"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1610844617109373"^^xsd:float ;
+            wgs:lat  "37.97296418272238"^^xsd:float ;
+            iot:order  "13"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1610254531126096"^^xsd:float ;
+            wgs:lat  "37.97308893153885"^^xsd:float ;
+            iot:order  "14"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.161215889952667"^^xsd:float ;
+            wgs:lat  "37.97307413084288"^^xsd:float ;
+            iot:order  "15"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1614706998090818"^^xsd:float ;
+            wgs:lat  "37.97301915680321"^^xsd:float ;
+            iot:order  "16"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.161567259333618"^^xsd:float ;
+            wgs:lat  "37.97294092444501"^^xsd:float ;
+            iot:order  "17"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1617094164114072"^^xsd:float ;
+            wgs:lat  "37.97298955538018"^^xsd:float ;
+            iot:order  "18"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1618596201162412"^^xsd:float ;
+            wgs:lat  "37.97295995394522"^^xsd:float ;
+            iot:order  "19"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+        iot:hasPoint  [
+            a wgs:Point ;
+            wgs:long  "-1.1620607857923582"^^xsd:float ;
+            wgs:lat  "37.97295149639018"^^xsd:float ;
+            iot:order  "20"^^xsd:integer ;
+            iot:valid   "true"^^xsd:boolean
+        ] ;
+    ] .
