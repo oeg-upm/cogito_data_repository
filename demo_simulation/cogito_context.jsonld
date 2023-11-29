@@ -14,6 +14,7 @@
         "om" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
         "project" : "https://data.cogito.iot.linkeddata.es/resources/project/",
         "city" : "https://data.cogito.iot.linkeddata.es/resources/city/",
+        "country" : "https://data.cogito.iot.linkeddata.es/resources/country/",
         "point" : "https://data.cogito.iot.linkeddata.es/resources/location/point/",
         "sunrise" : "https://data.cogito.iot.linkeddata.es/resources/measurement/sunrise/[=project_id]/",
         "sunset" : "https://data.cogito.iot.linkeddata.es/resources/measurement/sunset/[=project_id]/",
