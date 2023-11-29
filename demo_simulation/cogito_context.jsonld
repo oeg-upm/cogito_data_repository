@@ -2,6 +2,7 @@
     "@context" : {
         "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+        "owl" : "http://www.w3.org/2002/07/owl#",
         "process" : "https://cogito.iot.linkeddata.es/def/process#",
         "facility" : "https://cogito.iot.linkeddata.es/def/facility#",
         "xsd" : "http://www.w3.org/2001/XMLSchema#",
@@ -12,6 +13,7 @@
         "gn" : "http://www.geonames.org/ontology#",
         "wgs" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
         "om" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "geo" : "http://www.opengis.net/ont/geosparql#",
         "project" : "https://data.cogito.iot.linkeddata.es/resources/project/",
         "process_data" : "https://data.cogito.iot.linkeddata.es/resources/process/",
         "task" : "https://data.cogito.iot.linkeddata.es/resources/task/",
@@ -35,6 +37,93 @@
         "visibility" : "https://data.cogito.iot.linkeddata.es/resources/measurement/visibility/",
         "wind_speed" : "https://data.cogito.iot.linkeddata.es/resources/measurement/wind_speed/",
         "wind_deg" : "https://data.cogito.iot.linkeddata.es/resources/measurement/wind_deg/",
-        "wind_gust" : "https://data.cogito.iot.linkeddata.es/resources/measurement/wind_gust/"   
+        "wind_gust" : "https://data.cogito.iot.linkeddata.es/resources/measurement/wind_gust/" ,
+        "isRelatedToProcess" : {
+            "@id" : "process:isRelatedToProcess",
+            "@type" : "@id"
+        },
+        "isRelatedToProject" : {
+            "@id" : "process:isRelatedToProject",
+            "@type" : "@id"
+        },
+        "hasTask" : {
+            "@id" : "process:hasTask",
+            "@type" : "@id"
+        },
+        "addsElement" : {
+            "@id" : "process:addsElement",
+            "@type" : "@id"
+        },
+        "plannedStartDate" : {
+            "@id" : "process:plannedStartDate",
+            "@type" : "xsd:dateTime"
+        },
+        "plannedEndDate" : {
+            "@id" : "process:plannedEndDate",
+            "@type" : "xsd:dateTime"
+        },
+        "title" : {
+            "@id" : "dcterms:title",
+            "@type" : "xsd:string"
+        },
+        "belongsToProcess" : {
+            "@id" : "process:belongsToProcess",
+            "@type" : "@id"
+        },
+        "sameAs" : {
+            "@id" : "owl:sameAs",
+            "@type" : "@id"
+        },
+        "type" : {
+            "@id" : "rdf:type",
+            "@type" : "@id"
+        },
+        "locatedIn" : {
+            "@id" : "geo:locatedIn",
+            "@type" : "@id"
+        },
+        "name" : {
+            "@id" : "gn:name",
+            "@type" : "xsd:string"
+        },
+        "parentCountry" : {
+            "@id" : "gn:parentCountry",
+            "@type" : "@id"
+        },
+        "lat" : {
+            "@id" : "wgs:lat",
+            "@type" : "xsd:float"
+        },
+        "long" : {
+            "@id" : "wgs:long",
+            "@type" : "xsd:float"
+        },
+        "population" : {
+            "@id" : "gn:population",
+            "@type" : "xsd:integer"
+        },
+        "seeAlso" : {
+            "@id" : "rdfs:seeAlso",
+            "@type" : "@id"
+        },
+        "location" : {
+            "@id" : "wgs:location",
+            "@type" : "@id"
+        },
+        "hasValue" : {
+            "@id" : "saref:hasValue"
+        },
+        "hasTimeStamp" : {
+            "@id" : "saref:hasTimeStamp",
+            "@type" : "xsd:dateTime"
+        },
+        "relatesToProperty" : {
+            "@id" : "saref:relatesToProperty",
+            "@type" : "@id"
+        },
+        "measurementMadeBy" : {
+            "@id" : "saref:measurementMadeBy",
+            "@type" : "@id"
+        }
     }
 }
