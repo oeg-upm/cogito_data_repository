@@ -100,7 +100,7 @@
         },
         "population" : {
             "@id" : "gn:population",
-            "@type" : "xsd:integer"
+            "@type" : "xsd:string"
         },
         "seeAlso" : {
             "@id" : "rdfs:seeAlso",
