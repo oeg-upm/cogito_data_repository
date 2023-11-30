@@ -15,9 +15,37 @@ tag_group:779c5ea2-5e0a-4253-b28a-e7a27e5006d6
     dcterms:identifier  "779c5ea2-5e0a-4253-b28a-e7a27e5006d6"^^xsd:string ;
     dcterms:title  "Equipments"^^xsd:string .
 
+spatial_zone:1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e
+    a facility:SpatialZone, iot:TrackedZone ;
+    dcterms:identifier  "1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e"^^xsd:string ;
+    dcterms:title  "Surface"^^xsd:string ;
+    iot:hasPolygon  "POLYGON((37.97296312552811 -1.162560347221382, 37.97268402570935 -1.1625174318771436, 37.97284471967401 -1.1609295641403272, 37.97312381888178 -1.1609939371566846, 37.97296312552811 -1.162560347221382))" .
+
+spatial_zone:beec7ff5-48b8-4ab4-ac40-39c671445717
+    a facility:SpatialZone, iot:TrackedZone, safety:FallHazardZone ;
+    dcterms:identifier  "beec7ff5-48b8-4ab4-ac40-39c671445717"^^xsd:string ;
+    dcterms:title  "Zone 1"^^xsd:string ;
+    facility:belongsToSpatialZone spatial_zone:1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e ;
+    iot:hasPolygon  "POLYGON((37.97282674734016 -1.1624597643833234,37.97276542993277 -1.1624517177562788, 37.97279926023283 -1.162148628137596, 37.972860577611975 -1.1621593569736555, 37.97282674734016 -1.1624597643833234))" .
+
+spatial_zone:67b7dbe4-b589-4f49-a5bd-9e703e4ce2bf
+    a facility:SpatialZone, iot:TrackedZone, safety:FallHazardZone ;
+    dcterms:identifier  "67b7dbe4-b589-4f49-a5bd-9e703e4ce2bf"^^xsd:string ;
+    dcterms:title  "Zone 2"^^xsd:string ;
+    facility:belongsToSpatialZone spatial_zone:1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e ;
+    iot:hasPolygon  "POLYGON((37.97289017908699 -1.161947462461479, 37.972830976124975 -1.1619394158344343, 37.97286480639484 -1.1616121863346174, 37.972926123719226 -1.161622915170677, 37.97289017908699 -1.161947462461479))" .
+
+spatial_zone:9ed6b52d-293a-4320-a197-711c917b1d0d
+    a facility:SpatialZone, iot:TrackedZone, safety:FallHazardZone ;
+    dcterms:identifier  "9ed6b52d-293a-4320-a197-711c917b1d0d"^^xsd:string ;
+    dcterms:title  "Zone 3"^^xsd:string ;
+    facility:belongsToSpatialZone spatial_zone:1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e ;
+    iot:hasPolygon  "POLYGON((37.97293986725042 -1.161504227421768, 37.97287432115543 -1.1614908163766935, 37.972912380185456 -1.161128718159683, 37.97297792624644 -1.1611421292047575, 37.97293986725042 -1.161504227421768))" .
+
 tag:3511bac3-f210-40e2-b4f5-c48d9f5fe324
     a   iot:TrackingTag , iot:EquipmentTrackingTag ;
     dcterms:identifier  "3511bac3-f210-40e2-b4f5-c48d9f5fe324"^^xsd:string ;
+    iot:assignedToTrackedZone  spatial_zone:1e2f6b9e-0b9a-4b9e-9b9e-9b9e9b9e9b9e ;
     iot:hasTrajectory  [
         a iot:Trajectory ;
         iot:hasPoint  [
