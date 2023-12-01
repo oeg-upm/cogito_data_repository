@@ -124,6 +124,10 @@
         "measurementMadeBy" : {
             "@id" : "saref:measurementMadeBy",
             "@type" : "@id"
+        },
+        "makesMeasurement" : {
+            "@id" : "saref:makesMeasurement",
+            "@type" : "@id"
         }
     }
 }
