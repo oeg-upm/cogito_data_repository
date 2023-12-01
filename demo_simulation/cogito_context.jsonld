@@ -100,7 +100,7 @@
         },
         "population" : {
             "@id" : "gn:population",
-            "@type" : "xsd:string"
+            "@type" : "xsd:integer"
         },
         "seeAlso" : {
             "@id" : "rdfs:seeAlso",
@@ -112,6 +112,14 @@
         },
         "hasValue" : {
             "@id" : "saref:hasValue"
+        },
+        "hasValueDateTime" : {
+            "@id" : "saref:hasValue",
+            "@type" : "xsd:dateTime"
+        },
+        "hasValueFloat" : {
+            "@id" : "saref:hasValue",
+            "@type" : "xsd:float"
         },
         "hasTimeStamp" : {
             "@id" : "saref:hasTimeStamp",
