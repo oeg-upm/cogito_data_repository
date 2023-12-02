@@ -7,8 +7,11 @@
 @prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix tag_group: <https://data.cogito.iot.linkeddata.es/resources/tag_group/> .
 @prefix tag: <https://data.cogito.iot.linkeddata.es/resources/tag/> .
+@prefix facility: <https://data.cogito.iot.linkeddata.es/def/facility#> .
+@prefix spatial_zone: <https://data.cogito.iot.linkeddata.es/resources/spatial_zone/> .
 @prefix data: <https://data.cogito.iot.linkeddata.es/resources/> .
 @prefix geo_sparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix safety: <https://data.cogito.iot.linkeddata.es/def/safety#> .
 
 
 tag_group:779c5ea2-5e0a-4253-b28a-e7a27e5006d6
