@@ -56,140 +56,120 @@ tag:3511bac3-f210-40e2-b4f5-c48d9f5fe324
             a iot:Point ;
             wgs:lat  "37.973059330143954"^^xsd:double ;
             wgs:long  "-1.1610764150838926"^^xsd:double ;
-            iot:order  "1"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "1"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97303184312373"^^xsd:double ;
             wgs:long  "-1.161240029833801"^^xsd:double ;
-            iot:order  "2"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "2"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97297475466421"^^xsd:double ;
             wgs:long  "-1.1614358310918882"^^xsd:double ;
-            iot:order  "3"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "3"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.972913437380434"^^xsd:double ;
             wgs:long  "-1.1614251022558286"^^xsd:double ;
-            iot:order  "4"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "4"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97284366247801"^^xsd:double ;
             wgs:long  "-1.1614063267927244"^^xsd:double ;
-            iot:order  "5"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "5"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97282674734016"^^xsd:double ;
             wgs:long  "-1.1615565304975584"^^xsd:double ;
-            iot:order  "6"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "6"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.9729028654298"^^xsd:double ;
             wgs:long  "-1.1615592127065733"^^xsd:double ;
-            iot:order  "7"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "7"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.972883835914786"^^xsd:double ;
             wgs:long  "-1.1617013697843626"^^xsd:double ;
-            iot:order  "8"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "8"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97297686905236"^^xsd:double ;
             wgs:long  "-1.1618596201162412"^^xsd:double ;
-            iot:order  "9"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "9"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.972936695666526"^^xsd:double ;
             wgs:long  "-1.1619695906858518"^^xsd:double ;
-            iot:order  "10"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "10"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.9728077178054"^^xsd:double ;
             wgs:long  "-1.162087607882507"^^xsd:double ;
-            iot:order  "11"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "11"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97282674734016"^^xsd:double ;
             wgs:long  "-1.1622512226324155"^^xsd:double ;
-            iot:order  "12"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "12"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97280348901926"^^xsd:double ;
             wgs:long  "-1.1624094729642942"^^xsd:double ;
-            iot:order  "13"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "13"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97292189493987"^^xsd:double ;
             wgs:long  "-1.1624738459806516"^^xsd:double ;
-            iot:order  "14"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "14"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97272737082657"^^xsd:double ;
             wgs:long  "-1.1624792103986814"^^xsd:double ;
-            iot:order  "15"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "15"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97281406098422"^^xsd:double ;
             wgs:long  "-1.162216353915222"^^xsd:double ;
-            iot:order  "16"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "16"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.972776001903206"^^xsd:double ;
             wgs:long  "-1.1620205526571348"^^xsd:double ;
-            iot:order  "17"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "17"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.972822518555084"^^xsd:double ;
             wgs:long  "-1.1616209035139158"^^xsd:double ;
-            iot:order  "18"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "18"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.97292189493987"^^xsd:double ;
             wgs:long  "-1.1613446359853818"^^xsd:double ;
-            iot:order  "19"^^xsd:integer ;
-            iot:valid   "false"^^xsd:boolean
+            iot:order  "19"^^xsd:integer .
         ] ;
         iot:hasPoint  [
             a iot:Point ;
             wgs:lat  "37.9730297287371"^^xsd:double ;
             wgs:long  "-1.1611837034444883"^^xsd:double ;
-            iot:order  "20"^^xsd:integer ;
-            iot:valid   "true"^^xsd:boolean
+            iot:order  "20"^^xsd:integer .
         ] ;
     ] .
